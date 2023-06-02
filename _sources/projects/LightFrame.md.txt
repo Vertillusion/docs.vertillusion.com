@@ -1,8 +1,8 @@
 # LightFrame
 
-_传送门：[LightFrame官方网站-定义热爱的桌面](https://lightframe.vertillusion.xyz/)_  
+_传送门：[LightFrame官方网站-定义热爱的桌面] | https://lightframe.vertillusion.xyz/_  
 
-开发：[沫狐奶昔CimiMoly](https://github.com/EnderMo)  
+开发：[沫狐奶昔CimiMoly] | https://github.com/EnderMo  
 
 ## 软件特点
 * 即开即用。使用自开发轻量级框架,实现极低的资源占用<sup>1</sup>在满足桌面体验需求的同时保证日常使用流畅。  
@@ -14,6 +14,20 @@ _传送门：[LightFrame官方网站-定义热爱的桌面](https://lightframe.v
 1.在一般情况下,运行内存不超过10MB.<br>
 2.相关内容请在应用内查看提示.
 </sup>
+
+## 使用教程
+_TODO_
+
+## 贡献者
+| 昵称 | 贡献内容 |
+| ---- | ---- |
+| 沫狐奶昔 CimiMoly | 是LightFrame的造物主啦~ *:"Vertillusion"是属"CimiMoly"所有的发布载体. |
+| 辰落火辉 Haceau-Zoac | vui.parser |
+| 憨包 MeroWindows | vui.dom |
+| 悠瑞 iYoRoy | 安装器和资源站 |
+| xihale | 网站优化 |
+| 飞飞 Skywards | 网站优化 |
+| 诺尔 SlimeNull | 网站优化 |
 
 ---------
 ## Change Log
@@ -59,12 +73,12 @@ _传送门：[LightFrame官方网站-定义热爱的桌面](https://lightframe.v
 ### Beta2 Build90 | 2022-01-18  
 * 粒子发生器  
 * 专注空间Beta / 组件分析  
-* (U1)使用VertexUI最新草案  
+*  | U1使用VertexUI最新草案  
 
 ### Beta2 Build75 | 2021-12-22  
 * 加入便签纸、文本贴纸、时钟  
 * 新的主题组件,修复bug若干  
-* (U1)加入物品栏扩展选项  
+*  | U1加入物品栏扩展选项  
 
 ### Beta2 Build54 | 2021-11-21  
 * 加入ListPanel的进入动画  
@@ -72,13 +86,13 @@ _传送门：[LightFrame官方网站-定义热爱的桌面](https://lightframe.v
 
 ### Beta2 Build53 | 2021-11-21  
 * 新的推入动画  
-* 加入ListPanel(表列面板)  
+* 加入ListPanel | 表列面板  
 * 部分加入控件动画  
 
 ### Beta2 Build52 | 2021-11-14  
 * 新的UI  
 * Minecraft主题框改为主题组件  
-* 物品栏Dock(未正式加入,仅测试)  
+* 物品栏Dock | 未正式加入,仅测试  
 
 ### Beta2 Build51 | 2021-11-07  
 * 加入启动选项  

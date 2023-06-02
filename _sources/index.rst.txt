@@ -12,6 +12,7 @@ Vertillusion Studio
 
     basic/About.md
     basic/Members.md
+    basic/Sponsers.md
 
 .. toctree::
     :maxdepth: 2
