@@ -1,0 +1,421 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="索引" href="../genindex.html" /><link rel="search" title="搜索" href="../search.html" /><link rel="prev" title="成员列表" href="../basic/Members.html" />
+
+    <!-- Generated with Sphinx 6.2.1 and Furo 2023.03.27 -->
+        <title>LightFrame - Vertillusion 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">Vertillusion  文档</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">Vertillusion  文档</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
+  <input class="sidebar-search" placeholder="搜索" name="q" aria-label="搜索">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">基本信息</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic/About.html">工作室简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/Members.html">成员列表</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">项目</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">LightFrame</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="lightframe">
+<h1>LightFrame<a class="headerlink" href="#lightframe" title="此标题的永久链接">#</a></h1>
+<p><em>传送门：<a class="reference external" href="https://lightframe.vertillusion.xyz/">LightFrame官方网站-定义热爱的桌面</a></em></p>
+<p>开发：<a class="reference external" href="https://github.com/EnderMo">沫狐奶昔CimiMoly</a></p>
+<section id="id1">
+<h2>软件特点<a class="headerlink" href="#id1" title="此标题的永久链接">#</a></h2>
+<ul class="simple">
+<li><p>即开即用。使用自开发轻量级框架,实现极低的资源占用<sup>1</sup>在满足桌面体验需求的同时保证日常使用流畅。</p></li>
+<li><p>使用应用内时钟、日历、便签纸等组件创造一个您喜爱的桌面<sup>2</sup>。此外,您还可以使用混合、组件切割功能使其更加贴合您的壁纸。</p></li>
+<li><p>专注于您的体验。应用提供专注空间功能,您可以轻易组织您的任务。同时您可以搭配桌面组件布置,创造更加丰富的日常体验。</p></li>
+<li><p>本应用始终不强制收费。当然,在有能力的情况下,希望您可以支持本应用来帮助我们长期开发和维护。</p></li>
+</ul>
+<sup>
+1.在一般情况下,运行内存不超过10MB.<br>
+2.相关内容请在应用内查看提示.
+</sup></section>
+<hr class="docutils" />
+<section id="change-log">
+<h2>Change Log<a class="headerlink" href="#change-log" title="此标题的永久链接">#</a></h2>
+<section id="v0-4-5-1-build451-2023-5-27">
+<h3>v0.4.5.1 Build451 | 2023-5-27<a class="headerlink" href="#v0-4-5-1-build451-2023-5-27" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>新的滑动条和便签纸文本编辑交互</p></li>
+<li><p>在便签纸多行文本溢出时,显示滚动条</p></li>
+<li><p>其他小改动和bug修复</p></li>
+</ul>
+</section>
+<section id="v0-4-0-01-build401-2023-01-02">
+<h3>v0.4.0.01 Build401 | 2023-01-02<a class="headerlink" href="#v0-4-0-01-build401-2023-01-02" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>修复箱子的长目录缓存问题</p></li>
+</ul>
+</section>
+<section id="v0-4-0-build395-2023-01-01">
+<h3>v0.4.0 Build395 | 2023-01-01<a class="headerlink" href="#v0-4-0-build395-2023-01-01" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>全新的界面!新的体验</p></li>
+<li><p>重写的时钟组件 可用性更强!</p></li>
+<li><p>日历本的小更新</p></li>
+<li><p>独立的MC箱子 用来当文件夹也可以~</p></li>
+<li><p>部分操作微调 更易用~</p></li>
+</ul>
+</section>
+<section id="v0-3-1-build310-2022-09-10">
+<h3>v0.3.1 Build310 | 2022-09-10<a class="headerlink" href="#v0-3-1-build310-2022-09-10" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>修复部分隐式崩溃</p></li>
+</ul>
+</section>
+<section id="anniversary-build300-2022-08-28">
+<h3>Anniversary Build300 | 2022-08-28<a class="headerlink" href="#anniversary-build300-2022-08-28" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>主页更新!横幅与小贴纸~</p></li>
+<li><p>专注空间大更新!倒计时器&amp;待办清单</p></li>
+<li><p>事件检查器支持卡片添加</p></li>
+<li><p>其他小改动和bug修复</p></li>
+</ul>
+</section>
+<section id="v0-2-4-build240-2022-08-11">
+<h3>v0.2.4 Build240 | 2022-08-11<a class="headerlink" href="#v0-2-4-build240-2022-08-11" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>状态描述&amp;组件切割</p></li>
+<li><p>其他小改动</p></li>
+</ul>
+</section>
+<section id="v0-2-0-build200-2022-07-01">
+<h3>v0.2.0 Build200 | 2022-07-01<a class="headerlink" href="#v0-2-0-build200-2022-07-01" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>VertexUI-Twinkle轻卡片</p></li>
+<li><p>组件体验优化</p></li>
+<li><p>LimpidDesign设计引入</p></li>
+<li><p>其他小改动</p></li>
+</ul>
+</section>
+<section id="beta3-build105-2022-03-05">
+<h3>Beta3 Build105 | 2022-03-05<a class="headerlink" href="#beta3-build105-2022-03-05" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>新的UI和crash修复</p></li>
+<li><p>新的发生器</p></li>
+<li><p>在线更新</p></li>
+</ul>
+</section>
+<section id="beta2-build90-2022-01-18">
+<h3>Beta2 Build90 | 2022-01-18<a class="headerlink" href="#beta2-build90-2022-01-18" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>粒子发生器</p></li>
+<li><p>专注空间Beta / 组件分析</p></li>
+<li><p>(U1)使用VertexUI最新草案</p></li>
+</ul>
+</section>
+<section id="beta2-build75-2021-12-22">
+<h3>Beta2 Build75 | 2021-12-22<a class="headerlink" href="#beta2-build75-2021-12-22" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>加入便签纸、文本贴纸、时钟</p></li>
+<li><p>新的主题组件,修复bug若干</p></li>
+<li><p>(U1)加入物品栏扩展选项</p></li>
+</ul>
+</section>
+<section id="beta2-build54-2021-11-21">
+<h3>Beta2 Build54 | 2021-11-21<a class="headerlink" href="#beta2-build54-2021-11-21" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>加入ListPanel的进入动画</p></li>
+<li><p>使用绘制缓存,大幅度提高绘制效率</p></li>
+</ul>
+</section>
+<section id="beta2-build53-2021-11-21">
+<h3>Beta2 Build53 | 2021-11-21<a class="headerlink" href="#beta2-build53-2021-11-21" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>新的推入动画</p></li>
+<li><p>加入ListPanel(表列面板)</p></li>
+<li><p>部分加入控件动画</p></li>
+</ul>
+</section>
+<section id="beta2-build52-2021-11-14">
+<h3>Beta2 Build52 | 2021-11-14<a class="headerlink" href="#beta2-build52-2021-11-14" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>新的UI</p></li>
+<li><p>Minecraft主题框改为主题组件</p></li>
+<li><p>物品栏Dock(未正式加入,仅测试)</p></li>
+</ul>
+</section>
+<section id="beta2-build51-2021-11-07">
+<h3>Beta2 Build51 | 2021-11-07<a class="headerlink" href="#beta2-build51-2021-11-07" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>加入启动选项</p></li>
+<li><p>修复日期框闪烁的bug</p></li>
+</ul>
+</section>
+<section id="beta1-build50-2021-10-30">
+<h3>Beta1 Build50 | 2021-10-30<a class="headerlink" href="#beta1-build50-2021-10-30" title="此标题的永久链接">#</a></h3>
+<ul class="simple">
+<li><p>首个对外发布版本!</p></li>
+<li><p>加入Minecraft主题框</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          <a class="prev-page" href="../basic/Members.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">成员列表</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2019 - 2023, Vertillusion Studio - Meet, Inspire, Create.
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">LightFrame</a><ul>
+<li><a class="reference internal" href="#id1">软件特点</a></li>
+<li><a class="reference internal" href="#change-log">Change Log</a><ul>
+<li><a class="reference internal" href="#v0-4-5-1-build451-2023-5-27">v0.4.5.1 Build451 | 2023-5-27</a></li>
+<li><a class="reference internal" href="#v0-4-0-01-build401-2023-01-02">v0.4.0.01 Build401 | 2023-01-02</a></li>
+<li><a class="reference internal" href="#v0-4-0-build395-2023-01-01">v0.4.0 Build395 | 2023-01-01</a></li>
+<li><a class="reference internal" href="#v0-3-1-build310-2022-09-10">v0.3.1 Build310 | 2022-09-10</a></li>
+<li><a class="reference internal" href="#anniversary-build300-2022-08-28">Anniversary Build300 | 2022-08-28</a></li>
+<li><a class="reference internal" href="#v0-2-4-build240-2022-08-11">v0.2.4 Build240 | 2022-08-11</a></li>
+<li><a class="reference internal" href="#v0-2-0-build200-2022-07-01">v0.2.0 Build200 | 2022-07-01</a></li>
+<li><a class="reference internal" href="#beta3-build105-2022-03-05">Beta3 Build105 | 2022-03-05</a></li>
+<li><a class="reference internal" href="#beta2-build90-2022-01-18">Beta2 Build90 | 2022-01-18</a></li>
+<li><a class="reference internal" href="#beta2-build75-2021-12-22">Beta2 Build75 | 2021-12-22</a></li>
+<li><a class="reference internal" href="#beta2-build54-2021-11-21">Beta2 Build54 | 2021-11-21</a></li>
+<li><a class="reference internal" href="#beta2-build53-2021-11-21">Beta2 Build53 | 2021-11-21</a></li>
+<li><a class="reference internal" href="#beta2-build52-2021-11-14">Beta2 Build52 | 2021-11-14</a></li>
+<li><a class="reference internal" href="#beta2-build51-2021-11-07">Beta2 Build51 | 2021-11-07</a></li>
+<li><a class="reference internal" href="#beta1-build50-2021-10-30">Beta1 Build50 | 2021-10-30</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
+    <script src="../_static/translations.js"></script>
+    </body>
+</html>
