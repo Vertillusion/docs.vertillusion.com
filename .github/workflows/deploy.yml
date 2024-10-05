@@ -2,7 +2,7 @@ name: Deploy VitePress site to Pages
 
 on:
   push:
-    branches: [source2]
+    branches: [source]
 
 # 设置token访问权限
 permissions:
