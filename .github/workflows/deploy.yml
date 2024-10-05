@@ -37,6 +37,11 @@ jobs:
       - name: Build with VitePress
         run: |
           npm run docs:build # 启动项目
+      - name: Add CNAME and .nojekyll
+        run: |
+          cd .vitepress/dist
+          touch .nokekyll
+          echo 'docs.vertillusion.com' > CNAME
       - name: Deploy to GitHub Pages
         uses: s0/git-publish-subdir-action@develop
         env:
