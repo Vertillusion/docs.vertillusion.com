@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "docs.vertillusion.com",
+  base: "",
   head: [["link", { rel: "icon", href: "https://www.vertillusion.xyz/img/Newico.png" }]],
   title: "Vertillusion Studio Docs",
   description: "",
