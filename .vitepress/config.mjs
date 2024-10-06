@@ -64,8 +64,7 @@ export default defineConfig({
         text: '项目',
         items: [
           { text: 'LightFrame', link: '/projects/LightFrame' },
-          { text: 'Minecraft服务器', link: '/projects/Minecraft' },
-          { text: 'Vertillusion Passport', link: '/projects/Passport' }
+          { text: 'Minecraft服务器', link: '/projects/Minecraft' }
         ]
       },
     ],
