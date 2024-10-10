@@ -45,26 +45,15 @@ export default defineConfig({
     // 标题栏
     nav: [
       { text: '首页', link: '/' },
-      { text: '项目', link: '/projects/LightFrame' },
-      { text: '关于我们', link: '/basic/about' }
+      { text: 'LightFrame', link: '/projects/LightFrame' },
     ],
 
     // 左侧菜单
     sidebar: [
       {
-        text: '基本信息',
-        items: [
-          { text: '工作室简介', link: '/basic/about' },
-          { text: '成员列表', link: '/basic/members' },
-          { text: '赞助者', link: 'https://lightframe.vertillusion.xyz' },
-          { text: '站点列表', link: '/basic/websites' }
-        ]
-      },
-      {
         text: '项目',
         items: [
-          { text: 'LightFrame', link: '/projects/LightFrame' },
-          { text: 'Minecraft服务器', link: '/projects/Minecraft' }
+          { text: 'LightFrame', link: '/projects/LightFrame' }
         ]
       },
     ],

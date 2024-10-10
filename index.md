@@ -10,11 +10,8 @@ hero:
 #    alt: image
   actions:
     - theme: brand
-      text: 项目
+      text: LightFrame
       link: /projects/LightFrame
-    - theme: alt
-      text: 关于我们
-      link: /basic/about
 
 # features: // 启用后在首页显示四个小板块。（如需启用请删除本条注释）
 #  - title: Feature A // 标题
