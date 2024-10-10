@@ -45,15 +45,16 @@ export default defineConfig({
     // 标题栏
     nav: [
       { text: '首页', link: '/' },
-      { text: 'LightFrame', link: '/projects/LightFrame' },
+      { text: 'LightFrame', link: '/lightframe/index' },
     ],
 
     // 左侧菜单
     sidebar: [
       {
-        text: '项目',
+        text: 'LightFrame',
         items: [
-          { text: 'LightFrame', link: '/projects/LightFrame' }
+          { text: '基本介绍', link: '/lightframe/index' },
+          { text: '使用教程', link: '/lightframe/manual'}
         ]
       },
     ],

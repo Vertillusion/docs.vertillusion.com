@@ -1,4 +1,4 @@
-# LightFrame
+# 基本介绍
 
 ::: tip TIP
 - 传送门：[LightFrame官方网站-定义热爱的桌面](https://lightframe.vertillusion.xyz/)
@@ -15,13 +15,6 @@
 1.在一般情况下,运行内存不超过10MB.<br>
 2.相关内容请在应用内查看提示.
 </sup>
-
-## 使用教程
-从[官网](https://lightframe.vertillusion.xyz/)下载 **LightFrame.zip** ，并解压到一个固定的文件夹。  
-**请勿直接在压缩包内打开！**  
-如果双击运行出现 `0xc000007b`、`找不到msvcp140.dll` 等类似提示，请参考 [Q&A.1](#id3) 下载安装运行库  
-（然后就可以愉快的使用啦）  
-如果在使用的过程中遇到了Bug，我们欢迎您向我们反馈，具体请参考 [Bug反馈](#bug)
 
 ## Bug反馈
 您可以通过一下两个渠道反馈bug：  
@@ -59,12 +52,6 @@
 **加作者的Q:2016860442 直接提出要求就可以啦**  
 或者在爱发电私信预定~
 如果要将定制更新到新版本 您可以重新自己出价<sub>不需要原价来更新!</sub>
-
-## Q&A
-
-::: details 0xc000007b 报错怎么办 (找不到msvcp140.dll等) 
-下载安装：[https://aka.ms/vs/16/release/vc_redist.x64.exe](https://aka.ms/vs/16/release/vc_redist.x64.exe)
-:::
 
 ## 贡献者
 

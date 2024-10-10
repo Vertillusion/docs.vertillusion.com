@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: LightFrame
-      link: /projects/LightFrame
+      link: /lightframe/index
 
 # features: // 启用后在首页显示四个小板块。（如需启用请删除本条注释）
 #  - title: Feature A // 标题
