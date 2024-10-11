@@ -53,18 +53,6 @@
 或者在爱发电私信预定~
 如果要将定制更新到新版本 您可以重新自己出价<sub>不需要原价来更新!</sub>
 
-## 贡献者
-
-| 昵称 | 贡献内容 |
-| :------: | :------: |
-| 沫狐奶昔 CimiMoly | 是LightFrame的造物主啦~ *: "Vertillusion" 是属 "CimiMoly" 所有的发布载体. |
-| 辰落火辉 Haceau-Zoac | vui.parser |
-| 憨包 MeroWindows | vui.dom |
-| 悠瑞 iYoRoy | 安装器和资源站 |
-| xihale | 网站优化 |
-| 飞飞 Skywards | 网站优化 |
-| 诺尔 SlimeNull | 网站优化 |
-
 ## 关于更新
 LightFrame **不会** 自动更新，只有当用户点击 **检查更新** 按钮后才会开始 
 
@@ -77,6 +65,5 @@ LightFrame **不会** 自动更新，只有当用户点击 **检查更新** 按�
 1.当本地缓存有更新器时直接调用本地缓存
 </sup>
 
----------
-## Change Log
-请查阅官方网站：https://lightframe.vertillusion.xyz
+## 其他信息
+有关贡献者和更新日志内容请查阅官方网站：https://lightframe.vertillusion.xyz
