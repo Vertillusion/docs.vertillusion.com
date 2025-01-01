@@ -38,7 +38,7 @@ export default defineConfig({
     
     // 页脚
     footer: {
-      copyright: '© 版权所有 2019 - 2024, Vertillusion Studio - Meet, Inspire, Create..',
+      copyright: '© 版权所有 2019 - 2025, Vertillusion Studio - Meet, Inspire, Create..',
       message: '利用 VitePress 构建'
     },
     
