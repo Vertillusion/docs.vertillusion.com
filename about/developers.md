@@ -11,7 +11,6 @@ import {
 export default {
   components: {
     VPTeamPage,
-    VPTeamPageTitle,
     VPTeamMembers
   },
   data() {
@@ -42,11 +41,11 @@ export default {
           ]
         },
         {
-          avatar: '',
+          avatar: 'https://avatars.githubusercontent.com/u/47657299',
           name: 'telecomadm1145',
           title: '个性签名',
           links: [
-            { icon: 'github', link: 'https://github.com/yyx990803' },
+            { icon: 'github', link: 'https://github.com/telecomadm1145' },
           ]
         },
         {
