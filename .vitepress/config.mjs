@@ -60,8 +60,13 @@ export default defineConfig({
         items: [
           { text: '官方网站', link: 'https://www.vertillusion.com' },
           { text: 'LightFrame', link: 'https://lightframe.vertillusion.com' },
-          { text: 'LFS', link: 'https://lfs.vertillusion.com' },
-          { text: 'STARKETTLE', link: 'https://scarefree.cn/' },
+          { text: 'LFS', link: 'https://lfs.vertillusion.com' }
+        ],
+      },
+      {
+        text: "FRIENDS",
+        items: [
+          { text: 'STARKETTLE', link: 'https://scarefree.cn/' }
         ],
       },
       {
@@ -96,8 +101,7 @@ export default defineConfig({
         items: [
           { text: '官方网站', link: 'https://www.vertillusion.com' },
           { text: 'LightFrame', link: 'https://lightframe.vertillusion.com' },
-          { text: 'LFS', link: 'https://lfs.vertillusion.com' },
-          { text: 'STARKETTLE', link: 'https://scarefree.cn' }
+          { text: 'LFS', link: 'https://lfs.vertillusion.com' }
         ]
       },
       {
