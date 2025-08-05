@@ -79,8 +79,15 @@ export default defineConfig({
         text: 'LightFrame',
         collapsed: false,
         items: [
-          { text: '基本介绍', link: '/lightframe/index' },
-          { text: '使用教程', link: '/lightframe/manual'}
+          { text: '基本介绍', link: '/docs/lightframe/index' },
+          { text: '使用教程', link: '/docs/lightframe/manual'}
+        ]
+      },
+      {
+        text: 'Vui.Parser',
+        collapsed: false,
+        items: [
+          { text: '基本介绍', link: '/docs/vui.parser/index' }
         ]
       },
       {

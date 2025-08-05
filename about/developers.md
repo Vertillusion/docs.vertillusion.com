@@ -66,6 +66,14 @@ export default {
           ]
         },
         {
+          avatar: 'https://avatars.githubusercontent.com/u/39179150',
+          name: '坨坨总是吃不上饭',
+          title: '个性签名',
+          links: [
+            { icon: 'github', link: 'https://github.com/ThalliumASH' },
+          ]
+        },
+        {
           avatar: 'https://avatars.githubusercontent.com/u/69663231',
           name: 'SlimeNull',
           title: '个性签名',
@@ -79,14 +87,6 @@ export default {
           title: '个性签名',
           links: [
             { icon: 'github', link: 'https://github.com/yuyudifiesh' },
-          ]
-        },
-        {
-          avatar: '',
-          name: '',
-          title: '个性签名',
-          links: [
-            { icon: 'github', link: 'https://github.com/yyx990803' },
           ]
         },
       ]
