@@ -66,19 +66,19 @@ export default {
           ]
         },
         {
-          avatar: '',
-          name: '',
+          avatar: 'https://avatars.githubusercontent.com/u/69663231',
+          name: 'SlimeNull',
           title: '个性签名',
           links: [
-            { icon: 'github', link: 'https://github.com/yyx990803' },
+            { icon: 'github', link: 'https://github.com/SlimeNull' },
           ]
         },
         {
-          avatar: '',
-          name: '',
+          avatar: 'https://avatars.githubusercontent.com/u/209813028',
+          name: 'Yuyudifiesh',
           title: '个性签名',
           links: [
-            { icon: 'github', link: 'https://github.com/yyx990803' },
+            { icon: 'github', link: 'https://github.com/yuyudifiesh' },
           ]
         },
         {
