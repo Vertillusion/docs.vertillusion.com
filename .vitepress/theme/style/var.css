@@ -1,0 +1,54 @@
+/* var.css */
+:root {
+  --vp-c-brand-1: #5c83ff;
+  --vp-c-brand-2: #4da6ff;
+  --vp-c-brand-3: #66b3ff;
+
+  /* 提示框背景颜色 */
+  --vp-custom-block-tip-bg: var(--vp-c-blue-soft);
+}
+
+.dark {
+  --vp-c-brand-1: #1e6bcb;
+  --vp-c-brand-2: #5c83ff;
+  --vp-c-brand-3: #4da6ff;
+  --vp-home-hero-image-filter: blur(40px);
+}
+
+/* 也可自行单独修改brand按钮 */
+/* :root {
+    --vp-button-brand-border: #F6CEEC;
+    --vp-button-brand-text: #F6CEEC;
+    --vp-button-brand-bg: #D939CD;
+  
+    --vp-button-brand-hover-border: #F6CEEC;
+    --vp-button-brand-hover-text: #fff;
+    --vp-button-brand-hover-bg: #D939CD;
+  
+    --vp-button-brand-active-border: #F6CEEC;
+  } */
+
+/* 提示框 */
+.custom-block.tip {
+  border-color: #5c83ff;
+}
+
+/* 警告框 */
+.custom-block.warning {
+  /* border-color: #d97706; */
+  border-color: var(--vp-c-yellow-2);
+}
+
+/* 危险框 */
+.custom-block.danger {
+  /* border-color: #f43f5e; */
+  border-color: var(--vp-c-red-2);
+}
+
+.medium-zoom-overlay {
+  z-index: 30;
+}
+
+.medium-zoom-image {
+  z-index: 9999 !important; /* 给的值是21，但是实测盖不住，直接999 */
+}
