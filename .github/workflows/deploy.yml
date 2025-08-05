@@ -1,0 +1,51 @@
+name: Deploy VitePress site to Pages
+
+on:
+  push:
+    branches: [source]
+
+# 设置token访问权限
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
+# 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # 构建工作
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm # 设置缓存
+      - name: Setup Pages
+        uses: actions/configure-pages@v3  # 在工作流程自动配置GithubPages
+      - name: Install dependencies
+        run: npm install # 安装依赖
+      - name: Build with VitePress
+        run: |
+          npm run docs:build # 启动项目
+      - name: Add CNAME and .nojekyll
+        run: |
+          cd .vitepress/dist
+          touch .nokekyll
+          echo 'docs.vertillusion.com' > CNAME
+      - name: Deploy to GitHub Pages
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: public
+          FOLDER: .vitepress/dist
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
