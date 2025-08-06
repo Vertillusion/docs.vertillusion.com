@@ -35,7 +35,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/61569726',
           name: '辰落火辉Haceau-Zoac',
-          title: '这个人很高冷',
+          title: '平和 坚韧 不悲伤',
           links: [
             { icon: 'github', link: 'https://github.com/Haceau-Zoac' },
           ]
@@ -76,7 +76,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/39179150',
           name: '坨坨总是吃不上饭',
-          title: '这个人很高冷',
+          title: '在幻想中碰撞出熠熠生辉的焰火，照亮无垠的星辰大海！',
           links: [
             { icon: 'github', link: 'https://github.com/ThalliumASH' },
           ]
