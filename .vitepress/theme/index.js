@@ -1,8 +1,9 @@
 // https://vitepress.dev/guide/custom-theme
-// 别改这里的东西
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
+import "./style/blur.css";
+import "./style/var.css";
 
 /** @type {import('vitepress').Theme} */
 export default {

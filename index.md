@@ -2,23 +2,21 @@
 layout: home
 
 hero:
-  name: "Vertillusion Studio"
-  text: "Vertillusion 文档"
-  tagline: 
-#  image: // 启用后在首页显示一个图片。（如需启用请删除本条注释）
-#    src: // 请引用完整链接，比如 https://example.com/image.png （如需启用请删除本条注释）
-#    alt: image
+  name: "Vilinko Studio"
+  text: "文档"
+
   actions:
     - theme: brand
-      text: LightFrame
-      link: /lightframe/index
+      text: GITHUB
+      link: https://github.com/Vertillusion
 
-# features: // 启用后在首页显示四个小板块。（如需启用请删除本条注释）
-#  - title: Feature A // 标题
-#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit // 描述
-#  - title: Feature B
-#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#  - title: Feature C
-#    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+features:
+  - title: LightFrame
+    details: 以轻量的方式定义自己喜欢的桌面
+    link: /docs/lightframe/index
+    linkText: 查看文档
+  - title: Vui.Parser
+    details: 为 VinaUI 写的一个简陋的解析器
+    link: /docs/vui.parser/index
+    linkText: 查看文档
 ---
-
