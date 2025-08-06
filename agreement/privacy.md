@@ -118,3 +118,6 @@
 - 如您对本隐私政策有任何疑问、建议或投诉，可通过以下方式联系我们：
   - 邮箱：[cimimoly@outlook.com](mailto:cimimoly@outlook.com)
 - 我们会在收到您的反馈后 15 个工作日内进行核实并回复。
+
+## 附录：第三方政策链接
+- [爱发电平台服务条款](https://afdian.com/term)

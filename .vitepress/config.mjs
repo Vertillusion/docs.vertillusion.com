@@ -118,6 +118,8 @@ export default defineConfig({
         items: [
           { text: '服务条款', link: '/agreement/tos' },
           { text: '隐私政策', link: '/agreement/privacy' },
+          { text: '未成年人保护条款', link: '/agreement/protect_child' },
+          { text: '付费服务协议', link: '/agreement/pay' },
         ]
       },
     ],
