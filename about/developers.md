@@ -19,7 +19,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/48214360',
           name: '沫海CimiMoly',
-          title: '个性签名',
+          title: '这个人很高冷',
           links: [
             { icon: 'github', link: 'https://github.com/EnderMo' },
           ]
@@ -27,7 +27,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/119720365',
           name: '悠笙iYoRoy',
-          title: '个性签名',
+          title: '这个人很高冷',
           links: [
             { icon: 'github', link: 'https://github.com/KaguraiYoRoy' },
           ]
@@ -35,7 +35,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/61569726',
           name: '辰落火辉Haceau-Zoac',
-          title: '个性签名',
+          title: '这个人很高冷',
           links: [
             { icon: 'github', link: 'https://github.com/Haceau-Zoac' },
           ]
@@ -43,7 +43,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/47657299',
           name: 'telecomadm1145',
-          title: '个性签名',
+          title: '这个人很高冷',
           links: [
             { icon: 'github', link: 'https://github.com/telecomadm1145' },
           ]
@@ -51,7 +51,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/52279718',
           name: 'Fuwaki',
-          title: '个性签名',
+          title: '允许404，但永不驻足，在堆栈深处，听见花开的声音',
           links: [
             { icon: 'github', link: 'https://github.com/Fuwaki' },
 
@@ -60,15 +60,23 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/62087089',
           name: 'xihale',
-          title: '个性签名',
+          title: '冥冥觉无物，历历使相生',
           links: [
             { icon: 'github', link: 'https://github.com/xihale' },
           ]
         },
         {
+          avatar: 'https://avatars.githubusercontent.com/u/107689645',
+          name: '魔影酱 Ender',
+          title: '如果我们都迷路了，那就到月亮上相见吧',
+          links: [
+            { icon: 'github', link: 'https://github.com/Ender-Cell' },
+          ]
+        },
+        {
           avatar: 'https://avatars.githubusercontent.com/u/39179150',
           name: '坨坨总是吃不上饭',
-          title: '个性签名',
+          title: '这个人很高冷',
           links: [
             { icon: 'github', link: 'https://github.com/ThalliumASH' },
           ]
@@ -76,7 +84,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/69663231',
           name: 'SlimeNull',
-          title: '个性签名',
+          title: '这个人很高冷',
           links: [
             { icon: 'github', link: 'https://github.com/SlimeNull' },
           ]
@@ -84,7 +92,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/209813028',
           name: 'Yuyudifiesh',
-          title: '个性签名',
+          title: '霞光尽处，秧海连天',
           links: [
             { icon: 'github', link: 'https://github.com/yuyudifiesh' },
           ]

@@ -48,7 +48,7 @@ export default defineConfig({
     
     // 页脚
     footer: {
-      copyright: '© 版权所有 2019 - 2025, Vilinko Studio - Meet, Inspire, Create..',
+      copyright: 'Copyright © 2019 - 2025 Vilinko Studio. All Rights Reserved.',
       message: '利用 VitePress 构建'
     },
     
@@ -82,7 +82,7 @@ export default defineConfig({
     sidebar: [
       {
         text: 'LightFrame',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '基本介绍', link: '/docs/lightframe/index' },
           { text: '使用教程', link: '/docs/lightframe/manual'}
@@ -90,14 +90,14 @@ export default defineConfig({
       },
       {
         text: 'Vui.Parser',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '基本介绍', link: '/docs/vui.parser/index' }
         ]
       },
       {
         text: 'LINKS',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '官方网站', link: 'https://www.vertillusion.com' },
           { text: 'LightFrame', link: 'https://lightframe.vertillusion.com' },
@@ -106,10 +106,18 @@ export default defineConfig({
       },
       {
         text: '关于我们',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '关于 Vilinko Studio', link: '/about/index' },
           { text: '开发者列表', link: '/about/developers' }
+        ]
+      },
+      {
+        text: '服务协议',
+        collapsed: true,
+        items: [
+          { text: '服务条款', link: '/agreement/tos' },
+          { text: '隐私政策', link: '/agreement/privacy' },
         ]
       },
     ],
