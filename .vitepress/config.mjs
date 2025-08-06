@@ -49,7 +49,7 @@ export default defineConfig({
     // 页脚
     footer: {
       copyright: 'Copyright © 2019 - 2025 Vilinko Studio. All Rights Reserved.',
-      message: '利用 VitePress 构建'
+      message: '<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2025454076号</a>'
     },
     
     // 标题栏
