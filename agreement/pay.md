@@ -1,4 +1,8 @@
 # Vilinko Studio 付费服务协议
+
+[【English Version】](/en/agreement/pay.md)
+
+
 ::: tip 版本
 初版发布日期：2025 年 8 月 6 日
 

@@ -1,4 +1,7 @@
 # Vilinko Studio 未成年人保护条款
+
+[【English Version】](/en/agreement/protect_child.md)
+
 ::: tip 版本
 初版发布日期：2025 年 8 月 6 日
 

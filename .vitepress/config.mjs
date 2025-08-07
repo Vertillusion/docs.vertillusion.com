@@ -6,6 +6,17 @@ export default defineConfig({
   head: [["link", { rel: "icon", href: "https://www.vilinko.com/img/Newico.png" }]],
   title: "Vilinko Studio 文档",
   description: "",
+  // 多语言配置
+  locales: {
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN',
+    },
+    en: {
+      label: 'English',
+      lang: 'en-US',
+    },
+  },
   themeConfig: {
     logo: {
       light: "https://www.vilinko.com/img/Newico.png",
@@ -28,12 +39,12 @@ export default defineConfig({
       options: {
         translations: {
           button: {
-            buttonText: "搜索文档",
-            buttonAriaLabel: "搜索文档"
+            buttonText: "ヾ(≧▽≦*)o",
+            buttonAriaLabel: "ヾ(≧▽≦*)o"
           },
           modal: {
-            noResultsText: "无法找到结果",
-            resetButtonTitle: "清除查询条件",
+            noResultsText: "(ノへ￣、)",
+            resetButtonTitle: "重置",
             footer: {
               selectLabel: "选择",
               navigateUpKey: "↑",
@@ -58,7 +69,7 @@ export default defineConfig({
       {
         text: "LINKS",
         items: [
-          { text: '官方网站', link: 'https://www.vilinko.com' },
+          { text: 'Vilinko Studio', link: 'https://www.vilinko.com' },
           { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
           { text: 'LFS', link: 'https://lfs.vertillusion.com' }
         ],
@@ -70,7 +81,7 @@ export default defineConfig({
         ],
       },
       {
-        text: "关于我们",
+        text: "ABOUT",
         items: [
           { text: '关于 Vilinko Studio', link: '/about/index' },
           { text: '开发者列表', link: '/about/developers' },
@@ -84,42 +95,42 @@ export default defineConfig({
         text: 'LightFrame',
         collapsed: true,
         items: [
-          { text: '基本介绍', link: '/docs/lightframe/index' },
-          { text: '使用教程', link: '/docs/lightframe/manual'}
+          { text: '基本介绍 / Basic Introduction', link: '/docs/lightframe/index' },
+          { text: '使用教程 / User Manual', link: '/docs/lightframe/manual'}
         ]
       },
       {
         text: 'Vui.Parser',
         collapsed: true,
         items: [
-          { text: '基本介绍', link: '/docs/vui.parser/index' }
+          { text: '基本介绍 / Basic Introduction', link: '/docs/vui.parser/index' }
         ]
       },
       {
-        text: 'LINKS',
+        text: '链接 / LINKS',
         collapsed: true,
         items: [
-          { text: '官方网站', link: 'https://www.vilinko.com' },
+          { text: 'Vilinko Studio', link: 'https://www.vilinko.com' },
           { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
           { text: 'LFS', link: 'https://lfs.vertillusion.com' }
         ]
       },
       {
-        text: '关于我们',
+        text: '关于 / ABOUT',
         collapsed: true,
         items: [
-          { text: '关于 Vilinko Studio', link: '/about/index' },
-          { text: '开发者列表', link: '/about/developers' }
+          { text: '关于 Vilinko / About Vilinko', link: '/about/index' },
+          { text: '开发者列表 / Developers', link: '/about/developers' }
         ]
       },
       {
-        text: '服务协议',
+        text: '服务协议 / Service Agreement',
         collapsed: true,
         items: [
-          { text: '服务条款', link: '/agreement/tos' },
-          { text: '隐私政策', link: '/agreement/privacy' },
-          { text: '未成年人保护条款', link: '/agreement/protect_child' },
-          { text: '付费服务协议', link: '/agreement/pay' },
+          { text: '服务条款 / Terms of Service', link: '/agreement/tos' },
+          { text: '隐私政策 / Privacy Policy', link: '/agreement/privacy' },
+          { text: '未成年人保护条款 / Minor Protection Terms', link: '/agreement/protect_child' },
+          { text: '付费服务协议 / Paid Service Agreement', link: '/agreement/pay' },
         ]
       },
     ],

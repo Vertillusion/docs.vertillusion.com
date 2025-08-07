@@ -1,4 +1,7 @@
 # Vilinko Studio 隐私政策
+
+[【English Version】](/en/agreement/privacy.md)
+
 ::: tip 版本
 初版发布日期：2025 年 8 月 6 日
 
