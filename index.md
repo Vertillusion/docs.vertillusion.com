@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: GITHUB
-      link: https://github.com/Vertillusion
+      link: https://github.com/VilinkoStudio
 
 features:
   - title: LightFrame

@@ -126,7 +126,7 @@ export default defineConfig({
 
     // 社交链接
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/Vertillusion/' }
+      { icon: 'github', link: 'https://github.com/VilinkoStudio' },
     ]
   }
 })

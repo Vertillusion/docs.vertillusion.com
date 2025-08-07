@@ -5,8 +5,7 @@
 :::
 
 ## 0x01 初次使用
-
-从[官网](https://lightframe.vertillusion.xyz/)下载 **LightFrame.zip** ，并解压到一个固定的文件夹。  
+从[官网](https://lightframe.vilinko.com/)下载 **LightFrame.zip** ，并解压到一个固定的文件夹。  
 **请勿直接在压缩包内打开！**  
 
 ### 此步骤常见问题处理
