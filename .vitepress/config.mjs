@@ -3,13 +3,13 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: "",
-  head: [["link", { rel: "icon", href: "https://www.vertillusion.com/img/Newico.png" }]],
+  head: [["link", { rel: "icon", href: "https://www.vilinko.com/img/Newico.png" }]],
   title: "Vilinko Studio 文档",
   description: "",
   themeConfig: {
     logo: {
-      light: "https://www.vertillusion.com/img/Newico.png",
-      dark: "https://www.vertillusion.com/img/Newico.png"
+      light: "https://www.vilinko.com/img/Newico.png",
+      dark: "https://www.vilinko.com/img/Newico.png"
     },
     // https://vitepress.dev/reference/default-theme-config
     // 页面导航
@@ -58,8 +58,8 @@ export default defineConfig({
       {
         text: "LINKS",
         items: [
-          { text: '官方网站', link: 'https://www.vertillusion.com' },
-          { text: 'LightFrame', link: 'https://lightframe.vertillusion.com' },
+          { text: '官方网站', link: 'https://www.vilinko.com' },
+          { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
           { text: 'LFS', link: 'https://lfs.vertillusion.com' }
         ],
       },
@@ -99,8 +99,8 @@ export default defineConfig({
         text: 'LINKS',
         collapsed: true,
         items: [
-          { text: '官方网站', link: 'https://www.vertillusion.com' },
-          { text: 'LightFrame', link: 'https://lightframe.vertillusion.com' },
+          { text: '官方网站', link: 'https://www.vilinko.com' },
+          { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
           { text: 'LFS', link: 'https://lfs.vertillusion.com' }
         ]
       },
