@@ -9,10 +9,14 @@ hero:
     - theme: brand
       text: GITHUB
       link: https://github.com/VilinkoStudio
+    - theme: alt
+      text: 创建工单
+      link: https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e
 
 features:
   - icon:
-      src: https://lightframe.vilinko.com/favicon.ico
+      dark: https://lightframe.vilinko.com/lightframe_dark.ico
+      light: https://lightframe.vilinko.com/favicon.ico
     title: LightFrame
     details: 完全免费、由每一个用户支持、面向用户的轻量级创作型桌面优化应用程序。
     link: /docs/lightframe/index

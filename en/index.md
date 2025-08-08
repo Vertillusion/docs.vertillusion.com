@@ -9,10 +9,14 @@ hero:
     - theme: brand
       text: GITHUB
       link: https://github.com/VilinkoStudio
+    - theme: alt
+      text: Create a ticket
+      link: https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e
 
 features:
   - icon:
-      src: https://lightframe.vilinko.com/favicon.ico
+      dark: https://lightframe.vilinko.com/lightframe_dark.ico
+      light: https://lightframe.vilinko.com/favicon.ico
     title: LightFrame
     details: Completely free, supported by every user, a lightweight desktop optimization application for users.
     link: /en/docs/lightframe/index
