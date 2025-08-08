@@ -60,7 +60,7 @@
 - 本协议的订立、效力、解释、履行及争议解决均适用中华人民共和国法律。
 - 因本协议引起的任何争议，双方应首先通过友好协商解决；协商不成的，任何一方均有权向 Vilinko Studio 所在地有管辖权的人民法院提起诉讼。
 - 我们有权根据法律法规变化或业务需要修改本协议，修改后的协议将在公布后生效。您继续使用付费服务即表示接受修改后的协议。
-- 如对本协议有任何疑问，可通过 [cimimoly@outlook.com](mailto:cimimoly@outlook.com) 与我们联系。
+- 如对本协议有任何疑问，可通过 [privacy@vilinko.com](mailto:privacy@vilinko.com) 与我们联系。
 
 ## 第三方政策链接
 - [爱发电平台服务条款](https://afdian.com/term)

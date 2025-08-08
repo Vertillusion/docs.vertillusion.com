@@ -62,4 +62,4 @@ In case of any conflict, the [**Simplified Chinese version**](/agreement/protect
 
 ## 8. Other Terms
 - We will revise these terms according to the update of laws and regulations and the development of services. The revised terms will be announced on official channels and notified to guardians through appropriate means.
-- If you have any questions about these terms, you can contact us via [cimimoly@outlook.com](mailto:cimimoly@outlook.com).
+- If you have any questions about these terms, you can contact us via [privacy@vilinko.com](mailto:privacy@vilinko.com).

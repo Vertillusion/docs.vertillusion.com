@@ -62,4 +62,4 @@
 
 ## 八、其他条款
 - 我们会根据法律法规的更新及服务发展情况，对本条款进行修订。修订后的条款将在官方渠道公布，并通过适当方式通知监护人。
-- 如对本条款有任何疑问，可通过 [cimimoly@outlook.com](mailto:cimimoly@outlook.com) 与我们联系。
+- 如对本条款有任何疑问，可通过 [privacy@vilinko.com](mailto:privacy@vilinko.com) 与我们联系。

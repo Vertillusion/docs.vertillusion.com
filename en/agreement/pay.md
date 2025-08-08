@@ -58,7 +58,7 @@ In case of any conflict, the [**Simplified Chinese version**](/agreement/pay.md)
 - The formation, validity, interpretation, performance and dispute resolution of this agreement shall be governed by the laws of the People's Republic of China.
 - Any dispute arising from this agreement shall first be resolved through friendly negotiation between the parties; if the negotiation fails, either party has the right to file a lawsuit with the people's court with jurisdiction at the location of Vilinko Studio.
 - We have the right to modify this agreement according to changes in laws and regulations or business needs. The modified agreement shall take effect after being published. Your continued use of paid services means that you accept the modified agreement.
-- If you have any questions about this agreement, you can contact us via [cimimoly@outlook.com](mailto:cimimoly@outlook.com).
+- If you have any questions about this agreement, you can contact us via [privacy@vilinko.com](mailto:privacy@vilinko.com).
 
 ## Links to Third-Party Policies
 - [Afadian Platform Service Terms](https://afdian.com/term)
