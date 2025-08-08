@@ -54,5 +54,9 @@
 - 9.4 本协议中的标题仅为方便阅读，不影响条款的解释。​
 - 9.5 联系我们：如您对本协议有任何疑问，可通过官方网站提供的联系方式与我们联系。​
 
-## 附录：第三方政策链接
+## 附录
+### 第三方政策链接
 - [爱发电平台服务条款](https://afdian.com/term)
+
+### 联系我们
+- 创建工单：[Vilinko Studio 工单创建助手](https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e)

@@ -19,39 +19,9 @@
 ## Bug Feedback
 You can feedback bugs through the following two channels:
 
-1. Visit the [forum](https://forum.vilinko.com/), register an account and post for help
-2. Add the room manager's QQ: 2016860442, collect error information and feedback bugs
+1. [Create a ticket](https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e)
 
-Please provide the **.vui** file under the `C:\Users\username\AppData\Roaming\LightFrame` folder, which will help determine the bug
-For the way of asking questions, please refer to [【Repost】The Art of Asking Questions - Vilinko Studio](https://forum.vilinko.com/d/34-ban-yun-ti-wen-de-yi-zhu)
-
-## About Program Customization
-Customization is essentially a kind of support for the work~
-Compared to direct sponsorship, you also get the special version you want owo
-### Customizable Range
-* Home background color (solid color/gradient)
-* Title bar color (solid color/gradient)
-* Buttons (solid color rounded corners/solid color right angles/solid color gradient)
-* Add/modify/delete interfaces (such as position/text/banner content/component or window style)
-* Specific UI
-* vui cards (custom sticky note style)
-* Personal practical functions (this takes a lot of time to do!)
-* etc.
-
-In the customized version, you can also set a special logo for yourself to display anywhere in the program
-Such as: title bar gold gradient " "
-
-### Pricing
-**Starting from 15 RMB** You can bid according to your subjective customization value (it takes some time to modify the source code specifically for customization w)
-People who have sponsored more than 10 RMB can directly get a private customization opportunity
-
-### Construction Period
-Generally, the customized application will be delivered within 14 days on school days QwQ
-Completed on the same day during long vacations or double weekends
-
-**Add the author's QQ: 2016860442 and make a request directly**
-Or make a reservation in the private message of Afdian~
-If you want to update the customization to the new version, you can bid again<sub>No need to update at the original price!</sub>
+Please provide the **.vui** file under the `C:\Users\username\AppData\Roaming\LightFrame` folder, which will help determine the bug.
 
 ## About Updates
 LightFrame **will not** update automatically, it will only start when the user clicks the **Check for Updates** button

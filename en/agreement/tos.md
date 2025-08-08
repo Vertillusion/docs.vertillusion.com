@@ -60,5 +60,9 @@ Thank you for using Vilinko Studio software. By using our services, you agree to
 - 9.4 The headings in this agreement are for convenience of reading only and do not affect the interpretation of the terms.
 - 9.5 Contact us: If you have any questions about this agreement, you can contact us through the contact information provided on the official website.
 
-## Appendix: Links to Third-Party Policies
+## Appendix
+### Links to Third-Party Policies
 - [Afadian Platform Service Terms](https://afdian.com/term)
+
+### Contact Us
+- Create a ticket: [Vilinko Studio Ticket Creation Assistant](https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e)

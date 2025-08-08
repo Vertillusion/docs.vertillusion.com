@@ -11,8 +11,10 @@ hero:
       link: https://github.com/VilinkoStudio
 
 features:
-  - title: LightFrame
-    details: 以轻量的方式定义自己喜欢的桌面
+  - icon:
+      src: https://lightframe.vilinko.com/favicon.ico
+    title: LightFrame
+    details: 完全免费、由每一个用户支持、面向用户的轻量级创作型桌面优化应用程序。
     link: /docs/lightframe/index
     linkText: 查看文档
   - title: Vui.Parser

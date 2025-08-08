@@ -11,8 +11,10 @@ hero:
       link: https://github.com/VilinkoStudio
 
 features:
-  - title: LightFrame
-    details: Define your favorite desktop in a lightweight way
+  - icon:
+      src: https://lightframe.vilinko.com/favicon.ico
+    title: LightFrame
+    details: Completely free, supported by every user, a lightweight desktop optimization application for users.
     link: /en/docs/lightframe/index
     linkText: View Documentation
   - title: Vui.Parser
