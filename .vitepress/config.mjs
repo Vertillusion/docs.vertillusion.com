@@ -95,7 +95,7 @@ export default withMermaid(
           items: [
             { text: 'Vilinko Studio', link: 'https://www.vilinko.com' },
             { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
-            { text: 'LFS', link: 'https://lfs.vertillusion.com' }
+            { text: 'LFS', link: 'https://lfs.vilinko.com' }
           ],
         },
         {
@@ -136,7 +136,7 @@ export default withMermaid(
           items: [
             { text: 'Vilinko Studio', link: 'https://www.vilinko.com' },
             { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
-            { text: 'LFS', link: 'https://lfs.vertillusion.com' }
+            { text: 'LFS', link: 'https://lfs.vilinko.com' }
           ]
         },
         {
