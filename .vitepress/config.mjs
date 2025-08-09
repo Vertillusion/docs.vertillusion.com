@@ -120,7 +120,8 @@ export default withMermaid(
           collapsed: true,
           items: [
             { text: '基本介绍 / Basic Introduction', link: '/docs/lightframe/index' },
-            { text: '使用教程 / User Manual', link: '/docs/lightframe/manual' }
+            { text: '使用教程 / User Manual', link: '/docs/lightframe/manual' },
+            { text: '自定义命令 / Custom Commands', link: '/docs/lightframe/code' }
           ]
         },
         {
