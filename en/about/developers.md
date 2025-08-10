@@ -66,6 +66,14 @@ export default {
           ]
         },
         {
+          avatar: '/img/baicai.png',
+          name: '白菜',
+          title: '血火锻诗脊作梁，霜刃裂史字凝伤。碑碣崩星溅寒句，九回肠铸万古芒。',
+          // links: [
+          //   { icon: 'github', link: 'https://github.com/xihale' },
+          // ]
+        },
+        {
           avatar: 'https://avatars.githubusercontent.com/u/107689645',
           name: '魔影酱 Ender',
           title: '如果我们都迷路了，那就到月亮上相见吧',

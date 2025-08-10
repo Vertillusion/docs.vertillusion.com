@@ -36,4 +36,5 @@ The update process is as follows:
 </sup>
 
 ## Other Information
-For contributors and update logs, please refer to the official website: https://lightframe.vilinko.com
+For contributors and update logs, please refer to the official website  
+<Linkcard url="https://lightframe.vilinko.com" title="LightFrame" description="https://lightframe.vilinko.com" logo="https://lightframe.vilinko.com/favicon.ico"/>

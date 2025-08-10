@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import vitepressProtectPlugin from "vitepress-protect-plugin";
 import { withMermaid } from 'vitepress-plugin-mermaid'; // mermaid
 let markdownItTaskCheckbox;
 import('markdown-it-task-checkbox') // todo
@@ -39,7 +40,17 @@ export default withMermaid(
         } else {
           console.warn('markdown-it-task-checkbox not loaded yet');
         }
-      }
+      },
+
+    },
+    vite: {
+      plugins: [
+        vitepressProtectPlugin({
+          disableF12: true, // F12开发者模式
+          disableCopy: true, // 文本复制
+          disableSelect: true, // 文本选择
+        }),
+      ],
     },
     themeConfig: {
       logo: {
