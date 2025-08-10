@@ -5,6 +5,9 @@
 - [容器](#容器)
 - [Mermaid 语法](#mermaid) `2025.08.07`
 - [Todo 语法](#todo) `2025.08.07`
+- [链接块](#linkcard) `2025.08.10`
+- [隐藏文字](#closeword) `2025.08.10`
+
 
 ## 代码高亮
 **输入**
@@ -162,3 +165,29 @@ graph LR
 - [ ] 吃饭
 - [ ] 睡觉
 - [x] 打豆豆
+
+## LinkCard
+```md
+格式
+<Linkcard url="链接" title="标题" description="描述" logo="图标"/>
+```
+
+**输入**
+```md
+<Linkcard url="https://www.vilinko.com" title="Vilinko Studio" description="https://www.vilinko.com" logo="https://www.vilinko.com/img/Newico.png"/>
+```
+
+**输出**
+<Linkcard url="https://www.vilinko.com" title="Vilinko Studio" description="https://www.vilinko.com" logo="https://www.vilinko.com/img/Newico.png"/>
+
+## CloseWord
+这是一个自定义的功能，语法参照下方示例，使用时文字会消失，但仍能被检索。
+
+**输入**
+```md
+这是一个自定义的功能，语法参照下方示例，使用时<cw>文字</cw>会消失，但仍能被检索。
+```
+**输出**  
+输出内容不可查看，您现在应该看不到“文字”字样。  
+这是一个自定义的功能，语法参照下方示例，使用时<cw>文字</cw>会消失，但仍能被检索。
+
