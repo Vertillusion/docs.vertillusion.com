@@ -41,7 +41,7 @@ jobs:
         run: |
           cd .vitepress/dist
           touch .nokekyll
-          echo 'docs.vertillusion.com' > CNAME
+          echo 'docs.vilinko.com' > CNAME
       - name: Deploy to GitHub Pages
         uses: s0/git-publish-subdir-action@develop
         env:
