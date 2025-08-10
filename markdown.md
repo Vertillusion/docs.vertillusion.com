@@ -1,8 +1,8 @@
-# Markdown 示例
-
 ---
 search: false
 ---
+
+# Markdown 示例
 
 ## 目录
 - [代码高亮](#代码高亮)
