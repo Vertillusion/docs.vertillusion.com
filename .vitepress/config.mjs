@@ -72,6 +72,7 @@ export default withMermaid(
       search: {
         provider: "local",
         options: {
+          enablePhraseSearch: true,
           translations: {
             button: {
               buttonText: "ヾ(≧▽≦*)o",
