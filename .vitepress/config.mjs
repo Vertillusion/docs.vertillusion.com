@@ -47,8 +47,8 @@ export default withMermaid(
       plugins: [
         vitepressProtectPlugin({
           disableF12: true, // F12开发者模式
-          disableCopy: true, // 文本复制
-          disableSelect: true, // 文本选择
+          disableCopy: false, // 文本复制
+          disableSelect: false, // 文本选择
         }),
       ],
     },
