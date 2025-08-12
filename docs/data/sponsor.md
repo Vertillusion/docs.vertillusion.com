@@ -6,7 +6,7 @@
 :::
 
 ::: warning 技术实现声明
-数据来源：爱发电（海南风泽科技有限公司）
+数据来源：爱发电（海南风泽科技有限公司）    
 技术实现文档：[爱发电开发者 API 和 Webhook](https://guide.afdian.com/creator/developer)
 :::
 
