@@ -6,6 +6,7 @@ import "./style/blur.css";
 import "./style/var.css";
   import Linkcard from "./components/Linkcard.vue";
 import Closeword from "./components/closeword.vue";
+import SponsorTable from "./components/SponsorTable.vue";
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -18,6 +19,7 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // 注册全局组件
     app.component('Linkcard', Linkcard)
+    app.component('SponsorTable', SponsorTable)
     // 注册Closeword组件，支持<Closeword>和<cw>两种标签
     app.component('Closeword', Closeword)
     app.component('cw', Closeword)
