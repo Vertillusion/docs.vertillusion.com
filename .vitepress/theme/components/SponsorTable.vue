@@ -1,6 +1,52 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
-import { useStorage } from '@vueuse/core'
+import { ref, watch, onMounted, Ref, UnwrapRef } from 'vue'
+// 使用localStorage替代@vueuse/core的useStorage，增加Date类型特殊处理
+const useStorage = <T>(key: string, defaultValue: T): Ref<T> => {
+  const storedValue = localStorage.getItem(key)
+  let initialValue: T
+
+  if (storedValue) {
+    try {
+      // 尝试解析存储的值
+      const parsed = JSON.parse(storedValue)
+      // 特殊处理Date类型
+      if (typeof parsed === 'string' && defaultValue instanceof Date) {
+        initialValue = new Date(parsed) as unknown as T
+      } else {
+        initialValue = parsed as T
+      }
+    } catch (error) {
+      console.error('解析localStorage数据失败:', error)
+      initialValue = defaultValue
+    }
+  } else {
+    initialValue = defaultValue
+  }
+
+  // 使用类型断言确保类型匹配
+  const value = ref<T>(initialValue) as Ref<T>
+
+  watch(value, (newValue) => {
+    // 特殊处理Date类型
+    if (newValue instanceof Date) {
+      localStorage.setItem(key, JSON.stringify(newValue.toISOString()))
+    } else {
+      localStorage.setItem(key, JSON.stringify(newValue))
+    }
+  })
+
+  return value
+}
+
+// 检查是否为有效日期
+const isValidDate = (date: Date | null): boolean => {
+  return date instanceof Date && !isNaN(date.getTime())
+}
+
+// 格式化日期
+const formatDate = (date: Date): string => {
+  return date.toLocaleDateString()
+}
 
 // 定义API响应类型
 interface SponsorResponse {
@@ -18,17 +64,45 @@ const sponsors = ref<string[]>([])
 const lastFetchDate = useStorage<Date | null>('lastFetchDate', null)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
+const canRefresh = ref(true) // 控制按钮是否可点击
+const refreshCountdown = ref(0) // 倒计时秒数
 
 // 从API获取赞助者数据
-const fetchSponsors = async () => {
+// forceRefresh: 是否强制刷新数据，忽略缓存
+const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
+  // 如果是强制刷新且按钮不可点击，则直接返回
+  if (forceRefresh && !canRefresh.value) {
+    return
+  }
+
+  // 如果是强制刷新，开始倒计时
+  if (forceRefresh) {
+    startRefreshCountdown();
+  }
   // 检查是否需要获取新数据（每15天一次）
   const now = new Date()
-  if (lastFetchDate.value) {
+  if (!forceRefresh && isValidDate(lastFetchDate.value)) {
     const diffTime = now.getTime() - lastFetchDate.value.getTime()
     const diffDays = diffTime / (1000 * 60 * 60 * 24)
     if (diffDays < 15) {
       console.log('数据未过期，使用缓存数据')
+      // 如果有缓存数据但sponsors为空，仍然尝试获取
+      if (sponsors.value.length === 0) {
+        // 尝试从localStorage加载数据
+        const storedSponsors = localStorage.getItem('sponsors')
+        if (storedSponsors) {
+          sponsors.value = JSON.parse(storedSponsors)
+        }
+      }
       return
+    } else {
+      console.log('数据已过期，需要获取新数据')
+    }
+  } else {
+    if (forceRefresh) {
+      console.log('用户强制刷新，获取新数据')
+    } else {
+      console.log('lastFetchDate不是有效的Date对象，需要获取新数据')
     }
   }
 
@@ -36,22 +110,67 @@ const fetchSponsors = async () => {
   error.value = null
 
   try {
-    const response = await fetch('https://api.vilinko.com/sponsors/all')
+    // 添加超时处理
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 10000)
+
+    // 使用代理路径解决CORS问题
+    const apiUrl = '/api/sponsors/all'
+    console.log('正在请求API (通过代理):', apiUrl)
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      signal: controller.signal,
+      // 尝试添加credentials配置解决跨域问题
+      credentials: 'include'
+    })
+
+    clearTimeout(timeoutId)
+    console.log('API响应状态:', response.status)
+
     if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`)
+      throw new Error(`HTTP错误! 状态码: ${response.status}, 状态文本: ${response.statusText}`)
     }
 
     const data: SponsorResponse = await response.json()
+    console.log('API响应数据:', data)
     if (data.code === 200) {
       sponsors.value = data.data.sponsors
       lastFetchDate.value = now
+      // 保存到localStorage
+      localStorage.setItem('sponsors', JSON.stringify(sponsors.value))
       console.log('数据获取成功')
     } else {
-      throw new Error(`API error! message: ${data.message}`)
+      throw new Error(`API错误! 代码: ${data.code}, 消息: ${data.message}`)
     }
   } catch (err) {
-    error.value = err instanceof Error ? err.message : '获取数据失败'
-    console.error('获取数据失败:', err)
+    let errorMessage = '未知错误'
+    if (err instanceof Error) {
+      errorMessage = err.message
+      // 处理不同类型的错误
+      if (errorMessage.includes('AbortError')) {
+        errorMessage = '请求超时，请检查网络连接'
+      } else if (errorMessage.includes('Failed to fetch')) {
+        errorMessage = '无法连接到API服务器，可能是网络问题或CORS限制'
+      }
+    }
+    error.value = `获取数据失败: ${errorMessage}`
+    console.error('获取数据失败详情:', err)
+
+    // 尝试从localStorage加载缓存数据
+    const storedSponsors = localStorage.getItem('sponsors')
+    if (storedSponsors) {
+      sponsors.value = JSON.parse(storedSponsors)
+      error.value += ' (已加载本地缓存数据)'
+    } else if (retryCount < 3) {
+      // 重试机制
+      error.value += ` (${3 - retryCount}秒后重试...)`
+      setTimeout(() => {
+        fetchSponsors(retryCount + 1)
+      }, 3000)
+    }
   } finally {
     isLoading.value = false
   }
@@ -80,6 +199,28 @@ const getTwoColumnData = () => {
 onMounted(() => {
   fetchSponsors()
 })
+
+// 开始刷新倒计时
+const startRefreshCountdown = () => {
+  canRefresh.value = false;
+  refreshCountdown.value = 360; // 6分钟 = 360秒
+
+  const countdownInterval = setInterval(() => {
+    refreshCountdown.value--;
+
+    if (refreshCountdown.value <= 0) {
+      clearInterval(countdownInterval);
+      canRefresh.value = true;
+    }
+  }, 1000);
+}
+
+// 格式化倒计时显示
+const formatCountdown = () => {
+  const minutes = Math.floor(refreshCountdown.value / 60);
+  const seconds = refreshCountdown.value % 60;
+  return `${minutes}分${seconds}秒`;
+}
 
 // 提供给父组件的方法
 defineExpose({
@@ -120,9 +261,15 @@ defineExpose({
       暂无赞助者数据
     </p>
 
-    <p class="update-info" v-if="lastFetchDate">
-      数据最后更新时间: {{ lastFetchDate.toLocaleDateString() }}
+    <p class="update-info" v-if="isValidDate(lastFetchDate)">
+      数据最后更新时间: {{ formatDate(lastFetchDate as Date) }}
     </p>
+
+    <div class="refresh-button-container">
+      <button @click="fetchSponsors(0, true)" :disabled="isLoading || !canRefresh">
+        {{ isLoading ? '刷新中...' : (canRefresh ? '强制刷新' : `请等待${formatCountdown()}`) }}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -144,7 +291,7 @@ defineExpose({
 .sponsor-table td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #454545a6;
 }
 
 .sponsor-table th {
@@ -152,9 +299,7 @@ defineExpose({
   font-weight: 600;
 }
 
-.sponsor-table tr:hover {
-  background-color: #f5f5f5;
-}
+
 
 .loading,
 .error,
@@ -172,5 +317,29 @@ defineExpose({
   font-size: 14px;
   color: var(--vp-c-text-2);
   margin-top: 10px;
+}
+
+.refresh-button-container {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.refresh-button-container button {
+  padding: 6px 12px;
+  background-color: var(--vp-c-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refresh-button-container button:hover {
+  background-color: var(--vp-c-primary-dark);
+}
+
+.refresh-button-container button:disabled {
+  background-color: var(--vp-c-gray-3);
+  cursor: not-allowed;
 }
 </style>
