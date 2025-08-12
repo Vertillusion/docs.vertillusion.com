@@ -114,9 +114,16 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     const controller = new AbortController()
     const timeoutId = setTimeout(() => controller.abort(), 10000)
 
-    // 使用代理路径解决CORS问题
-    const apiUrl = '/api/sponsors/all'
-    console.log('正在请求API (通过代理):', apiUrl)
+    // 优先使用代理路径，备用方案使用完整URL
+    let apiUrl = '/api/sponsors/all';
+    // 线上环境可能需要直接使用完整URL
+    const isProduction = process.env.NODE_ENV === 'production';
+    if (isProduction) {
+      apiUrl = 'https://api.vilinko.com/sponsors/all';
+      console.log('生产环境，使用完整API URL:', apiUrl);
+    } else {
+      console.log('开发环境，使用代理路径:', apiUrl);
+    }
     const response = await fetch(apiUrl, {
       method: 'GET',
       headers: {
@@ -131,7 +138,8 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     console.log('API响应状态:', response.status)
 
     if (!response.ok) {
-      throw new Error(`HTTP错误! 状态码: ${response.status}, 状态文本: ${response.statusText}`)
+      console.error(`API请求失败，状态码: ${response.status}, 状态文本: ${response.statusText}, 请求URL: ${apiUrl}`);
+      throw new Error(`HTTP错误! 状态码: ${response.status}, 状态文本: ${response.statusText}, 请求URL: ${apiUrl}`)
     }
 
     const data: SponsorResponse = await response.json()
