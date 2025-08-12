@@ -3,6 +3,8 @@
 ::: tip TIP
 - Official Website: [LightFrame - Define Your Favorite Desktop](https://lightframe.vilinko.com/)
 - Developer: [沫狐奶昔 CimiMoly](https://github.com/EnderMo)
+- [User Manual](/docs/lightframe/manual)
+- [Custom Command List](/docs/lightframe/code)
 :::
 
 ## Software Features

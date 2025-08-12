@@ -2,7 +2,9 @@
 
 ::: tip TIP
 - 传送门：[LightFrame 官方网站-定义热爱的桌面](https://lightframe.vilinko.com/)
-- 开发：[沫狐奶昔 CimiMoly](https://github.com/EnderMo)  
+- 开发：[沫狐奶昔 CimiMoly](https://github.com/EnderMo)
+- [使用教程](/docs/lightframe/manual)
+- [自定义命令列表](/docs/lightframe/code)
 :::
 
 ## 软件特点
