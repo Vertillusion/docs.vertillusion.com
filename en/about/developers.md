@@ -70,7 +70,7 @@ export default {
           name: '白菜',
           title: '血火锻诗脊作梁，霜刃裂史字凝伤。碑碣崩星溅寒句，九回肠铸万古芒。',
           links: [
-            { icon: 'external-link', link: 'http://www.cabbage-white.top' },
+            { icon: 'github', link: 'http://www.cabbage-white.top' },
           ]
         },
         {
