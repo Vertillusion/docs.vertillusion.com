@@ -11,7 +11,7 @@ hero:
       link: https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e
     - theme: alt
       text: Sponsor List
-      link: /en/docs/data/sponsor.md
+      link: /docs/data/sponsor.md
 
 features:
   - icon:
