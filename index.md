@@ -7,11 +7,11 @@ hero:
 
   actions:
     - theme: brand
-      text: GITHUB
-      link: https://github.com/VilinkoStudio
-    - theme: alt
       text: 创建工单
       link: https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e
+    - theme: alt
+      text: 赞助者列表
+      link: /docs/data/sponsor.md
 
 features:
   - icon:

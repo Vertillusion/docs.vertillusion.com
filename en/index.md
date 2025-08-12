@@ -7,11 +7,11 @@ hero:
 
   actions:
     - theme: brand
-      text: GITHUB
-      link: https://github.com/VilinkoStudio
-    - theme: alt
       text: Create a ticket
       link: https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e
+    - theme: alt
+      text: Sponsor List
+      link: /en/docs/data/sponsor.md
 
 features:
   - icon:
