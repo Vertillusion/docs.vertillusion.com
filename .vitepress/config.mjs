@@ -16,7 +16,7 @@ export default withMermaid(
     base: "",
     head: [["link", { rel: "icon", href: "https://www.vilinko.com/img/Newico.png" }]],
     title: "Vilinko Studio 文档",
-    description: "",
+    description:  "Vilinko Studio 文档，提供产品的使用说明和用户服务支持。",
     // 多语言配置
     locales: {
       root: {
@@ -127,6 +127,13 @@ export default withMermaid(
 
       // 左侧菜单
       sidebar: [
+        {
+          text: 'Universe',
+          collapsed: true,
+          items: [
+            { text: '介绍 / Introduction', link: '/docs/universe/index' }
+          ]
+        },
         {
           text: 'LightFrame',
           collapsed: true,

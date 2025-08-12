@@ -25,4 +25,8 @@ features:
     details: 为 VinaUI 写的一个简陋的解析器
     link: /docs/vui.parser/index
     linkText: 查看文档
+  - title: Vilinko Universe
+    details: 一款专为 Vilinko 工作室各类产品提供更新、扩展及启动功能的软件。
+    link: /docs/universe/index
+    linkText: 查看文档
 ---
