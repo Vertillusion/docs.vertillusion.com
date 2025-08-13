@@ -124,72 +124,15 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     } else {
       console.log('开发环境，使用代理路径:', apiUrl);
     }
-
-    // 为生产环境添加额外的CORS相关请求头
-    const headers = {
-      'Content-Type': 'application/json',
-      'Accept': '*/*',
-      'Cache-Control': 'no-cache',
-      'Pragma': 'no-cache'
-    };
-
-    if (isProduction) {
-      // 添加Origin头以帮助服务器识别请求来源
-      headers['Origin'] = 'https://docs.vilinko.com';
-      console.log('添加Origin请求头:', headers['Origin']);
-    }
-
-    console.log('请求头:', headers);
-
-    let response;
-    try {
-      // 首先尝试正常fetch
-      response = await fetch(apiUrl, {
-        method: 'GET',
-        headers: headers,
-        signal: controller.signal,
-        // 尝试添加credentials配置解决跨域问题
-        credentials: 'include'
-      });
-    } catch (fetchError) {
-      // 如果发生CORS错误，尝试使用no-cors模式作为备选
-      if (isProduction && fetchError instanceof TypeError && fetchError.message.includes('Failed to fetch')) {
-        console.warn('正常fetch失败，尝试使用no-cors模式');
-        response = await fetch(apiUrl, {
-          method: 'GET',
-          headers: headers,
-          signal: controller.signal,
-          credentials: 'include',
-          mode: 'no-cors'
-        });
-        // no-cors模式下无法访问响应内容，所以我们只能假设它成功了
-        console.warn('no-cors模式请求已发送，但无法验证响应');
-        // 尝试从localStorage加载数据
-        const storedSponsors = localStorage.getItem('sponsors');
-        if (storedSponsors) {
-          sponsors.value = JSON.parse(storedSponsors);
-          error.value = '获取数据失败: 可能是CORS限制 (已加载本地缓存数据)';
-        } else {
-          error.value = '获取数据失败: 可能是CORS限制 (无本地缓存数据)';
-        }
-        return;
-      } else {
-        throw fetchError;
-      }
-    }
-
-    // 记录响应头中的CORS相关信息
-    console.log('响应头:', Array.from(response.headers.entries()));
-    if (response.headers.has('Access-Control-Allow-Origin')) {
-      console.log('Access-Control-Allow-Origin:', response.headers.get('Access-Control-Allow-Origin'));
-    } else {
-      console.log('响应头中没有Access-Control-Allow-Origin');
-    }
-    if (response.headers.has('Access-Control-Allow-Credentials')) {
-      console.log('Access-Control-Allow-Credentials:', response.headers.get('Access-Control-Allow-Credentials'));
-    } else {
-      console.log('响应头中没有Access-Control-Allow-Credentials');
-    }
+    const response = await fetch(apiUrl, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      signal: controller.signal,
+      // 尝试添加credentials配置解决跨域问题
+      credentials: 'include'
+    })
 
     clearTimeout(timeoutId)
     console.log('API响应状态:', response.status)
