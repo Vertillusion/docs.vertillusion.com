@@ -126,18 +126,10 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
   }
 
   isLoading.value = true
-  error.value = null
+    error.value = null
 
-  try {
-    // 添加超时处理
-    const controller = new AbortController()
-    const timeoutId = setTimeout(() => controller.abort(), 10000)
-
-    // 灵活配置API请求路径
-    // 可以通过环境变量或配置决定是否使用代理
+    // 灵活配置API请求路径 - 移到顶部确保作用域正确
     const isProduction = process.env.NODE_ENV === 'production';
-    // 生产环境也可以选择是否使用代理
-    // 临时将默认值改为false，直接调用API以排查404问题
     const useProxyInProduction = false; // 根据需要修改此配置
     
     let apiUrl;
@@ -149,12 +141,17 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
       console.log('正在请求API (通过代理):', apiUrl);
     }
 
+    // 添加超时处理 - 移到外部try块之前，确保在catch中可访问
+    const controller = new AbortController()
+    const timeoutId = setTimeout(() => controller.abort(), 10000)
+    try {
+
     // 添加API路径检查
     if (apiUrl.includes('/api/sponsors/all') && isProduction) {
       console.warn('生产环境中使用代理路径可能导致404错误，请确认服务器代理配置是否正确');
     }
-    // 配置CORS请求选项
-    const fetchOptions = {
+    // 预先定义fetchOptions，确保在整个函数作用域内可访问
+    let fetchOptions = {
       method: 'GET',
       headers: {
           'Content-Type': 'application/json',
@@ -163,9 +160,7 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
         },
       signal: controller.signal,
       credentials: 'include',
-      // 明确指定CORS模式
       mode: 'cors',
-      // 允许重定向
       redirect: 'follow'
     };
 
