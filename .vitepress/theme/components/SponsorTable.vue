@@ -136,8 +136,9 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     // 灵活配置API请求路径
     // 可以通过环境变量或配置决定是否使用代理
     const isProduction = process.env.NODE_ENV === 'production';
-    // 生产环境默认使用代理，避免直接调用可能被拦截
-    const useProxyInProduction = true; // 改为true，优先使用代理
+    // 生产环境也可以选择是否使用代理
+    // 临时将默认值改为false，直接调用API以排查404问题
+    const useProxyInProduction = false; // 根据需要修改此配置
     
     let apiUrl;
     if (isProduction && !useProxyInProduction) {
@@ -146,6 +147,11 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     } else {
       apiUrl = '/api/sponsors/all';
       console.log('正在请求API (通过代理):', apiUrl);
+    }
+
+    // 添加API路径检查
+    if (apiUrl.includes('/api/sponsors/all') && isProduction) {
+      console.warn('生产环境中使用代理路径可能导致404错误，请确认服务器代理配置是否正确');
     }
     // 配置CORS请求选项
     const fetchOptions = {
@@ -169,7 +175,12 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     console.log('API响应状态:', response.status)
 
     if (!response.ok) {
-      throw new Error(`HTTP错误! 状态码: ${response.status}, 状态文本: ${response.statusText}`)
+      // 增强404错误处理
+      if (response.status === 404) {
+        throw new Error(`API端点不存在! 请检查API路径是否正确: ${apiUrl}`)
+      } else {
+        throw new Error(`HTTP错误! 状态码: ${response.status}, 状态文本: ${response.statusText}`)
+      }
     }
 
     const data: SponsorResponse = await response.json()
