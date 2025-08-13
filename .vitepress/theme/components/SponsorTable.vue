@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch, onMounted, Ref, UnwrapRef } from 'vue'
-// 使用localStorage替代@vueuse/core的useStorage，增加Date类型特殊处理
+// 使用localStorage替代@vueuse/core的useStorage，增强Date类型处理
 // isDateType: 标识该值是否应该被视为Date类型处理
 const useStorage = <T>(key: string, defaultValue: T, isDateType = false): Ref<T> => {
   const storedValue = localStorage.getItem(key)
@@ -11,9 +11,10 @@ const useStorage = <T>(key: string, defaultValue: T, isDateType = false): Ref<T>
       // 尝试解析存储的值
       const parsed = JSON.parse(storedValue)
       // 特殊处理Date类型
-      if (isDateType && typeof parsed === 'string') {
-        // 即使defaultValue是null，只要指定了isDateType为true，也按Date类型处理
-        initialValue = new Date(parsed) as unknown as T
+      if (isDateType) {
+        // 安全解析日期字符串
+        const date = safeParseDate(typeof parsed === 'string' ? parsed : null);
+        initialValue = (date || defaultValue) as unknown as T
       } else {
         initialValue = parsed as T
       }
@@ -41,8 +42,20 @@ const useStorage = <T>(key: string, defaultValue: T, isDateType = false): Ref<T>
 }
 
 // 检查是否为有效日期
-const isValidDate = (date: Date | null): boolean => {
+const isValidDate = (date: Date | null | string): boolean => {
+  // 处理字符串类型的日期
+  if (typeof date === 'string') {
+    const parsedDate = new Date(date);
+    return !isNaN(parsedDate.getTime());
+  }
   return date instanceof Date && !isNaN(date.getTime())
+}
+
+// 安全地解析日期
+const safeParseDate = (dateStr: string | null): Date | null => {
+  if (!dateStr) return null;
+  const date = new Date(dateStr);
+  return isValidDate(date) ? date : null;
 }
 
 // 格式化日期
@@ -123,8 +136,8 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     // 灵活配置API请求路径
     // 可以通过环境变量或配置决定是否使用代理
     const isProduction = process.env.NODE_ENV === 'production';
-    // 生产环境也可以选择使用代理，默认为直接调用
-    const useProxyInProduction = false; // 根据需要修改此配置
+    // 生产环境默认使用代理，避免直接调用可能被拦截
+    const useProxyInProduction = true; // 改为true，优先使用代理
     
     let apiUrl;
     if (isProduction && !useProxyInProduction) {
@@ -178,8 +191,28 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
       if (errorMessage.includes('AbortError')) {
         errorMessage = '请求超时，请检查网络连接'
     } else if (errorMessage.includes('Failed to fetch')) {
-        // 检测是否为跨域错误
-        if (navigator.userAgent.includes('Chrome')) {
+        // 检测是否为客户端阻止错误
+        if (err instanceof TypeError && errorMessage.includes('Failed to fetch') && navigator.userAgent.includes('Chrome')) {
+            // 尝试使用代理重新请求
+            if (apiUrl === 'https://api.vilinko.com/sponsors/all') {
+                errorMessage = 'API请求被浏览器阻止，尝试使用代理重新请求...';
+                console.warn(errorMessage);
+                // 关闭当前控制器
+                controller.abort();
+                // 切换到代理模式并重试
+                apiUrl = '/api/sponsors/all';
+                console.log('切换到代理模式:', apiUrl);
+                // 重新设置fetch选项
+                fetchOptions.signal = new AbortController().signal;
+                // 延迟1秒后重试
+                setTimeout(() => {
+                    fetchSponsors(retryCount + 1, forceRefresh);
+                }, 1000);
+                return;
+            } else {
+                errorMessage = '无法连接到API服务器，可能是网络问题或浏览器扩展拦截。\n\n解决方案提示:\n1. 检查网络连接\n2. 暂时禁用浏览器扩展\n3. 尝试使用其他浏览器';
+            }
+        } else if (navigator.userAgent.includes('Chrome')) {
             errorMessage = '无法连接到API服务器，可能是网络问题或CORS限制。\n\n解决方案提示:\n1. 确认API服务器已正确配置CORS\n2. 尝试使用代理服务器转发请求\n3. 检查浏览器安全策略';
         } else {
             errorMessage = '无法连接到API服务器，可能是网络问题或CORS限制';
