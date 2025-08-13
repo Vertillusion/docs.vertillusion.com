@@ -1,18 +1,14 @@
 <script setup lang="ts">
 import { ref, watch, onMounted, Ref, UnwrapRef } from 'vue'
 // 使用localStorage替代@vueuse/core的useStorage，增强Date类型处理
-// isDateType: 标识该值是否应该被视为Date类型处理
 const useStorage = <T>(key: string, defaultValue: T, isDateType = false): Ref<T> => {
   const storedValue = localStorage.getItem(key)
   let initialValue: T
 
   if (storedValue) {
     try {
-      // 尝试解析存储的值
       const parsed = JSON.parse(storedValue)
-      // 特殊处理Date类型
       if (isDateType) {
-        // 安全解析日期字符串
         const date = safeParseDate(typeof parsed === 'string' ? parsed : null);
         initialValue = (date || defaultValue) as unknown as T
       } else {
@@ -26,11 +22,9 @@ const useStorage = <T>(key: string, defaultValue: T, isDateType = false): Ref<T>
     initialValue = defaultValue
   }
 
-  // 使用类型断言确保类型匹配
   const value = ref<T>(initialValue) as Ref<T>
 
   watch(value, (newValue) => {
-    // 特殊处理Date类型
     if (isDateType && newValue instanceof Date) {
       localStorage.setItem(key, JSON.stringify(newValue.toISOString()))
     } else {
@@ -41,9 +35,7 @@ const useStorage = <T>(key: string, defaultValue: T, isDateType = false): Ref<T>
   return value
 }
 
-// 检查是否为有效日期
 const isValidDate = (date: Date | null | string): boolean => {
-  // 处理字符串类型的日期
   if (typeof date === 'string') {
     const parsedDate = new Date(date);
     return !isNaN(parsedDate.getTime());
@@ -51,14 +43,12 @@ const isValidDate = (date: Date | null | string): boolean => {
   return date instanceof Date && !isNaN(date.getTime())
 }
 
-// 安全地解析日期
 const safeParseDate = (dateStr: string | null): Date | null => {
   if (!dateStr) return null;
   const date = new Date(dateStr);
   return isValidDate(date) ? date : null;
 }
 
-// 格式化日期
 const formatDate = (date: Date): string => {
   return date.toLocaleDateString()
 }
@@ -80,18 +70,14 @@ const sponsors = ref<string[]>([])
 const lastFetchDate = useStorage<Date | null>('lastFetchDate', null, true)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
-const canRefresh = ref(true) // 控制按钮是否可点击
-const refreshCountdown = ref(0) // 倒计时秒数
+const canRefresh = ref(true)
+const refreshCountdown = ref(0)
 
-// 从API获取赞助者数据
-// forceRefresh: 是否强制刷新数据，忽略缓存
 const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
-  // 如果是强制刷新且按钮不可点击，则直接返回
   if (forceRefresh && !canRefresh.value) {
     return
   }
 
-  // 如果是强制刷新，开始倒计时
   if (forceRefresh) {
     startRefreshCountdown();
   }
@@ -102,9 +88,7 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     const diffDays = diffTime / (1000 * 60 * 60 * 24)
     if (diffDays < 15) {
       console.log('数据未过期，使用缓存数据')
-      // 如果有缓存数据但sponsors为空，仍然尝试获取
       if (sponsors.value.length === 0) {
-        // 尝试从localStorage加载数据
         const storedSponsors = localStorage.getItem('sponsors')
         if (storedSponsors) {
           sponsors.value = JSON.parse(storedSponsors)
@@ -119,7 +103,6 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
       console.log('用户强制刷新，获取新数据')
     } else {
       console.log('lastFetchDate不是有效的Date对象，需要获取新数据');
-      // 清除无效的localStorage数据
       localStorage.removeItem('lastFetchDate');
       console.log('已清除无效的lastFetchDate数据')
     }
@@ -135,10 +118,10 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     let apiUrl;
     if (isProduction && !useProxyInProduction) {
       apiUrl = 'https://api.vilinko.com/sponsors/all';
-      console.log('正在请求API (直接):', apiUrl);
+      console.log('正在请求API (直接)');
     } else {
       apiUrl = '/api/sponsors/all';
-      console.log('正在请求API (通过代理):', apiUrl);
+      console.log('正在请求API (通过代理)');
     }
 
     // 添加超时处理 - 移到外部try块之前，确保在catch中可访问
@@ -146,7 +129,6 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     const timeoutId = setTimeout(() => controller.abort(), 10000)
     try {
 
-    // 添加API路径检查
     if (apiUrl.includes('/api/sponsors/all') && isProduction) {
       console.warn('生产环境中使用代理路径可能导致404错误，请确认服务器代理配置是否正确');
     }
@@ -170,11 +152,10 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     console.log('API响应状态:', response.status)
 
     if (!response.ok) {
-      // 增强404错误处理
       if (response.status === 404) {
-        throw new Error(`API端点不存在! 请检查API路径是否正确: ${apiUrl}`)
+        throw new Error(`Error：110001`)
       } else {
-        throw new Error(`HTTP错误! 状态码: ${response.status}, 状态文本: ${response.statusText}`)
+        throw new Error(`Error：110002`)
       }
     }
 
@@ -183,45 +164,37 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     if (data.code === 200) {
       sponsors.value = data.data.sponsors
       lastFetchDate.value = now
-      // 保存到localStorage
       localStorage.setItem('sponsors', JSON.stringify(sponsors.value))
       console.log('数据获取成功')
     } else {
-      throw new Error(`API错误! 代码: ${data.code}, 消息: ${data.message}`)
+      throw new Error(`Error：110003`)
     }
   } catch (err) {
-    let errorMessage = '未知错误'
+    let errorMessage = 'Error：130001'
     if (err instanceof Error) {
       errorMessage = err.message
-      // 处理不同类型的错误
       if (errorMessage.includes('AbortError')) {
-        errorMessage = '请求超时，请检查网络连接'
+        errorMessage = 'Error：100001'
     } else if (errorMessage.includes('Failed to fetch')) {
-        // 检测是否为客户端阻止错误
         if (err instanceof TypeError && errorMessage.includes('Failed to fetch') && navigator.userAgent.includes('Chrome')) {
-            // 尝试使用代理重新请求
             if (apiUrl === 'https://api.vilinko.com/sponsors/all') {
-                errorMessage = 'API请求被浏览器阻止，尝试使用代理重新请求...';
+                errorMessage = 'Error：100002';
                 console.warn(errorMessage);
-                // 关闭当前控制器
                 controller.abort();
-                // 切换到代理模式并重试
                 apiUrl = '/api/sponsors/all';
-                console.log('切换到代理模式:', apiUrl);
-                // 重新设置fetch选项
+                console.log('切换到代理模式');
                 fetchOptions.signal = new AbortController().signal;
-                // 延迟1秒后重试
                 setTimeout(() => {
                     fetchSponsors(retryCount + 1, forceRefresh);
                 }, 1000);
                 return;
             } else {
-                errorMessage = '无法连接到API服务器，可能是网络问题或浏览器扩展拦截。\n\n解决方案提示:\n1. 检查网络连接\n2. 暂时禁用浏览器扩展\n3. 尝试使用其他浏览器';
+                errorMessage = 'Error：100003';
             }
         } else if (navigator.userAgent.includes('Chrome')) {
-            errorMessage = '无法连接到API服务器，可能是网络问题或CORS限制。\n\n解决方案提示:\n1. 确认API服务器已正确配置CORS\n2. 尝试使用代理服务器转发请求\n3. 检查浏览器安全策略';
+            errorMessage = 'Error：100004';
         } else {
-            errorMessage = '无法连接到API服务器，可能是网络问题或CORS限制';
+            errorMessage = 'Error：100005';
         }
     } else if (errorMessage.includes('404')) {
         errorMessage = 'API端点不存在，请检查API路径是否正确'
@@ -230,13 +203,11 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     error.value = `获取数据失败: ${errorMessage}`
     console.error('获取数据失败详情:', err)
 
-    // 尝试从localStorage加载缓存数据
     const storedSponsors = localStorage.getItem('sponsors')
     if (storedSponsors) {
       sponsors.value = JSON.parse(storedSponsors)
       error.value += ' (已加载本地缓存数据)'
     } else if (retryCount < 3) {
-      // 重试机制
       error.value += ` (${3 - retryCount}秒后重试...)`
       setTimeout(() => {
         fetchSponsors(retryCount + 1)
@@ -247,7 +218,6 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
   }
 }
 
-// 将赞助者数据转换为两列数组
 const getTwoColumnData = () => {
   const twoColumnData: string[][] = []
   const midIndex = Math.ceil(sponsors.value.length / 2)
@@ -266,12 +236,10 @@ const getTwoColumnData = () => {
   return twoColumnData
 }
 
-// 在组件挂载时获取数据
 onMounted(() => {
   fetchSponsors()
 })
 
-// 开始刷新倒计时
 const startRefreshCountdown = () => {
   canRefresh.value = false;
   refreshCountdown.value = 360; // 6分钟 = 360秒
@@ -286,7 +254,6 @@ const startRefreshCountdown = () => {
   }, 1000);
 }
 
-// 格式化倒计时显示
 const formatCountdown = () => {
   const minutes = Math.floor(refreshCountdown.value / 60);
   const seconds = refreshCountdown.value % 60;
@@ -370,8 +337,6 @@ defineExpose({
   font-weight: 600;
 }
 
-
-
 .loading,
 .error,
 .no-data {
@@ -398,7 +363,7 @@ defineExpose({
 .refresh-button-container button {
   padding: 6px 12px;
   background-color: var(--vp-c-primary);
-  color: white;
+  color: #5c83ff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
