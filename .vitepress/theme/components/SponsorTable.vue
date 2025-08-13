@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { ref, watch, onMounted, Ref, UnwrapRef } from 'vue'
 // 使用localStorage替代@vueuse/core的useStorage，增加Date类型特殊处理
-const useStorage = <T>(key: string, defaultValue: T): Ref<T> => {
+// isDateType: 标识该值是否应该被视为Date类型处理
+const useStorage = <T>(key: string, defaultValue: T, isDateType = false): Ref<T> => {
   const storedValue = localStorage.getItem(key)
   let initialValue: T
 
@@ -10,7 +11,8 @@ const useStorage = <T>(key: string, defaultValue: T): Ref<T> => {
       // 尝试解析存储的值
       const parsed = JSON.parse(storedValue)
       // 特殊处理Date类型
-      if (typeof parsed === 'string' && defaultValue instanceof Date) {
+      if (isDateType && typeof parsed === 'string') {
+        // 即使defaultValue是null，只要指定了isDateType为true，也按Date类型处理
         initialValue = new Date(parsed) as unknown as T
       } else {
         initialValue = parsed as T
@@ -28,7 +30,7 @@ const useStorage = <T>(key: string, defaultValue: T): Ref<T> => {
 
   watch(value, (newValue) => {
     // 特殊处理Date类型
-    if (newValue instanceof Date) {
+    if (isDateType && newValue instanceof Date) {
       localStorage.setItem(key, JSON.stringify(newValue.toISOString()))
     } else {
       localStorage.setItem(key, JSON.stringify(newValue))
@@ -61,7 +63,8 @@ interface SponsorResponse {
 
 // 状态管理
 const sponsors = ref<string[]>([])
-const lastFetchDate = useStorage<Date | null>('lastFetchDate', null)
+// 明确指定isDateType为true，确保Date类型正确处理
+const lastFetchDate = useStorage<Date | null>('lastFetchDate', null, true)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
 const canRefresh = ref(true) // 控制按钮是否可点击
@@ -102,7 +105,10 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     if (forceRefresh) {
       console.log('用户强制刷新，获取新数据')
     } else {
-      console.log('lastFetchDate不是有效的Date对象，需要获取新数据')
+      console.log('lastFetchDate不是有效的Date对象，需要获取新数据');
+      // 清除无效的localStorage数据
+      localStorage.removeItem('lastFetchDate');
+      console.log('已清除无效的lastFetchDate数据')
     }
   }
 
@@ -114,16 +120,9 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     const controller = new AbortController()
     const timeoutId = setTimeout(() => controller.abort(), 10000)
 
-    // 优先使用代理路径，备用方案使用完整URL
-    let apiUrl = '/api/sponsors/all';
-    // 线上环境可能需要直接使用完整URL
-    const isProduction = process.env.NODE_ENV === 'production';
-    if (isProduction) {
-      apiUrl = 'https://api.vilinko.com/sponsors/all';
-      console.log('生产环境，使用完整API URL:', apiUrl);
-    } else {
-      console.log('开发环境，使用代理路径:', apiUrl);
-    }
+    // 使用代理路径解决CORS问题
+    const apiUrl = '/api/sponsors/all'
+    console.log('正在请求API (通过代理):', apiUrl)
     const response = await fetch(apiUrl, {
       method: 'GET',
       headers: {
@@ -138,8 +137,7 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     console.log('API响应状态:', response.status)
 
     if (!response.ok) {
-      console.error(`API请求失败，状态码: ${response.status}, 状态文本: ${response.statusText}, 请求URL: ${apiUrl}`);
-      throw new Error(`HTTP错误! 状态码: ${response.status}, 状态文本: ${response.statusText}, 请求URL: ${apiUrl}`)
+      throw new Error(`HTTP错误! 状态码: ${response.status}, 状态文本: ${response.statusText}`)
     }
 
     const data: SponsorResponse = await response.json()
