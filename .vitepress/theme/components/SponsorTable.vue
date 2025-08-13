@@ -120,18 +120,37 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     const controller = new AbortController()
     const timeoutId = setTimeout(() => controller.abort(), 10000)
 
-    // 使用代理路径解决CORS问题
-    const apiUrl = '/api/sponsors/all'
-    console.log('正在请求API (通过代理):', apiUrl)
-    const response = await fetch(apiUrl, {
+    // 灵活配置API请求路径
+    // 可以通过环境变量或配置决定是否使用代理
+    const isProduction = process.env.NODE_ENV === 'production';
+    // 生产环境也可以选择使用代理，默认为直接调用
+    const useProxyInProduction = false; // 根据需要修改此配置
+    
+    let apiUrl;
+    if (isProduction && !useProxyInProduction) {
+      apiUrl = 'https://api.vilinko.com/sponsors/all';
+      console.log('正在请求API (直接):', apiUrl);
+    } else {
+      apiUrl = '/api/sponsors/all';
+      console.log('正在请求API (通过代理):', apiUrl);
+    }
+    // 配置CORS请求选项
+    const fetchOptions = {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
-      },
+          'Content-Type': 'application/json',
+          // 添加跨域请求标识
+          'X-Requested-With': 'XMLHttpRequest',
+        },
       signal: controller.signal,
-      // 尝试添加credentials配置解决跨域问题
-      credentials: 'include'
-    })
+      credentials: 'include',
+      // 明确指定CORS模式
+      mode: 'cors',
+      // 允许重定向
+      redirect: 'follow'
+    };
+
+    const response = await fetch(apiUrl, fetchOptions)
 
     clearTimeout(timeoutId)
     console.log('API响应状态:', response.status)
@@ -158,9 +177,16 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
       // 处理不同类型的错误
       if (errorMessage.includes('AbortError')) {
         errorMessage = '请求超时，请检查网络连接'
-      } else if (errorMessage.includes('Failed to fetch')) {
-        errorMessage = '无法连接到API服务器，可能是网络问题或CORS限制'
-      }
+    } else if (errorMessage.includes('Failed to fetch')) {
+        // 检测是否为跨域错误
+        if (navigator.userAgent.includes('Chrome')) {
+            errorMessage = '无法连接到API服务器，可能是网络问题或CORS限制。\n\n解决方案提示:\n1. 确认API服务器已正确配置CORS\n2. 尝试使用代理服务器转发请求\n3. 检查浏览器安全策略';
+        } else {
+            errorMessage = '无法连接到API服务器，可能是网络问题或CORS限制';
+        }
+    } else if (errorMessage.includes('404')) {
+        errorMessage = 'API端点不存在，请检查API路径是否正确'
+    }
     }
     error.value = `获取数据失败: ${errorMessage}`
     console.error('获取数据失败详情:', err)
