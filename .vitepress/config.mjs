@@ -192,6 +192,7 @@ export default withMermaid(
       // 社交链接
       socialLinks: [
         { icon: 'github', link: 'https://github.com/VilinkoStudio' },
+        { icon: 'bilibili', link: 'https://space.bilibili.com/3493298551393123' },
       ]
     },
   })

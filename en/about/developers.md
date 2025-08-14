@@ -19,7 +19,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/48214360',
           name: '沫海CimiMoly',
-          title: '这个人很高冷',
+          title: '星河如沫 映入澄曈 勇敢向圆满。',
           links: [
             { icon: 'github', link: 'https://github.com/EnderMo' },
           ]
@@ -27,7 +27,7 @@ export default {
         {
           avatar: 'https://avatars.githubusercontent.com/u/119720365',
           name: '悠笙iYoRoy',
-          title: '这个人很高冷',
+          title: '愿世间万物都能被温柔以待。',
           links: [
             { icon: 'github', link: 'https://github.com/KaguraiYoRoy' },
           ]
