@@ -19,6 +19,10 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-common-types": "^7.0.0",
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^7.0.0",
+    "@fortawesome/vue-fontawesome": "^3.1.1",
     "vitepress-plugin-announcement": "^0.1.5"
   }
 }

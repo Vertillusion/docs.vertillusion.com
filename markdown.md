@@ -11,6 +11,8 @@ search: false
 - [Todo 语法](#todo) `2025.08.07`
 - [链接块](#linkcard) `2025.08.10`
 - [隐藏文字](#closeword) `2025.08.10`
+- [下载按钮](#downloadcard) `2025.08.16`
+
 
 
 ## 代码高亮
@@ -195,3 +197,16 @@ graph LR
 输出内容不可查看，您现在应该看不到“文字”字样。  
 这是一个自定义的功能，语法参照下方示例，使用时<cw>文字</cw>会消失，但仍能被检索。
 
+## DownloadCard
+```md
+格式
+<DownloadCard url="链接" title="标题" description="描述"/>
+```
+
+**输入**
+```md
+<DownloadCard url="https://www.vilinko.com" title="Vilinko Studio" description="https://www.vilinko.com"/>
+```
+
+**输出**
+<DownloadCard url="https://www.vilinko.com" title="Vilinko Studio" description="https://www.vilinko.com"/>

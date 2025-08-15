@@ -84,7 +84,7 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
   // 检查是否需要获取新数据（每15天一次）
   const now = new Date()
   if (!forceRefresh && isValidDate(lastFetchDate.value)) {
-    const diffTime = now.getTime() - lastFetchDate.value.getTime()
+    const diffTime = now.getTime() - (lastFetchDate.value?.getTime() || 0)
     const diffDays = diffTime / (1000 * 60 * 60 * 24)
     if (diffDays < 15) {
       console.log('数据未过期，使用缓存数据')
@@ -146,7 +146,12 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
       redirect: 'follow'
     };
 
-    const response = await fetch(apiUrl, fetchOptions)
+    const response = await fetch(apiUrl, {
+      ...fetchOptions,
+      credentials: 'include' as const,
+      mode: 'cors' as const,
+      redirect: 'follow' as const,
+    })
 
     clearTimeout(timeoutId)
     console.log('API响应状态:', response.status)
@@ -183,7 +188,18 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
                 controller.abort();
                 apiUrl = '/api/sponsors/all';
                 console.log('切换到代理模式');
-                fetchOptions.signal = new AbortController().signal;
+                // 重新定义fetchOptions以确保其作用域正确
+                let fetchOptions = {
+                  method: 'GET',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                  },
+                  signal: new AbortController().signal,
+                  credentials: 'include',
+                  mode: 'cors',
+                  redirect: 'follow'
+                };
                 setTimeout(() => {
                     fetchSponsors(retryCount + 1, forceRefresh);
                 }, 1000);
