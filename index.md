@@ -22,15 +22,15 @@ features:
     link: /docs/lightframe/index
     linkText: 查看文档
   - icon: 
-      dark: https://vui.vilinko.com/favicon.ico
-      light: https://vui.vilinko.com/favicon.ico
+      dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/vuip.ico
+      light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/vuip.ico
     title: Vui.Parser
     details: 为 VinaUI 写的一个简陋的解析器
     link: /docs/vui.parser/index
     linkText: 查看文档
   - icon: 
-      dark: https://universe.vilinko.com/favicon.ico
-      light: https://universe.vilinko.com/favicon.ico
+      dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/uni.ico
+      light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/uni.ico
     title: Vilinko Universe
     details: 一款专为 Vilinko 工作室各类产品提供更新、扩展及启动功能的软件。
     link: /docs/universe/index
