@@ -21,11 +21,17 @@ features:
     details: Completely free, supported by every user, a lightweight desktop optimization application for users.
     link: /en/docs/lightframe/index
     linkText: View Documentation
-  - title: Vui.Parser
+  - icon: 
+      dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/vuip.ico
+      light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/vuip.ico
+    title: Vui.Parser
     details: A simple parser written for VinaUI
     link: /en/docs/vui.parser/index
     linkText: View Documentation
-  - title: Vilinko Universe
+  - icon: 
+      dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/uni.ico
+      light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/uni.ico
+    title: Vilinko Universe
     details: A software for Vilinko, which is used to start and update.
     link: /en/docs/universe/index
     linkText: View Documentation

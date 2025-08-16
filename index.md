@@ -21,11 +21,17 @@ features:
     details: 完全免费、由每一个用户支持、面向用户的轻量级创作型桌面优化应用程序。
     link: /docs/lightframe/index
     linkText: 查看文档
-  - title: Vui.Parser
+  - icon: 
+      dark: https://vui.vilinko.com/favicon.ico
+      light: https://vui.vilinko.com/favicon.ico
+    title: Vui.Parser
     details: 为 VinaUI 写的一个简陋的解析器
     link: /docs/vui.parser/index
     linkText: 查看文档
-  - title: Vilinko Universe
+  - icon: 
+      dark: https://universe.vilinko.com/favicon.ico
+      light: https://universe.vilinko.com/favicon.ico
+    title: Vilinko Universe
     details: 一款专为 Vilinko 工作室各类产品提供更新、扩展及启动功能的软件。
     link: /docs/universe/index
     linkText: 查看文档
