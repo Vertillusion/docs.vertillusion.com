@@ -25,14 +25,14 @@ features:
       dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/vuip.ico
       light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/vuip.ico
     title: Vui.Parser
-    details: A simple parser written for VinaUI
+    details: A simple parser written for VinaUI.
     link: /en/docs/vui.parser/index
     linkText: View Documentation
   - icon: 
       dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/uni.ico
       light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/uni.ico
     title: Vilinko Universe
-    details: A software for Vilinko, which is used to start and update.
+    details: Find, download, start, and update projects belonging to you and Vilinko.
     link: /en/docs/universe/index
     linkText: View Documentation
 ---
