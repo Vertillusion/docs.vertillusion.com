@@ -7,8 +7,8 @@ hero:
 
   actions:
     - theme: brand
-      text: Create a ticket
-      link: https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e
+      text: Common Questions
+      link: /support/qa.md
     - theme: alt
       text: Sponsor List
       link: /docs/data/sponsor.md

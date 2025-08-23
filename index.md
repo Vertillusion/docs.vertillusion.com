@@ -7,8 +7,8 @@ hero:
 
   actions:
     - theme: brand
-      text: 创建工单
-      link: https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e
+      text: 常见问题
+      link: /support/qa.md
     - theme: alt
       text: 赞助者列表
       link: /docs/data/sponsor.md
