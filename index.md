@@ -35,4 +35,11 @@ features:
     details: 在 Vilinko Universe 发现、下载、启动、更新属于你和 Vilinko 的项目。
     link: /docs/universe/index
     linkText: 查看文档
+  - icon: 
+      dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/img/vina.ico
+      light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/img/vina.ico
+    title: Vina UI
+    details: 一个简洁轻量的 UI 基础框架。
+    link: /docs/vinaui/index
+    linkText: 查看文档
 ---

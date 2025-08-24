@@ -161,6 +161,13 @@ export default withMermaid(
           ]
         },
         {
+          text: 'Vina.UI',
+          collapsed: true,
+          items: [
+            { text: '基本介绍 / Basic Introduction', link: '/docs/vinaui/index' }
+          ]
+        },
+        {
           text: '链接 / LINKS',
           collapsed: true,
           items: [

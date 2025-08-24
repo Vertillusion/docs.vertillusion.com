@@ -35,4 +35,11 @@ features:
     details: Find, download, start, and update projects belonging to you and Vilinko.
     link: /en/docs/universe/index
     linkText: View Documentation
+  - icon:
+      dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/img/vina.ico
+      light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/img/vina.ico
+    title: Vina UI
+    details: A UI foundation that simple and light.
+    link: /en/docs/vinaui/index
+    linkText: View Documentation
 ---
