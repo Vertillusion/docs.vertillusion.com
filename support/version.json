@@ -1,0 +1,12 @@
+[
+  {
+    "num": "1",
+	"name": "示例应用",
+    "version": "1.0.0"
+  },
+  {
+    "num": "2",
+	"name": "LightFrame",
+    "version": "1.0.1"
+  }
+]

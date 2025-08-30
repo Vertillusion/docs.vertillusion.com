@@ -12,7 +12,7 @@ search: false
 - [链接块](#linkcard) `2025.08.10`
 - [隐藏文字](#closeword) `2025.08.10`
 - [下载按钮](#downloadcard) `2025.08.16`
-
+- [批量修改应用版本](#批量修改应用版本) `2025.08.31` `BETA`
 
 
 ## 代码高亮
@@ -198,8 +198,8 @@ graph LR
 这是一个自定义的功能，语法参照下方示例，使用时<cw>文字</cw>会消失，但仍能被检索。
 
 ## DownloadCard
+**格式**
 ```md
-格式
 <DownloadCard url="链接" title="标题" description="描述"/>
 ```
 
@@ -210,3 +210,24 @@ graph LR
 
 **输出**
 <DownloadCard url="https://www.vilinko.com" title="Vilinko Studio" description="https://www.vilinko.com"/>
+
+## 批量修改应用版本
+::: warning 组件正在测试中
+`Version.vue` 是一个正在开发的功能组件，暂时不支持英文语法。
+:::
+本插件将应用版本存储在 `support/version.json` 文件中，现在，你可以在相关文档编写中通过 `<num>` 标签来引用对应软件的版本。
+
+若要更新本文档中所有关于此应用的版本，可以直接修改 json 文件。
+
+**格式**
+```md
+<num>序号</num>
+```
+
+**输入**
+```md
+<num>1</num>
+```
+
+**输出**
+<num>1</num>
