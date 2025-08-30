@@ -1,3 +1,10 @@
+---
+prev: false
+next:
+  text: 'User Manual'
+  link: '/en/docs/lightframe/manual'
+---
+
 # Basic Introduction
 
 ::: tip TIP

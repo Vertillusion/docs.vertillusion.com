@@ -1,3 +1,7 @@
+---
+prev: false
+---
+
 # Vilinko Studio 软件服务条款
 
 [【English Version】](/en/agreement/tos.md)

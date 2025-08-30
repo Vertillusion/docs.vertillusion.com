@@ -1,3 +1,8 @@
+---
+prev: false
+next: false
+---
+
 # Vilinko Universe
 ::: warning 注意
 此条目正在建设中，部分内容可能在后续有所改动。

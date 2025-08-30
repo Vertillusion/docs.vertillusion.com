@@ -1,3 +1,10 @@
+---
+prev: false
+next: 
+  text: 'Developer List'
+  link: '/en/about/developers'
+---
+
 # About Vilinko Studio
 > Value and beauty are not bound by any rules.
 

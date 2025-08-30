@@ -1,3 +1,10 @@
+---
+prev:
+  text: '使用教程'
+  link: '/docs/lightframe/manual'
+next: false
+---
+
 # 自定义命令列表
 1. (文件) 打开文件
 2. (*.vui) 打开卡片

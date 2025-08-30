@@ -1,3 +1,10 @@
+---
+prev: false
+next:
+  text: '使用教程'
+  link: '/docs/lightframe/manual'
+---
+
 # 基本介绍
 
 ::: tip TIP

@@ -1,5 +1,7 @@
 ---
 search: false
+prev: false
+next: false
 ---
 
 # Markdown 示例

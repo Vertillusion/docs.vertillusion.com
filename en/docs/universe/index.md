@@ -1,3 +1,8 @@
+---
+prev: false
+next: false
+---
+
 # Vilinko Universe
 ::: warning Important
 This entry is under construction, some content may be changed.

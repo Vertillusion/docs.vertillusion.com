@@ -1,3 +1,10 @@
+---
+prev:
+  text: 'User Manual'
+  link: '/en/docs/lightframe/manual'
+next: false
+---
+
 # Custom Command List
 1. (File) Open File
 2. (*.vui) Open Card

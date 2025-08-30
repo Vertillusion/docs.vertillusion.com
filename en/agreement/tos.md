@@ -1,3 +1,7 @@
+---
+prev: false
+---
+
 # Vilinko Studio Software Service Terms
 ::: tip Version
 Initial release date: August 6, 2025
