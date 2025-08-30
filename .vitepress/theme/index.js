@@ -9,6 +9,7 @@ import Closeword from "./components/closeword.vue";
 import SponsorTable from "./components/SponsorTable.vue";
 import DownloadCard from "./components/DownloadCard.vue";
 import Version, { processNumTags, EnNumComponent } from "./components/version.vue";
+import { processResearchTags } from "./components/research.vue";
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -30,15 +31,18 @@ export default {
     app.component('Version', Version)
     app.component('version', Version)
     
+
+    
     // 注册EnNumComponent组件，支持<en_num>标签
     app.component('en_num', EnNumComponent)
     
-    // 添加页面加载完成后的钩子，用于处理<num>和<en_num>标签
+    // 添加页面加载完成后的钩子，用于处理<num>、<en_num>和<research>标签
     router.onAfterRouteChanged = () => {
       // 等待DOM渲染完成
       setTimeout(() => {
         // 处理页面中的所有标签
-        processNumTags()
+        processNumTags();
+        processResearchTags();
       }, 100)
     }
   }

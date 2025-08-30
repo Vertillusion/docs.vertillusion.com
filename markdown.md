@@ -18,6 +18,7 @@ next: false
 - [隐藏文字](#closeword) `2025.08.10` <Badge type="tip" text="1.0.0" />
 - [下载按钮](#downloadcard) `2025.08.16` <Badge type="tip" text="1.0.0" />
 - [批量修改应用版本](#批量修改应用版本) `2025.08.31` <Badge type="warning" text="Beta" />
+- [调研项目](#调研项目) `2025.08.31` <Badge type="warning" text="Beta" />
 
 
 ## 代码高亮
@@ -277,6 +278,42 @@ graph LR
 
 **输出**
 <num>1</num>
+
+## 调研项目
+::: warning 组件正在测试中
+`research.vue` 是一个正在开发的功能组件，暂时不支持英文语法。  
+另外，当前版本在某些情况下（小概率）可能无法正常映射版本文本，需要用户手动刷新。
+:::
+
+本插件将调研链接存储在 `support/research.json` 中，可以通过修改 `status` 字段来控制是否显示调研链接。
+
+**格式**
+```md
+<research>序号</research>
+```
+
+**输入**
+```md
+<research>1</research>
+```
+对应的配置为：
+```json
+[
+  {
+    "n": "1",
+    "name": "示例调查问卷标题",
+    "status": "open",
+    "links": "/research/"
+  }
+]
+```
+未经处理的输出内容，实际不会显示：
+```md
+数据调研中心正在进行 name ，如果您有时间，欢迎帮助我们优化相关产品。 links
+```
+
+**最后输出**
+<research>1</research>
 
 <hr>
 <h6 style="text-align: center;">更多插件正在开发啦</h6>
