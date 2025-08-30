@@ -220,31 +220,6 @@ export default withMermaid(
           // 导航和侧边栏
           nav: createNav('zh'),
           sidebar: createSidebar('zh'),
-          
-          // 搜索框
-          search: {
-            provider: "local",
-            options: {
-              enablePhraseSearch: true,
-              translations: {
-                button: {
-                  buttonText: "ヾ(≧▽≦*)o",
-                  buttonAriaLabel: "ヾ(≧▽≦*)o"
-                },
-                modal: {
-                  noResultsText: "(ノへ￣、)",
-                  resetButtonTitle: "重置",
-                  footer: {
-                    selectLabel: "选择",
-                    navigateUpKey: "↑",
-                    navigateDownKey: "↓",
-                    closeKey: "Esc",
-                    submitKey: "Enter"
-                  },
-                },
-              },
-            },
-          },
         }
       },
       en: {
@@ -265,31 +240,6 @@ export default withMermaid(
           // 导航和侧边栏
           nav: createNav('en'),
           sidebar: createSidebar('en'),
-          
-          // 搜索框
-          search: {
-            provider: "local",
-            options: {
-              enablePhraseSearch: true,
-              translations: {
-                button: {
-                  buttonText: "(๑•̀ㅂ•́)و✧",
-                  buttonAriaLabel: "(๑•̀ㅂ•́)و✧"
-                },
-                modal: {
-                  noResultsText: "(ノへ￣、)",
-                  resetButtonTitle: "Reset",
-                  footer: {
-                    selectLabel: "Select",
-                    navigateUpKey: "↑",
-                    navigateDownKey: "↓",
-                    closeKey: "Esc",
-                    submitKey: "Enter"
-                  },
-                },
-              },
-            },
-          },
         }
       },
     },
@@ -333,6 +283,31 @@ export default withMermaid(
       logo: {
         light: "https://www.vilinko.com/img/Newico.png",
         dark: "https://www.vilinko.com/img/Newico.png"
+      },
+      
+      // 搜索框
+      search: {
+        provider: "local",
+        options: {
+          enablePhraseSearch: true,
+          translations: {
+            button: {
+              buttonText: "搜索",
+              buttonAriaLabel: "搜索"
+            },
+            modal: {
+              noResultsText: "未找到结果",
+              resetButtonTitle: "重置",
+              footer: {
+                selectLabel: "选择",
+                navigateUpKey: "↑",
+                navigateDownKey: "↓",
+                closeKey: "Esc",
+                submitKey: "Enter"
+              },
+            },
+          },
+        },
       },
 
       // 页脚

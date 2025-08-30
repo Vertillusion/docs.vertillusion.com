@@ -13,6 +13,7 @@ import { processResearchTags } from "./components/research.vue";
 
 /** @type {import('vitepress').Theme} */
 export default {
+  ...DefaultTheme, // 展开DefaultTheme以确保所有默认属性都被包含
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
@@ -20,6 +21,9 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    // 调用默认主题的enhanceApp方法
+    DefaultTheme.enhanceApp?.({ app, router, siteData })
+    
     // 注册全局组件
     app.component('Linkcard', Linkcard)
     app.component('SponsorTable', SponsorTable)
@@ -30,8 +34,6 @@ export default {
     // 注册Version组件，支持<Version>和<version>两种标签
     app.component('Version', Version)
     app.component('version', Version)
-    
-
     
     // 注册EnNumComponent组件，支持<en_num>标签
     app.component('en_num', EnNumComponent)
