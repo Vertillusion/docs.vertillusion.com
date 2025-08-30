@@ -5,16 +5,19 @@ next: false
 ---
 
 # Markdown 示例
+此页将展示 Vitepress 部分已配置的内置语法和添加的额外语法功能，帮助团队快速编写文档。 
+**页面没有提供英文版本**
 
 ## 目录
-- [代码高亮](#代码高亮)
-- [容器](#容器)
-- [Mermaid 语法](#mermaid) `2025.08.07`
-- [Todo 语法](#todo) `2025.08.07`
-- [链接块](#linkcard) `2025.08.10`
-- [隐藏文字](#closeword) `2025.08.10`
-- [下载按钮](#downloadcard) `2025.08.16`
-- [批量修改应用版本](#批量修改应用版本) `2025.08.31` `BETA`
+- [代码高亮](#代码高亮) <Badge type="info" text="内置" />
+- [容器](#容器) <Badge type="info" text="内置" />
+- [徽标](#徽标) <Badge type="info" text="内置" />
+- [Mermaid 语法](#mermaid) `2025.08.07` <Badge type="tip" text="1.0.0" />
+- [Todo 语法](#todo) `2025.08.07` <Badge type="tip" text="1.0.0" />
+- [链接块](#linkcard) `2025.08.10` <Badge type="tip" text="1.0.2" />
+- [隐藏文字](#closeword) `2025.08.10` <Badge type="tip" text="1.0.0" />
+- [下载按钮](#downloadcard) `2025.08.16` <Badge type="tip" text="1.0.0" />
+- [批量修改应用版本](#批量修改应用版本) `2025.08.31` <Badge type="warning" text="Beta" />
 
 
 ## 代码高亮
@@ -93,6 +96,46 @@ This is a dangerous warning.
 ::: details
 This is a details block.
 :::
+
+## 徽标
+徽标可让你为标题添加状态。例如，指定部分的类型或支持的版本可能很有用。
+
+### 用法
+
+可以使用全局组件 `Badge` 。
+
+**输入**
+
+```html
+  Title <Badge type="info" text="default" />
+  Title <Badge type="tip" text="^1.9.0" />
+  Title <Badge type="warning" text="beta" />
+  Title <Badge type="danger" text="caution" />
+```
+
+**输出**
+
+Title <Badge type="info" text="default" />
+
+Title <Badge type="tip" text="^1.9.0" />
+
+Title <Badge type="warning" text="beta" />
+
+Title <Badge type="danger" text="caution" />
+
+### 自定义子节点
+
+`<Badge>` 接受 `children`，这将显示在徽标中。
+
+**输入**
+
+```html
+Title <Badge type="info">custom element</Badge>
+```
+
+**输出**
+
+Title <Badge type="info">custom element</Badge>
 
 ## Mermaid
 ### 示例 1
@@ -213,9 +256,10 @@ graph LR
 **输出**
 <DownloadCard url="https://www.vilinko.com" title="Vilinko Studio" description="https://www.vilinko.com"/>
 
-## 批量修改应用版本
+## 批量修改应用版本 <Badge type="warning" text="beta" />
 ::: warning 组件正在测试中
-`Version.vue` 是一个正在开发的功能组件，暂时不支持英文语法。
+`Version.vue` 是一个正在开发的功能组件，暂时不支持英文语法。  
+另外，当前版本在某些情况下（小概率）可能无法正常映射版本文本，需要用户手动刷新。
 :::
 本插件将应用版本存储在 `support/version.json` 文件中，现在，你可以在相关文档编写中通过 `<num>` 标签来引用对应软件的版本。
 
@@ -233,3 +277,6 @@ graph LR
 
 **输出**
 <num>1</num>
+
+<hr>
+<h6 style="text-align: center;">更多插件正在开发啦</h6>
