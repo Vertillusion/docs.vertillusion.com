@@ -1,12 +1,17 @@
 [
   {
     "num": "1",
-	"name": "示例应用",
+    "name": "示例应用",
     "version": "1.0.0"
   },
   {
     "num": "2",
-	"name": "LightFrame",
+    "name": "LightFrame",
     "version": "1.0.1"
+  },
+  {
+    "num": "3",
+    "name": "Vilinko Universe",
+    "version": "0.1.00"
   }
 ]
