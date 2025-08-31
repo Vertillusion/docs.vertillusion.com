@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref, watch, onMounted, Ref, UnwrapRef } from 'vue'
-// 使用localStorage替代@vueuse/core的useStorage，增强Date类型处理
+import { ref, watch, onMounted, Ref } from 'vue'
+
 const useStorage = <T>(key: string, defaultValue: T, isDateType = false): Ref<T> => {
   const storedValue = localStorage.getItem(key)
   let initialValue: T
@@ -53,7 +53,6 @@ const formatDate = (date: Date): string => {
   return date.toLocaleDateString()
 }
 
-// 定义API响应类型
 interface SponsorResponse {
   code: number
   data: {
@@ -64,9 +63,7 @@ interface SponsorResponse {
   message: string
 }
 
-// 状态管理
 const sponsors = ref<string[]>([])
-// 明确指定isDateType为true，确保Date类型正确处理
 const lastFetchDate = useStorage<Date | null>('lastFetchDate', null, true)
 const isLoading = ref(false)
 const error = ref<string | null>(null)
@@ -81,7 +78,7 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
   if (forceRefresh) {
     startRefreshCountdown();
   }
-  // 检查是否需要获取新数据（每15天一次）
+
   const now = new Date()
   if (!forceRefresh && isValidDate(lastFetchDate.value)) {
     const diffTime = now.getTime() - (lastFetchDate.value?.getTime() || 0)
@@ -95,66 +92,40 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
         }
       }
       return
-    } else {
-      console.log('数据已过期，需要获取新数据')
-    }
-  } else {
-    if (forceRefresh) {
-      console.log('用户强制刷新，获取新数据')
-    } else {
-      console.log('lastFetchDate不是有效的Date对象，需要获取新数据');
-      localStorage.removeItem('lastFetchDate');
-      console.log('已清除无效的lastFetchDate数据')
     }
   }
 
   isLoading.value = true
-    error.value = null
+  error.value = null
 
-    // 灵活配置API请求路径 - 移到顶部确保作用域正确
-    const isProduction = process.env.NODE_ENV === 'production';
-    const useProxyInProduction = false; // 根据需要修改此配置
-    
-    let apiUrl;
-    if (isProduction && !useProxyInProduction) {
-      apiUrl = 'https://api.vilinko.com/sponsors/all';
-      console.log('正在请求API (直接)');
-    } else {
-      apiUrl = '/api/sponsors/all';
-      console.log('正在请求API (通过代理)');
-    }
+  const isProduction = process.env.NODE_ENV === 'production';
+  const useProxyInProduction = false;
+  
+  let apiUrl;
+  if (isProduction && !useProxyInProduction) {
+    apiUrl = 'https://api.vilinko.com/sponsors/all';
+  } else {
+    apiUrl = '/api/sponsors/all';
+  }
 
-    // 添加超时处理 - 移到外部try块之前，确保在catch中可访问
-    const controller = new AbortController()
-    const timeoutId = setTimeout(() => controller.abort(), 10000)
-    try {
-
-    if (apiUrl.includes('/api/sponsors/all') && isProduction) {
-      console.warn('生产环境中使用代理路径可能导致404错误，请确认服务器代理配置是否正确');
-    }
-    // 预先定义fetchOptions，确保在整个函数作用域内可访问
-    let fetchOptions = {
+  const controller = new AbortController()
+  const timeoutId = setTimeout(() => controller.abort(), 10000)
+  try {
+    const fetchOptions = {
       method: 'GET',
       headers: {
-          'Content-Type': 'application/json',
-          // 添加跨域请求标识
-          'X-Requested-With': 'XMLHttpRequest',
-        },
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+      },
       signal: controller.signal,
-      credentials: 'include',
-      mode: 'cors',
-      redirect: 'follow'
-    };
-
-    const response = await fetch(apiUrl, {
-      ...fetchOptions,
       credentials: 'include' as const,
       mode: 'cors' as const,
       redirect: 'follow' as const,
-    })
+    };
+
+    const response = await fetch(apiUrl, fetchOptions)
 
     clearTimeout(timeoutId)
-    console.log('API响应状态:', response.status)
 
     if (!response.ok) {
       if (response.status === 404) {
@@ -165,12 +136,10 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
     }
 
     const data: SponsorResponse = await response.json()
-    console.log('API响应数据:', data)
     if (data.code === 200) {
       sponsors.value = data.data.sponsors
       lastFetchDate.value = now
       localStorage.setItem('sponsors', JSON.stringify(sponsors.value))
-      console.log('数据获取成功')
     } else {
       throw new Error(`Error：110003`)
     }
@@ -180,41 +149,26 @@ const fetchSponsors = async (retryCount = 0, forceRefresh = false) => {
       errorMessage = err.message
       if (errorMessage.includes('AbortError')) {
         errorMessage = 'Error：100001'
-    } else if (errorMessage.includes('Failed to fetch')) {
-        if (err instanceof TypeError && errorMessage.includes('Failed to fetch') && navigator.userAgent.includes('Chrome')) {
-            if (apiUrl === 'https://api.vilinko.com/sponsors/all') {
-                errorMessage = 'Error：100002';
-                console.warn(errorMessage);
-                controller.abort();
-                apiUrl = '/api/sponsors/all';
-                console.log('切换到代理模式');
-                // 重新定义fetchOptions以确保其作用域正确
-                let fetchOptions = {
-                  method: 'GET',
-                  headers: {
-                    'Content-Type': 'application/json',
-                    'X-Requested-With': 'XMLHttpRequest',
-                  },
-                  signal: new AbortController().signal,
-                  credentials: 'include',
-                  mode: 'cors',
-                  redirect: 'follow'
-                };
-                setTimeout(() => {
-                    fetchSponsors(retryCount + 1, forceRefresh);
-                }, 1000);
-                return;
-            } else {
-                errorMessage = 'Error：100003';
-            }
+      } else if (errorMessage.includes('Failed to fetch')) {
+        if (err instanceof TypeError && navigator.userAgent.includes('Chrome')) {
+          if (apiUrl === 'https://api.vilinko.com/sponsors/all') {
+            errorMessage = 'Error：100002';
+            controller.abort();
+            setTimeout(() => {
+              fetchSponsors(retryCount + 1, forceRefresh);
+            }, 1000);
+            return;
+          } else {
+            errorMessage = 'Error：100003';
+          }
         } else if (navigator.userAgent.includes('Chrome')) {
-            errorMessage = 'Error：100004';
+          errorMessage = 'Error：100004';
         } else {
-            errorMessage = 'Error：100005';
+          errorMessage = 'Error：100005';
         }
-    } else if (errorMessage.includes('404')) {
+      } else if (errorMessage.includes('404')) {
         errorMessage = 'API端点不存在，请检查API路径是否正确'
-    }
+      }
     }
     error.value = `获取数据失败: ${errorMessage}`
     console.error('获取数据失败详情:', err)
@@ -276,7 +230,6 @@ const formatCountdown = () => {
   return `${minutes}分${seconds}秒`;
 }
 
-// 提供给父组件的方法
 defineExpose({
   fetchSponsors,
   getTwoColumnData
