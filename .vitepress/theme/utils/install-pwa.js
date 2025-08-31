@@ -23,8 +23,6 @@ function initPWA() {
           // 监听更新事件
           registration.onupdatefound = () => {
             const installingWorker = registration.installing;
-            if (!installingWorker) return;
-            
             installingWorker.onstatechange = () => {
               if (installingWorker.state === 'installed') {
                 if (navigator.serviceWorker.controller) {
@@ -45,7 +43,7 @@ function initPWA() {
     
     // 页面加载后检查是否需要显示安装按钮
     setTimeout(checkAndShowInstallButton, 1000);
-    });
+  });
   }
   
   // 添加PWA安装提示
@@ -68,7 +66,6 @@ function initPWA() {
 // 检查是否可以安装PWA并显示按钮
 function checkAndShowInstallButton() {
   if (!isBrowser()) return;
-  
   // 只有在生产环境、不是独立模式且有deferredPrompt时才显示按钮
   if (process.env.NODE_ENV === 'production' && !isPwaInstalled() && deferredPrompt) {
     showInstallButton();
@@ -107,6 +104,7 @@ function showInstallButton() {
     console.error('Failed to create install button:', error);
   }
 }
+}
 
 // 隐藏安装按钮
 function hideInstallButton() {
@@ -119,6 +117,7 @@ function hideInstallButton() {
       installButton = null;
     }
   }, 300);
+}
 }
 
 // 显示更新通知
@@ -153,6 +152,7 @@ function showUpdateNotification() {
     console.error('Failed to create update notification:', error);
   }
 }
+}
 
 // 提供一个函数来手动触发安装提示
 export function triggerPwaInstall() {
@@ -169,11 +169,13 @@ export function triggerPwaInstall() {
     deferredPrompt = null;
   });
 }
+}
 
 // 检查是否已安装PWA
 export function isPwaInstalled() {
   if (!isBrowser()) return false;
   
+
   // 检查是否处于独立模式
   return window.matchMedia('(display-mode: standalone)').matches ||
          window.navigator.standalone ||
