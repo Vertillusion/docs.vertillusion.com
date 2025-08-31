@@ -206,16 +206,6 @@ body.scrolled .VPNav::after {
   transform: translateY(0) scaleX(1);
 }
 
-/* 暗色模式下的边框效果 */
-.dark .VPNav::after {
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(92, 131, 255, 0.3),
-    transparent
-  );
-}
-
 /* 为顶栏和内容之间添加柔和的过渡区域 */
 .VPContent {
   position: relative;
@@ -353,34 +343,6 @@ img[loading="lazy"]::before {
 .VPNavBar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
 }
-
-/* PWA安装提示样式 */
-.pwa-install-banner {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--vp-c-bg);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  padding: 16px 24px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  z-index: 9999;
-  transition: all 0.3s ease;
-}
-
-.pwa-install-banner.hidden {
-  opacity: 0;
-  transform: translateX(-50%) translateY(20px);
-  pointer-events: none;
-}
-
-
-
-
 
 /* 调整主页标题与顶栏间距 */
 .VPHero {

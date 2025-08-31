@@ -14,6 +14,8 @@ next:
 - [Custom Command List](/docs/lightframe/code)
 :::
 
+<research>2</research>
+
 ## Software Features
 * Ready to use. Using a self-developed lightweight framework to achieve extremely low resource usage<sup>1</sup>, ensuring smooth daily use while meeting desktop experience needs.
 * Create a desktop you love with in-app clock, calendar, sticky notes and other components<sup>2</sup>. In addition, you can use mixing and component cutting functions to make it more suitable for your wallpaper.
