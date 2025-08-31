@@ -4,6 +4,8 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 import "./style/blur.css";
 import "./style/var.css";
+import { setupImageOptimization } from './utils/imageOptimizer.js';
+import './utils/install-pwa.js';
 import Linkcard from "./components/Linkcard.vue";
 import Closeword from "./components/closeword.vue";
 import SponsorTable from "./components/SponsorTable.vue";
@@ -23,6 +25,10 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // 调用默认主题的enhanceApp方法
     DefaultTheme.enhanceApp?.({ app, router, siteData })
+
+    // 初始化图片优化工具
+    const imageOptimizer = setupImageOptimization();
+    imageOptimizer.init();
     
     // 注册全局组件
     app.component('Linkcard', Linkcard)
@@ -45,7 +51,19 @@ export default {
         // 处理页面中的所有标签
         processNumTags();
         processResearchTags();
+        
+        // 页面更新后重新处理图片
+        imageOptimizer.updateImages();
       }, 100)
     }
+
+    // 在应用卸载时清理资源
+    const originalUnmount = app.unmount;
+    app.unmount = function() {
+      imageOptimizer.destroy();
+      if (originalUnmount) {
+        originalUnmount.call(this);
+      }
+    };
   }
 }
