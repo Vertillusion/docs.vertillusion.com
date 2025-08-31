@@ -48,7 +48,7 @@
   --vp-c-default-2: var(--vp-c-gray-2);
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
-
+  
   --vp-c-brand-1: var(--vp-c-indigo-1);
   --vp-c-brand-2: var(--vp-c-indigo-2);
   --vp-c-brand-3: var(--vp-c-indigo-3);
@@ -68,6 +68,38 @@
   --vp-c-danger-2: var(--vp-c-red-2);
   --vp-c-danger-3: var(--vp-c-red-3);
   --vp-c-danger-soft: var(--vp-c-red-soft);
+}
+
+/* 隐藏全局滚动条 - 适用于所有主流浏览器 */
+/* 针对Firefox */
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+/* 针对Chrome, Safari, Edge等WebKit浏览器 */
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* 确保body和其他容器也应用相同的滚动条隐藏样式 */
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* 确保主要内容区域的滚动条也被隐藏 */
+.VPContent {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.VPContent::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 /**
@@ -135,5 +167,383 @@
 
 .DocSearch {
   --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+/**
+ * Header Border Transition - 顶栏下边框平滑过渡效果
+ * -------------------------------------------------------------------------- */
+
+/* 为顶栏添加平滑的下边框渐变和整体过渡 */
+.VPNav {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 100;
+}
+
+/* 使用伪元素创建渐变下边框 */
+.VPNav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(92, 131, 255, 0.2),
+    transparent
+  );
+  opacity: 0;
+  transform: translateY(2px) scaleX(0.9);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+/* 滚动时显示平滑的下边框 */
+body.scrolled .VPNav::after {
+  opacity: 1;
+  transform: translateY(0) scaleX(1);
+}
+
+/* 暗色模式下的边框效果 */
+.dark .VPNav::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(92, 131, 255, 0.3),
+    transparent
+  );
+}
+
+/* 为顶栏和内容之间添加柔和的过渡区域 */
+.VPContent {
+  position: relative;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* 在内容区域顶部添加渐变阴影，增强与顶栏的过渡 */
+.VPContent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dark .VPContent::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 15, 15, 0.1) 0%,
+    transparent 100%
+  );
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 增强整体页面元素的过渡效果 */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/**
+ * Image Optimization - 图片优化样式
+ * -------------------------------------------------------------------------- */
+
+/* 图片加载过渡动画 */
+img {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+  transform: scale(1);
+}
+
+/* 缓存图片的加载样式 */
+img.img-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 为懒加载图片添加加载指示器 */
+img[loading="lazy"] {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+/* 图片加载时的淡入效果 */
+img[loading="lazy"]:loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 图片加载占位符样式 */
+img[loading="lazy"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: inherit;
+}
+
+/* 暗色模式下的图片加载样式调整 */
+.dark img[loading="lazy"] {
+  opacity: 0.7;
+}
+
+.dark img[loading="lazy"]::before {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/**
+ * Sidebar Scrollbar - 隐藏侧边栏滚动条
+ * -------------------------------------------------------------------------- */
+
+/* 隐藏侧边栏滚动条但保持滚动功能 */
+.VPSidebar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.VPSidebar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* 确保在移动设备上也隐藏侧边栏滚动条 */
+.VPAside {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.VPAside::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* 隐藏导航菜单的滚动条 */
+.VPNavBar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.VPNavBar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+/* PWA安装提示样式 */
+.pwa-install-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.pwa-install-banner.hidden {
+  opacity: 0;
+  transform: translateX(-50%) translateY(20px);
+  pointer-events: none;
+}
+
+.pwa-install-banner p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--vp-c-text-1);
+}
+
+.pwa-install-button {
+  background-color: var(--vp-c-brand);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pwa-install-button:hover {
+  background-color: var(--vp-c-brand-dark);
+}
+
+.pwa-install-dismiss {
+  background: none;
+  border: none;
+  color: var(--vp-c-text-2);
+  cursor: pointer;
+  font-size: 20px;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.pwa-install-dismiss:hover {
+  background-color: var(--vp-c-bg-soft);
+}
+
+/* 固定位置的PWA安装按钮样式 */
+#pwa-install-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--vp-c-brand);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(22, 119, 255, 0.4);
+  z-index: 9999;
+  opacity: 0;
+  transition: all 0.3s ease;
+  padding: 0;
+  min-width: auto;
+}
+
+#pwa-install-button::before {
+  content: '↓';
+  margin-right: 4px;
+  font-size: 14px;
+}
+
+#pwa-install-button:hover {
+  background-color: var(--vp-c-brand-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(22, 119, 255, 0.5);
+}
+
+#pwa-install-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(22, 119, 255, 0.3);
+}
+
+/* PWA更新通知样式 */
+.pwa-update-notification {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 9999;
+  animation: slideDown 0.3s ease-out;
+}
+
+.pwa-update-notification p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--vp-c-text-1);
+}
+
+#pwa-refresh-button {
+  background-color: var(--vp-c-brand);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#pwa-refresh-button:hover {
+  background-color: var(--vp-c-brand-dark);
+}
+
+/* 滑入动画 */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* 调整主页标题与顶栏间距 */
+.VPHero {
+  padding-top: clamp(1rem, 5vh, 2rem) !important;
+  margin-top: -20px !important;
+}
+
+.VPHero .container {
+  padding-top: 0 !important;
+}
+
+/* 响应式设计调整 */
+@media (max-width: 768px) {
+  .VPHero {
+    margin-top: -15px !important;
+    padding-top: clamp(0.8rem, 4vh, 1.5rem) !important;
+  }
+  
+  #pwa-install-button {
+    width: 48px;
+    height: 48px;
+    font-size: 14px;
+    bottom: 16px;
+    right: 16px;
+  }
+  
+  .pwa-update-notification {
+    width: calc(100% - 32px);
+    max-width: 400px;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    top: 70px;
+  }
 }
 

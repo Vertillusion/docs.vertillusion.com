@@ -2,6 +2,7 @@
   "devDependencies": {
     "@braintree/sanitize-url": "^7.1.1",
     "@types/dom-view-transitions": "^1.0.6",
+    "@vite-pwa/vitepress": "^1.0.0",
     "cytoscape": "^3.33.0",
     "cytoscape-cose-bilkent": "^4.1.0",
     "dayjs": "^1.11.13",
