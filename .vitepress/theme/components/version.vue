@@ -73,6 +73,11 @@ export { EnNumComponent }
 
 export function processNumTags() {
   try {
+    // 检查是否在浏览器环境中
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
+    
     // 处理中文标签
     const numElements = document.querySelectorAll('num');
     numElements.forEach(element => {

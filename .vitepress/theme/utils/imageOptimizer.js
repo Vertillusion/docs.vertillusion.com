@@ -2,10 +2,14 @@
  * 图片优化工具 - 处理图片懒加载和cookie缓存
  */
 
-// Cookie操作工具函数
+// 检查是否在浏览器环境中
+const isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
+
+// Cookie操作工具函数 - 仅在浏览器环境中可用
 const CookieUtils = {
   // 设置Cookie，包含过期时间
   setCookie(name, value, days) {
+    if (!isBrowser) return;
     const expires = new Date();
     expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
     document.cookie = `${name}=${encodeURIComponent(value)};expires=${expires.toUTCString()};path=/`;
@@ -13,6 +17,7 @@ const CookieUtils = {
 
   // 获取Cookie值
   getCookie(name) {
+    if (!isBrowser) return null;
     const nameEQ = `${name}=`;
     const ca = document.cookie.split(';');
     for (let i = 0; i < ca.length; i++) {
@@ -25,6 +30,7 @@ const CookieUtils = {
 
   // 检查Cookie是否存在且未过期
   isCookieValid(name) {
+    if (!isBrowser) return false;
     return this.getCookie(name) !== null;
   }
 };
@@ -35,11 +41,14 @@ class ImageCacheManager {
     this.cacheKey = 'imageCache';
     this.cacheDuration = 15; // 缓存15天
     this.cachedImages = {};
-    this.initCache();
+    if (isBrowser) {
+      this.initCache();
+    }
   }
 
   // 初始化缓存
   initCache() {
+    if (!isBrowser) return;
     const cachedData = CookieUtils.getCookie(this.cacheKey);
     if (cachedData) {
       try {
@@ -53,16 +62,16 @@ class ImageCacheManager {
 
   // 保存缓存到Cookie
   saveCache() {
+    if (!isBrowser) return;
     const cacheData = JSON.stringify(this.cachedImages);
     CookieUtils.setCookie(this.cacheKey, cacheData, this.cacheDuration);
   }
 
   // 添加图片到缓存
   cacheImage(url) {
-    if (!this.cachedImages[url]) {
-      this.cachedImages[url] = new Date().getTime();
-      this.saveCache();
-    }
+    if (!isBrowser || this.cachedImages[url]) return;
+    this.cachedImages[url] = new Date().getTime();
+    this.saveCache();
   }
 
   // 检查图片是否已缓存
@@ -72,6 +81,7 @@ class ImageCacheManager {
 
   // 清理过期缓存
   cleanExpiredCache() {
+    if (!isBrowser) return;
     const now = new Date().getTime();
     const expirationTime = this.cacheDuration * 24 * 60 * 60 * 1000;
     
@@ -94,6 +104,8 @@ class ImageLazyLoader {
 
   // 初始化懒加载
   init() {
+    if (!isBrowser) return;
+    
     // 检查浏览器是否支持IntersectionObserver
     if ('IntersectionObserver' in window) {
       this.observer = new IntersectionObserver((entries) => {
@@ -119,6 +131,8 @@ class ImageLazyLoader {
 
   // 处理页面中的图片
   processImages() {
+    if (!isBrowser) return;
+    
     const images = document.querySelectorAll('img[src$=".png"], img[src$=".ico"]');
     
     images.forEach(img => {
@@ -142,6 +156,8 @@ class ImageLazyLoader {
 
   // 加载图片并缓存
   loadImage(img) {
+    if (!isBrowser) return;
+    
     const imgUrl = img.src;
     
     // 创建新图片对象预加载
@@ -178,25 +194,25 @@ export function setupImageOptimization() {
   
   // 初始化图片优化
   function init() {
-    if (!imageLoader) {
-      imageLoader = new ImageLazyLoader();
-      imageLoader.init();
-    }
+    if (!isBrowser || imageLoader) return;
+    
+    imageLoader = new ImageLazyLoader();
+    imageLoader.init();
   }
   
   // 页面更新时重新处理图片
   function updateImages() {
-    if (imageLoader) {
-      imageLoader.processImages();
-    }
+    if (!isBrowser || !imageLoader) return;
+    
+    imageLoader.processImages();
   }
   
   // 清理资源
   function destroy() {
-    if (imageLoader) {
-      imageLoader.destroy();
-      imageLoader = null;
-    }
+    if (!isBrowser || !imageLoader) return;
+    
+    imageLoader.destroy();
+    imageLoader = null;
   }
   
   return {

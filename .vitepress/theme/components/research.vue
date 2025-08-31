@@ -4,6 +4,11 @@ import researchData from '../../../support/research.json'
 
 export function processResearchTags() {
   try {
+    // 检查是否在浏览器环境中
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
+    }
+    
     const researchElements = document.querySelectorAll('research');
     
     researchElements.forEach(element => {
