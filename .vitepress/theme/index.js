@@ -5,7 +5,6 @@ import './style.css'
 import "./style/blur.css";
 import "./style/var.css";
 import { setupImageOptimization } from './utils/imageOptimizer.js';
-import './utils/install-pwa.js';
 import Linkcard from "./components/Linkcard.vue";
 import Closeword from "./components/closeword.vue";
 import SponsorTable from "./components/SponsorTable.vue";
