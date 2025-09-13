@@ -20,6 +20,9 @@ importers:
       '@fortawesome/vue-fontawesome':
         specifier: ^3.1.1
         version: 3.1.1(@fortawesome/fontawesome-svg-core@7.0.0)(vue@3.5.18)
+      nuna-design-vue:
+        specifier: ^1.0.2
+        version: 1.0.2(vue@3.5.18)
       vitepress-plugin-announcement:
         specifier: ^0.1.5
         version: 0.1.5(vitepress@1.6.4(@algolia/client-search@5.35.0)(postcss@8.5.6)(search-insights@2.17.3)(terser@5.43.1))
@@ -2143,6 +2146,11 @@ packages:
 
   nprogress-v2@1.1.10:
     resolution: {integrity: sha512-MypWLNIPIM07SS0bAc/oac0vhVFz9vAHm7d1sj//Pnf3J03LQ3CuWrlDteIu6exq0fIvkDJ6tUDRWLaifsIt5w==}
+
+  nuna-design-vue@1.0.2:
+    resolution: {integrity: sha512-WQqXR8AOX4tfB5gobBG+ca8RGLwdDhEarU3UWENzaBSjy7APxlv5Wv9VqV/7DxlEplxthTTwamani03a8O1Duw==}
+    peerDependencies:
+      vue: ^3.2.0
 
   object-inspect@1.13.4:
     resolution: {integrity: sha512-W67iLl4J2EXEGTbfeHCffrjDfitvLANg0UlX3wFUUSTx92KXRFegMHUVgSqE+wvhAbi4WqjGg9czysTV2Epbew==}
@@ -5104,6 +5112,10 @@ snapshots:
     optional: true
 
   nprogress-v2@1.1.10: {}
+
+  nuna-design-vue@1.0.2(vue@3.5.18):
+    dependencies:
+      vue: 3.5.18
 
   object-inspect@1.13.4: {}
 
