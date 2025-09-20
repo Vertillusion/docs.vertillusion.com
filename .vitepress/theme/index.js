@@ -11,6 +11,9 @@ import SponsorTable from "./components/SponsorTable.vue";
 import DownloadCard from "./components/DownloadCard.vue";
 import Version, { processNumTags, EnNumComponent } from "./components/version.vue";
 import { processResearchTags } from "./components/research.vue";
+// 导入nuna-design-vue组件库
+import NunaDesignVue from 'nuna-design-vue';
+import 'nuna-design-vue/style.css';
 
 /** @type {import('vitepress').Theme} */
 export default {
@@ -24,6 +27,9 @@ export default {
   enhanceApp({ app, router, siteData }) {
     // 调用默认主题的enhanceApp方法
     DefaultTheme.enhanceApp?.({ app, router, siteData })
+
+    // 全局注册nuna-design-vue组件库
+    app.use(NunaDesignVue);
 
     // 初始化图片优化工具
     const imageOptimizer = setupImageOptimization();

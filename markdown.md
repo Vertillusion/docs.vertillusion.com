@@ -17,6 +17,7 @@ next: false
 - [链接块](#linkcard) `2025.08.10` <Badge type="tip" text="1.0.2" />
 - [隐藏文字](#closeword) `2025.08.10` <Badge type="tip" text="1.0.0" />
 - [下载按钮](#downloadcard) `2025.08.16` <Badge type="tip" text="1.0.0" />
+- [多功能按钮](#n-button) `2025.09.20` <Badge type="warning" text="Beta" />
 - [批量修改应用版本](#批量修改应用版本) `2025.08.31` <Badge type="warning" text="Beta" />
 - [调研项目](#调研项目) `2025.08.31` <Badge type="warning" text="Beta" />
 
@@ -244,6 +245,10 @@ graph LR
 这是一个自定义的功能，语法参照下方示例，使用时<cw>文字</cw>会消失，但仍能被检索。
 
 ## DownloadCard
+::: warning 组件暂停服务
+请使用 `n-button` 代替此组件。
+:::
+
 **格式**
 ```md
 <DownloadCard url="链接" title="标题" description="描述"/>
@@ -256,6 +261,51 @@ graph LR
 
 **输出**
 <DownloadCard url="https://www.vilinko.com" title="Vilinko Studio" description="https://www.vilinko.com"/>
+
+## n-button
+这是一个多功能的按钮组件，目前完成了部分功能本地化适配。
+
+### 格式示例
+```md
+<n-button type="primary">正常状态的 Primary 按钮</n-button>
+<br>
+<br>
+<n-button type="primary" disabled>禁用状态的 Primary 按钮</n-button>
+<br>
+<br>
+<n-button type="primary" loading>加载中状态的 Primary 按钮</n-button>
+```
+**输出**
+<n-button type="primary">正常状态的 primary 按钮</n-button>
+<br>
+<br>
+<n-button type="primary" disabled>禁用状态的 Primary 按钮</n-button>
+<br>
+<br>
+<n-button type="primary" loading>加载中状态的 Primary 按钮</n-button>
+
+### 下载功能
+基于 `nuna-design-vue` 组件库创建的功能性按钮组件。
+
+**格式**
+```md
+  <a href="https://lightframe.vilinko.com/Update/VilinkoUniverse.exe" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <n-button type="primary">下载 / 更新 Vilinko Universe</n-button>
+  </a>
+```
+
+::: warning
+注意：代码不能顶格书写，不空格会导致报错！
+
+~~我也不知道为什么啊，但是顶格写就是会报错qwq~~
+:::
+
+
+**输出**
+  <br>
+  <a href="https://lightframe.vilinko.com/Update/VilinkoUniverse.exe" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+    <n-button type="primary">下载 / 更新 Vilinko Universe</n-button>
+  </a>
 
 ## 批量修改应用版本 <Badge type="warning" text="beta" />
 ::: warning 组件正在测试中
