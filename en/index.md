@@ -22,22 +22,22 @@ features:
     link: /en/docs/lightframe/index
     linkText: View Documentation
   - icon: 
-      dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/vuip.ico
-      light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/vuip.ico
+      dark: ../vuip.ico
+      light: ../vuip.ico
     title: Vui.Parser
     details: A simple parser written for VinaUI.
     link: /en/docs/vui.parser/index
     linkText: View Documentation
   - icon: 
-      dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/uni.ico
-      light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/uni.ico
+      dark: ../uni.ico
+      light: ../uni.ico
     title: Vilinko Universe
     details: Find, download, start, and update projects belonging to you and Vilinko.
     link: /en/docs/universe/index
     linkText: View Documentation
   - icon:
-      dark: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/img/vina.ico
-      light: https://raw.githubusercontent.com/VilinkoStudio/docs.vilinko.com/refs/heads/source/img/vina.ico
+      dark: ../vina.ico
+      light: ../vina.ico
     title: Vina UI
     details: A UI foundation that simple and light.
     link: /en/docs/vinaui/index
