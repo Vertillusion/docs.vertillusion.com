@@ -22,22 +22,22 @@ features:
     link: /docs/lightframe/index
     linkText: 查看文档
   - icon: 
-      dark: ../vuip.ico
-      light: ../vuip.ico
+      dark: /public/vuip.ico
+      light: /public/vuip.ico
     title: Vui.Parser
     details: 简易、开源、轻量的数据解析器。
     link: /docs/vui.parser/index
     linkText: 查看文档
   - icon: 
-      dark: ../uni.ico
-      light: ../uni.ico
+      dark: /public/uni.ico
+      light: /public/uni.ico
     title: Vilinko Universe
     details: 在 Vilinko Universe 发现、下载、启动、更新属于你和 Vilinko 的项目。
     link: /docs/universe/index
     linkText: 查看文档
   - icon: 
-      dark: ../vina.ico
-      light: ../vina.ico
+      dark: /public/vina.ico
+      light: /public/vina.ico
     title: Vina UI
     details: 一个简洁轻量的 UI 基础框架。
     link: /docs/vinaui/index
