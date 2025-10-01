@@ -1,8 +1,10 @@
 ---
-search: false
 prev: false
 next: false
+outline: false
 ---
+
+<login>
 
 # Markdown 示例
 此页将展示 Vitepress 部分已配置的内置语法和添加的额外语法功能，帮助团队快速编写文档。 
@@ -20,6 +22,7 @@ next: false
 - [多功能按钮](#n-button) `2025.09.20` <Badge type="warning" text="Beta" />
 - [批量修改应用版本](#批量修改应用版本) `2025.08.31` <Badge type="warning" text="Beta" />
 - [调研项目](#调研项目) `2025.08.31` <Badge type="warning" text="Beta" />
+- [授权码保护](#授权码保护) `2025.09.21` <Badge type="warning" text="Beta" />
 
 
 ## 代码高亮
@@ -365,5 +368,22 @@ graph LR
 **最后输出**
 <research>1</research>
 
+## 授权码保护
+**格式**
+```md
+<login></login>
+```
+
+### 示例
+**输入**
+```md
+<login>Vilinko Studio</login>
+```
+
+**输出**
+<login>Vilinko Studio</login>
+
 <hr>
 <h6 style="text-align: center;">更多插件正在开发啦</h6>
+
+</login>

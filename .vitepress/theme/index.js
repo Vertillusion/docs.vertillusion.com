@@ -11,6 +11,8 @@ import SponsorTable from "./components/SponsorTable.vue";
 import DownloadCard from "./components/DownloadCard.vue";
 import Version, { processNumTags, EnNumComponent } from "./components/version.vue";
 import { processResearchTags } from "./components/research.vue";
+// 导入Login组件
+import Login from './components/login.vue';
 // 导入nuna-design-vue组件库
 import NunaDesignVue from 'nuna-design-vue';
 import 'nuna-design-vue/style.css';
@@ -48,6 +50,10 @@ export default {
     
     // 注册EnNumComponent组件，支持<en_num>标签
     app.component('en_num', EnNumComponent)
+    
+    // 注册Login组件，支持<login>标签
+    app.component('Login', Login)
+    app.component('login', Login)
     
     // 添加页面加载完成后的钩子，用于处理<num>、<en_num>和<research>标签
     router.onAfterRouteChanged = () => {
