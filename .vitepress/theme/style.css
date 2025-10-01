@@ -92,10 +92,39 @@ body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
 }
 
-/* 确保主要内容区域的滚动条也被隐藏 */
+.top-alert {
+  position: fixed;
+  top: 60px; /* 调整为顶栏高度以下 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* 缩短左右长度 */
+  max-width: 600px; /* 设置最大宽度 */
+  z-index: 9999;
+  margin: 0;
+  border-radius: 8px; /* 添加圆角 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  padding-left: 16px !important; /* 减少左填充 */
+  padding-right: 16px !important; /* 减少右填充 */
+  /* 初始状态在屏幕上方 */
+  opacity: 0;
+  transform: translateX(-50%) translateY(-20px);
+  animation: slideDown 0.5s ease-out forwards;
+}
+
+/* 从上往下弹出的动画 */
+@keyframes slideDown {
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* 移除之前为内容区域添加的顶部边距，因为现在alert在顶栏下方 */
 .VPContent {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE 10+ */
+  margin-top: 0;
 }
 
 .VPContent::-webkit-scrollbar {
