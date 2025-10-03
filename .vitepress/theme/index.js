@@ -17,6 +17,8 @@ import Login from './components/login.vue';
 import Unlockre from './components/unlockre.vue';
 // 导入ua组件
 import Ua from './components/ua.vue';
+// 导入uain组件
+import Uain from './components/uain.vue';
 // 导入nuna-design-vue组件库
 import NunaDesignVue from 'nuna-design-vue';
 import 'nuna-design-vue/style.css';
@@ -67,6 +69,10 @@ export default {
     // 注册Ua组件，支持<Ua>和<ua>两种标签
     app.component('Ua', Ua)
     app.component('ua', Ua)
+    
+    // 注册Uain组件，支持<Uain>和<uain>两种标签
+    app.component('Uain', Uain)
+    app.component('uain', Uain)
     
     // 添加页面加载完成后的钩子，用于处理<num>、<en_num>和<research>标签
     router.onAfterRouteChanged = () => {
