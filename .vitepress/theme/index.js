@@ -13,6 +13,10 @@ import Version, { processNumTags, EnNumComponent } from "./components/version.vu
 import { processResearchTags } from "./components/research.vue";
 // 导入Login组件
 import Login from './components/login.vue';
+// 导入unlockre组件
+import Unlockre from './components/unlockre.vue';
+// 导入ua组件
+import Ua from './components/ua.vue';
 // 导入nuna-design-vue组件库
 import NunaDesignVue from 'nuna-design-vue';
 import 'nuna-design-vue/style.css';
@@ -54,6 +58,15 @@ export default {
     // 注册Login组件，支持<login>标签
     app.component('Login', Login)
     app.component('login', Login)
+    
+    // 注册Unlockre组件，支持<Unlockre>和<unlockre>以及<rere>三种标签
+    app.component('Unlockre', Unlockre)
+    app.component('unlockre', Unlockre)
+    app.component('rere', Unlockre)
+    
+    // 注册Ua组件，支持<Ua>和<ua>两种标签
+    app.component('Ua', Ua)
+    app.component('ua', Ua)
     
     // 添加页面加载完成后的钩子，用于处理<num>、<en_num>和<research>标签
     router.onAfterRouteChanged = () => {
