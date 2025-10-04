@@ -1,3 +1,5 @@
+<!-- 私有化产品定制组件 -->
+
 <template>
   <div class="unlockre-container">
     <button class="clear-cache-bar" @click="clearAllCaches">

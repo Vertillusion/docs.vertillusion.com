@@ -1,3 +1,5 @@
+<!-- 私有化产品定制组件 -->
+
 <template>
   <div class="login-container">
     <div v-if="!isAuthenticated" class="login-form">

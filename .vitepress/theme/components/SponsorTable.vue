@@ -1,3 +1,5 @@
+<!-- 私有化产品定制组件 -->
+
 <script setup lang="ts">
 import { ref, watch, onMounted, Ref } from 'vue'
 

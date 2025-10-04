@@ -1,3 +1,5 @@
+<!-- 私有化产品定制组件 -->
+
 <script setup>
 import { ref, defineProps } from 'vue'
 import versionData from '../../../support/version.json'
