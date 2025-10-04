@@ -25,12 +25,6 @@ function createNav(lang = 'zh') {
         ],
       },
       {
-        text: "FRIENDS",
-        items: [
-          { text: 'STARKETTLE', link: 'https://scarefree.cn/' }
-        ],
-      },
-      {
         text: "ABOUT",
         items: [
           { text: 'About Vilinko Studio', link: '/en/about/index' },
@@ -49,12 +43,6 @@ function createNav(lang = 'zh') {
         { text: 'Vilinko Studio', link: 'https://www.vilinko.com' },
         { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
         { text: 'LFS', link: 'https://lfs.vilinko.com' }
-      ],
-    },
-    {
-      text: "友情链接",
-      items: [
-        { text: 'STARKETTLE', link: 'https://scarefree.cn/' }
       ],
     },
     {
