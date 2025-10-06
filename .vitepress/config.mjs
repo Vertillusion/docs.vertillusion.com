@@ -309,7 +309,6 @@ export default withMermaid(withPwa(
       socialLinks: [
         { icon: 'github', link: 'https://github.com/VilinkoStudio' },
         { icon: 'bilibili', link: 'https://space.bilibili.com/3493298551393123' },
-        { icon: 'wechat', link: 'https://chatbot.weixin.qq.com/webapp/VevUWQr6ZPRLtn0f8gdoJ4bYQI6EKv?isFloat=false&robotName=%E5%B0%8FV' },
       ]
     },
   })
