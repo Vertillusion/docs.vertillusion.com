@@ -12,7 +12,7 @@ next:
 - 开发：[沫狐奶昔 CimiMoly](https://github.com/EnderMo)
 - [使用教程](/docs/lightframe/manual)
 - [自定义命令列表](/docs/lightframe/code)
-- [首次使用用户引导](/oobe/lightframe/index.md)
+- [首次使用用户引导](/oobe/lightframe/index.md) <Badge type="warning" text="Beta" />
 :::
 
 <research>2</research>
