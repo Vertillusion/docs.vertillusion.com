@@ -18,7 +18,7 @@ features:
       dark: https://lightframe.vilinko.com/lightframe_dark.ico
       light: https://lightframe.vilinko.com/favicon.ico
     title: LightFrame
-    details: 完全免费、由每一个用户支持、面向用户的轻量级创作型桌面优化应用程序。
+    details: 免费、由每一个用户支持、面向用户的轻量级创作型桌面优化应用程序。
     link: /docs/lightframe/index
     linkText: 查看文档
   - icon: 

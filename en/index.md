@@ -47,7 +47,7 @@ features:
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const showNationalDayAlert = true
+const showNationalDayAlert = false
 
 onMounted(() => {
   clearCacheCookies();
