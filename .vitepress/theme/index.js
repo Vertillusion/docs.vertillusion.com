@@ -30,6 +30,9 @@ let iframeElement = null;
 let chatButton = null;
 
 function initWechatChatbot() {
+  // 确保只在浏览器环境中执行
+  if (typeof window === 'undefined' || typeof document === 'undefined') return;
+  
   // 避免重复加载
   if (wechatChatbotLoaded) return;
   
@@ -53,6 +56,9 @@ function initWechatChatbot() {
 
 // 创建悬浮按钮
 function createChatButton() {
+  // 确保只在浏览器环境中执行
+  if (typeof window === 'undefined' || typeof document === 'undefined') return;
+  
   // 创建按钮容器
   chatButton = document.createElement('div');
   chatButton.id = 'wechat-chat-button';
@@ -82,6 +88,9 @@ function createChatButton() {
 
 // 显示客服窗口
 function showChatWindow() {
+  // 确保只在浏览器环境中执行
+  if (typeof window === 'undefined' || typeof document === 'undefined') return;
+  
   // 移除按钮
   if (chatButton && chatButton.parentNode) {
     chatButton.parentNode.removeChild(chatButton);
@@ -150,12 +159,14 @@ function showChatWindow() {
   
   // 关闭按钮点击事件
   closeButton.addEventListener('click', () => {
+    // 移除窗口
     if (chatWindowContainer && chatWindowContainer.parentNode) {
       chatWindowContainer.parentNode.removeChild(chatWindowContainer);
+      // 移除事件监听器
       window.removeEventListener('resize', sizeWindow);
+      // 重新创建按钮
+      setTimeout(createChatButton, 100);
     }
-    // 重新显示按钮
-    createChatButton();
   });
 }
 
@@ -237,15 +248,25 @@ export default {
     app.unmount = function() {
       imageOptimizer.destroy();
       // 清理客服组件
-      if (chatWindowContainer && chatWindowContainer.parentNode) {
-        chatWindowContainer.parentNode.removeChild(chatWindowContainer);
-      }
-      if (chatButton && chatButton.parentNode) {
-        chatButton.parentNode.removeChild(chatButton);
+      if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+        if (chatWindowContainer && chatWindowContainer.parentNode) {
+          chatWindowContainer.parentNode.removeChild(chatWindowContainer);
+        }
+        if (chatButton && chatButton.parentNode) {
+          chatButton.parentNode.removeChild(chatButton);
+        }
       }
       if (originalUnmount) {
         originalUnmount.call(this);
       }
     };
   }
+}
+
+// 处理研究标签
+// 确保只在浏览器环境中执行
+if (typeof window !== 'undefined') {
+  window.processResearchTags = processResearchTags;
+  // 处理数字标签
+  window.processNumTags = processNumTags;
 }

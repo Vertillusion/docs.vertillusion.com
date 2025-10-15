@@ -16,6 +16,9 @@ const MAX_ERRORS = 10; // 最多保存10条错误信息
 
 // 初始化全局错误捕获机制
 function initErrorCapture() {
+  // 确保只在浏览器环境中执行
+  if (typeof window === 'undefined') return;
+  
   // 捕获全局JavaScript错误
   window.addEventListener('error', (event) => {
     const errorInfo = {
@@ -67,11 +70,19 @@ function addError(errorInfo) {
   }
 }
 
-// 初始化错误捕获
-initErrorCapture();
+// 确保只在浏览器客户端执行初始化
+if (typeof window !== 'undefined') {
+  // 初始化错误捕获
+  initErrorCapture();
+}
 
 // 显示用户信息的函数
 function showUserInfo() {
+  // 确保只在浏览器环境中执行
+  if (typeof window === 'undefined' || typeof navigator === 'undefined') {
+    return;
+  }
+  
   try {
     // 获取用户Agent
     const userAgent = navigator.userAgent;
