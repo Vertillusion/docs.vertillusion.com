@@ -31,6 +31,7 @@ function createNav(lang = 'zh') {
           { text: 'Developers List', link: '/en/about/developers' },
         ],
       },
+      { text: 'Login', link: 'https://vilinko-studio.feishu.cn/' },
     ];
   }
   
@@ -52,6 +53,7 @@ function createNav(lang = 'zh') {
         { text: '开发者列表', link: '/about/developers' },
       ],
     },
+    { text: '企业登录', link: 'https://vilinko-studio.feishu.cn/' },
   ];
 }
 
@@ -251,7 +253,6 @@ export default withMermaid(withPwa(
     vite: {
       server: {
         proxy: {
-          // 代理API请求以解决CORS问题
           '/api': {
             target: 'https://api.vilinko.com',
             changeOrigin: true,

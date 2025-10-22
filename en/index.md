@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: Sponsor List
       link: /docs/data/sponsor.md
+    - theme: alt
+      text: Quick Service
+      link: /en/docs/quick_service/index
 
 features:
   - icon:

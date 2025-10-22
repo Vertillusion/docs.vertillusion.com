@@ -12,6 +12,9 @@ hero:
     - theme: alt
       text: 赞助者列表
       link: /docs/data/sponsor.md
+    - theme: alt
+      text: 快捷服务
+      link: /docs/quick_service/index
 
 features:
   - icon:
