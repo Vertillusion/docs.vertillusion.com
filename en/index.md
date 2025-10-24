@@ -71,34 +71,17 @@ onMounted(() => {
 })
 
 function clearCacheCookies() {
+  // 移除所有缓存相关的cookie
   const cookiesToClear = ['vitepress-theme-cache', 'vitepress-cache', 'vue-router-cache'];
   
   cookiesToClear.forEach(cookieName => {
     document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
   });
-  
-  window.addEventListener('beforeunload', () => {
-    localStorage.removeItem('vitepress-last-visit');
-  });
 }
 
 function checkComponentsUpdate() {
-  if (localStorage.getItem('is-refreshing')) {
-    localStorage.removeItem('is-refreshing');
-    return;
-  }
-  
-  const currentComponentsVersion = '1.0.1';
-  const storedVersion = localStorage.getItem('components-version');
-  
-  if (storedVersion !== currentComponentsVersion) {
-    localStorage.setItem('is-refreshing', 'true');
-    localStorage.setItem('components-version', currentComponentsVersion);
-    
-    setTimeout(() => {
-      window.location.reload(true);
-    }, 500);
-  }
+  // 移除版本控制和强制刷新逻辑，确保每次加载都是最新内容
+  // 不再使用localStorage存储版本信息
 }
 </script>
 
