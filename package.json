@@ -2,7 +2,6 @@
   "devDependencies": {
     "@braintree/sanitize-url": "^7.1.1",
     "@types/dom-view-transitions": "^1.0.6",
-    "@vite-pwa/vitepress": "^1.0.0",
     "dayjs": "^1.11.13",
     "debug": "^4.4.1",
     "markdown-it-task-checkbox": "^1.0.6",
@@ -22,6 +21,7 @@
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/vue-fontawesome": "^3.1.1",
-    "nuna-design-vue": "^1.0.2"
+    "nuna-design-vue": "^1.0.2",
+    "vuetify": "3.9.0-beta.1"
   }
 }

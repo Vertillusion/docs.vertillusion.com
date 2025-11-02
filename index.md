@@ -13,6 +13,9 @@ hero:
       text: 赞助者列表
       link: /docs/data/sponsor.md
     - theme: alt
+      text: 创建工单
+      link: http://s.vilinko.com/issue
+    - theme: alt
       text: 快捷服务
       link: /docs/quick_service/index
 
@@ -70,7 +73,6 @@ onMounted(() => {
 })
 
 function clearCacheCookies() {
-  // 移除所有缓存相关的cookie
   const cookiesToClear = ['vitepress-theme-cache', 'vitepress-cache', 'vue-router-cache'];
   
   cookiesToClear.forEach(cookieName => {
@@ -79,8 +81,6 @@ function clearCacheCookies() {
 }
 
 function checkComponentsUpdate() {
-  // 移除版本控制和强制刷新逻辑，确保每次加载都是最新内容
-  // 不再使用localStorage存储版本信息
 }
 </script>
 

@@ -23,6 +23,7 @@ outline: false
 - [批量修改应用版本](#批量修改应用版本) `2025.08.31` <Badge type="warning" text="Beta" />
 - [调研项目](#调研项目) `2025.08.31` <Badge type="warning" text="Beta" />
 - [授权码保护](#授权码保护) `2025.09.21` <Badge type="warning" text="Beta" />
+- [Snackbar 通知](#snackbar通知) `2025.11.02` <Badge type="tip" text="1.0.0" />
 
 
 ## 代码高亮
@@ -382,6 +383,53 @@ graph LR
 
 **输出**
 <login>Vilinko Studio</login>
+
+## Snackbar 通知 <Badge type="tip" text="1.0.0" />
+
+全局的消息通知组件，可以在任何地方快速显示临时消息。支持多种颜色主题（信息、成功、警告、错误）。
+
+### 使用方法
+
+#### 在 JavaScript 中使用
+
+**输入**
+```js
+// 显示信息通知
+$snackbar.showMessage('这是一条信息通知');
+
+// 显示成功通知
+$snackbar.showMessage('操作成功！', 'success');
+
+// 显示警告通知
+$snackbar.showMessage('请注意！', 'warning');
+
+// 显示错误通知
+$snackbar.showMessage('操作失败', 'error');
+
+// 自定义显示时间（毫秒）
+$snackbar.showMessage('这条消息将显示5秒', 'info', 5000);
+```
+
+#### 在 Vue 组件中使用
+
+```js
+// 在Vue组件中通过this访问
+this.$snackbar.showMessage('组件内的通知');
+```
+
+### 交互演示
+
+<button onclick="$snackbar.showMessage('这是一条信息通知')" style="background-color: #2196f3; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-right: 8px;">信息通知</button>
+<button onclick="$snackbar.showMessage('操作成功！', 'success')" style="background-color: #4caf50; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-right: 8px;">成功通知</button>
+<button onclick="$snackbar.showMessage('请注意！', 'warning')" style="background-color: #ff9800; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-right: 8px;">警告通知</button>
+<button onclick="$snackbar.showMessage('操作失败', 'error')" style="background-color: #f44336; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">错误通知</button>
+
+### 注意事项
+
+- Snackbar 会自动显示在页面底部居中
+- 默认显示时间为3秒，可以自定义
+- 消息会从底部滑入，自动消失时从底部滑出
+- 支持移动端自适应显示，最大宽度限制为屏幕的90%
 
 <hr>
 <h6 style="text-align: center;">更多插件正在开发啦</h6>

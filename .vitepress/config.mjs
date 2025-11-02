@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress';
 import vitepressProtectPlugin from "vitepress-protect-plugin";
 import { withMermaid } from 'vitepress-plugin-mermaid'; // mermaid
-import { withPwa } from '@vite-pwa/vitepress';
 let markdownItTaskCheckbox;
 import('markdown-it-task-checkbox') // todo
   .then(module => {
@@ -183,7 +182,7 @@ function createSidebar(lang = 'zh') {
   ];
 }
 
-export default withMermaid(withPwa(
+export default withMermaid(
   defineConfig({
     base: "",
     head: [["link", { rel: "icon", href: "https://www.vilinko.com/img/Newico.png" }]],
@@ -313,4 +312,4 @@ export default withMermaid(withPwa(
       ]
     },
   })
-))
+)
