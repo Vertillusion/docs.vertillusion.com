@@ -115,6 +115,7 @@ function createSidebar(lang = 'zh') {
           { text: 'Privacy Policy', link: '/en/agreement/privacy' },
           { text: 'Minor Protection Terms', link: '/en/agreement/protect_child' },
           { text: 'Paid Service Agreement', link: '/en/agreement/pay' },
+          { text: 'Pogget Inspiration Hub Service Agreement', link: '/en/agreement/pogget-vui-service' },
         ]
       },
     ];
@@ -177,6 +178,7 @@ function createSidebar(lang = 'zh') {
         { text: '隐私政策', link: '/agreement/privacy' },
         { text: '未成年人保护条款', link: '/agreement/protect_child' },
         { text: '付费服务协议', link: '/agreement/pay' },
+        { text: '灵感小站服务协议', link: '/agreement/pogget-vui-service' },
       ]
     },
   ];
