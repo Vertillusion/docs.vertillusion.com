@@ -106,6 +106,7 @@ The Company collects the following information through the Feishu Document Syste
 2. Perform <u>desensitization processing and encrypted storage</u> on <u>user personal information</u>.
 3. Establish a strict data access permission management system.
 4. Conduct regular information security risk assessments and audits.
+5. For more detailed privacy policy, please refer to the "Vilinko Studio Privacy Policy".
 
 ## 8. Disclaimer
 
