@@ -33,7 +33,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3  # 在工作流程自动配置GithubPages
       - name: Install dependencies
-        run: npm install # 安装依赖
+        run: npm install --legacy-peer-deps # 安装依赖，忽略peer依赖冲突
       - name: Build with VitePress
         run: |
           npm run docs:build # 启动项目
