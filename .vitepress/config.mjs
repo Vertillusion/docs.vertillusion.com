@@ -187,7 +187,46 @@ function createSidebar(lang = 'zh') {
 export default withMermaid(
   defineConfig({
     base: "",
-    head: [["link", { rel: "icon", href: "https://www.vilinko.com/img/Newico.png" }]],
+    head: [
+      ["link", { rel: "icon", href: "https://www.vilinko.com/img/Newico.png" }],
+      // 防止浏览器缓存cookies和页面内容的meta标签
+      ["meta", { "http-equiv": "Cache-Control", content: "no-cache, no-store, must-revalidate" }],
+      ["meta", { "http-equiv": "Pragma", content: "no-cache" }],
+      ["meta", { "http-equiv": "Expires", content: "0" }],
+      // 添加JavaScript来清除现有cookies并设置不缓存的cookies
+      ["script", {}, `
+        // 清除所有cookies
+        function clearAllCookies() {
+          const cookies = document.cookie.split("; ");
+          for (let c = 0; c < cookies.length; c++) {
+            const d = window.location.hostname.split(".");
+            while (d.length > 0) {
+              const cookieBase = encodeURIComponent(cookies[c].split("=")[0]) + "=; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=" + d.join(".");
+              document.cookie = cookieBase;
+              d.shift();
+            }
+          }
+        }
+        
+        // 设置cookies时添加不缓存标志
+        function setNoCacheCookie(name, value, days = 0) {
+          let expires = "";
+          if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days*24*60*60*1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/; SameSite=Lax; secure; HttpOnly=false; Max-Age=0";
+        }
+        
+        // 页面加载时执行
+        window.addEventListener('DOMContentLoaded', () => {
+          clearAllCookies();
+          // 可选：设置一个会话cookie用于必要的功能，但不持久化
+          setNoCacheCookie('session_active', 'true', 0);
+        });
+      `]
+    ],
     title: "Vilinko Studio 文档",
     description: "Vilinko Studio 文档，提供产品的使用说明和用户服务支持。",
     keywords: 'Vilinko Studio,文档,产品,服务,支持,Vilinko,vertillusion,lightframe,lfs,vinaui,vui',
