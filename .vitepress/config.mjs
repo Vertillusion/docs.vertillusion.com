@@ -30,7 +30,7 @@ function createNav(lang = 'zh') {
           { text: 'Developers List', link: '/en/about/developers' },
         ],
       },
-      { text: 'Login', link: 'https://vilinko-studio.feishu.cn/' },
+      { text: 'Login', link: 'https://vilinko-studio.feishu.cn/docx/IcrTdGBgxobSIDxJjkWcKYWpnZL?' },
     ];
   }
   
@@ -52,7 +52,7 @@ function createNav(lang = 'zh') {
         { text: '开发者列表', link: '/about/developers' },
       ],
     },
-    { text: '企业登录', link: 'https://vilinko-studio.feishu.cn/' },
+    { text: '企业登录', link: 'https://vilinko-studio.feishu.cn/docx/IcrTdGBgxobSIDxJjkWcKYWpnZL?' },
   ];
 }
 
