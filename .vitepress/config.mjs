@@ -342,7 +342,7 @@ export default withMermaid(
 
       // 页脚
       footer: {
-        copyright: 'Copyright © 2019 - 2025 Vilinko Studio. All Rights Reserved.',
+        copyright: 'Copyright © 2019 - 2026 Vilinko Studio. All Rights Reserved.',
         message: '<a href="https://beian.miit.gov.cn/" target="_blank" style="text-decoration: none;">粤ICP备2025454076号</a>'
       },
 
