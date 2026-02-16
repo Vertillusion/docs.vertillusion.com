@@ -1,6 +1,6 @@
 # Statement on User Right to Be Informed for Pogget
 
-To safeguard your right to be informed while using Pogget (hereinafter referred to as the “Application”) and to clearly define the scope of data processing that may be involved when Vilinko (hereinafter referred to as “we” or “us”) provides services, this statement is formulated in accordance with the User Agreement and the Privacy Policy.
+To safeguard your right to be informed while using Pogget (hereinafter referred to as the “Application”) and to clearly define the scope of data processing that may be involved when Vilinko (hereinafter referred to as “we” or “us”) provides services, this statement is formulated in accordance with the Service Terms and the Privacy Policy.
 
 ## I. Description of User Rights
 
