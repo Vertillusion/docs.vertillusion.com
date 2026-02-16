@@ -14,7 +14,7 @@ hero:
       link: /docs/data/sponsor.md
     - theme: alt
       text: Submit a Ticket
-      link: http://s.vilinko.com/issue
+      link: https://vilinkostudio.github.io/support/own/email.html
     - theme: alt
       text: Quick Service
       link: /en/docs/quick_service/index

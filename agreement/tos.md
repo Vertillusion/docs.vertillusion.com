@@ -63,4 +63,4 @@ prev: false
 - [爱发电平台服务条款](https://afdian.com/term)
 
 ### 联系我们
-- 创建工单：[Vilinko Studio 工单创建助手](https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e)
+- [创建工单](https://vilinkostudio.github.io/support/own/email.html)

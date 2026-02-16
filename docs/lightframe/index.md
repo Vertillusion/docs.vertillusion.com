@@ -31,7 +31,7 @@ next:
 ## Bug反馈
 您可以通过一下渠道反馈 bug ：  
 
-1. [创建工单](https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e)
+1. [创建工单](https://vilinkostudio.github.io/support/own/email.html)
 
 请提供`C:\Users\账户名\AppData\Roaming\LightFrame`文件夹下的 **.vui** 文件，这将有助于 Bug 的判断。
 

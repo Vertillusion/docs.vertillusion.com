@@ -14,7 +14,7 @@ hero:
       link: /docs/data/sponsor.md
     - theme: alt
       text: 创建工单
-      link: http://s.vilinko.com/issue
+      link: https://vilinkostudio.github.io/support/own/email.html
     - theme: alt
       text: 快捷服务
       link: /docs/quick_service/index

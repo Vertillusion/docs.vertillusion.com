@@ -120,8 +120,7 @@
 ## 十、联系我们
 - 如您对本隐私政策有任何疑问、建议或投诉，可通过以下方式联系我们：
   - 邮箱：[privacy@vilinko.com](mailto:privacy@vilinko.com)
-  - 创建工单（推荐）：[Vilinko Studio 工单创建助手](https://vilinko-studio.feishu.cn/share/base/form/shrcnMi5t1NY40A0fjdTN2oRO5e)
-- 我们会在收到您的反馈后 15 个工作日内进行核实并回复。
+  - [Vilinko 反馈中心](http://vilinkostudio.github.io/support)
 
 ## 附录：第三方政策链接
 - [爱发电平台服务条款](https://afdian.com/term)
