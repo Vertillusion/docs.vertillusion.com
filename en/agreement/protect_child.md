@@ -6,7 +6,7 @@ Last updated date: August 6, 2025
 :::
 
 ::: warning 
-Vilinko Studio is registered in mainland China, which means that when handling service requests from outside mainland China, we will comply with the relevant laws of the People's Republic of China. Your personal data will be processed in accordance with the applicable laws and regulations of the People's Republic of China.
+Vilinko Studio is registered in Chinese Mainland, which means that when handling service requests from outside Chinese Mainland, we will comply with the relevant laws of the People's Republic of China. Your personal data will be processed in accordance with the applicable laws and regulations of the People's Republic of China.
 :::
 
 In case of any conflict, the [**Simplified Chinese version**](/agreement/protect_child.md) shall prevail.
