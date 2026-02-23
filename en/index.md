@@ -21,8 +21,8 @@ hero:
 
 features:
   - icon:
-      dark: https://lightframe.vilinko.com/lightframe_dark.ico
-      light: https://lightframe.vilinko.com/favicon.ico
+      dark: https://lightframe.vilinko.com/images/logo.webp
+      light: https://lightframe.vilinko.com/images/logo.webp
     title: LightFrame
     details: Completely free, supported by every user, a lightweight desktop optimization application for users.
     link: /en/docs/lightframe/index
@@ -49,51 +49,3 @@ features:
     link: /en/docs/vinaui/index
     linkText: View Documentation
 ---
-
-<script setup>
-import { ref, onMounted } from 'vue'
-
-const showNationalDayAlert = false
-
-onMounted(() => {
-  clearCacheCookies();
-  
-  checkComponentsUpdate();
-  
-  if (showNationalDayAlert) {
-    setTimeout(() => {
-      const alerts = document.querySelectorAll('.top-alert')
-      alerts.forEach(alert => {
-        alert.style.opacity = '0'
-        setTimeout(() => {
-          alert.style.display = 'none'
-        }, 300)
-      })
-    }, 5000)
-  }
-})
-
-function clearCacheCookies() {
-  const cookiesToClear = ['vitepress-theme-cache', 'vitepress-cache', 'vue-router-cache'];
-  
-  cookiesToClear.forEach(cookieName => {
-    document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-  });
-}
-
-function checkComponentsUpdate() {
-}
-</script>
-
-<div v-if="showNationalDayAlert">
-  <n-alert message="Happy National Day!" type="info" :border="false" show-icon class="top-alert" id="alert1" />
-  <n-alert 
-      message="Happy National Day!" 
-      :border="false"
-      description="Wishing you a joyous and happy National Day! Thank you for your continued support of Vilinko Studio. We will continue to provide you with excellent software and services."
-      type="info" 
-      show-icon 
-      class="top-alert"
-      id="alert2"
-  />
-</div>
