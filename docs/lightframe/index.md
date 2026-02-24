@@ -49,4 +49,4 @@ LightFrame **不会** 自动更新，只有当用户点击 **检查更新** 按�
 
 ## 其他信息
 有关贡献者和更新日志内容请查阅官方网站  
-<Linkcard url="https://lightframe.vilinko.com" title="LightFrame" description="https://lightframe.vilinko.com" logo="https://lightframe.vilinko.com/favicon.ico"/>
+<Linkcard url="https://lightframe.vilinko.com" title="LightFrame" description="https://lightframe.vilinko.com" logo="https://lightframe.vilinko.com/images/logo.webp"/>

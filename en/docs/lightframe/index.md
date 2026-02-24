@@ -48,4 +48,4 @@ The update process is as follows:
 
 ## Other Information
 For contributors and update logs, please refer to the official website  
-<Linkcard url="https://lightframe.vilinko.com" title="LightFrame" description="https://lightframe.vilinko.com" logo="https://lightframe.vilinko.com/favicon.ico"/>
+<Linkcard url="https://lightframe.vilinko.com" title="LightFrame" description="https://lightframe.vilinko.com" logo="https://lightframe.vilinko.com/images/logo.webp"/>

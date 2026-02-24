@@ -19,6 +19,8 @@
     "docs:preview": "vitepress preview"
   },
   "dependencies": {
+    "@docsearch/css": "^4.6.0",
+    "@docsearch/js": "^4.6.0",
     "@fortawesome/fontawesome-common-types": "^7.0.0",
     "@fortawesome/fontawesome-svg-core": "^7.0.0",
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
