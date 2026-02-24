@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.vilinko.com/sitemap.xml
+
+# Algolia 爬虫验证
+# Algolia-Crawler-Verif: 83BCABF73D3589B7
+
+# 禁止访问的路径
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+
+# 允许访问的路径
+Allow: /
+Allow: /docs/
+Allow: /about/
+Allow: /support/
+Allow: /agreement/
+
+# Crawl-delay 设置（如果需要）
+Crawl-delay: 10
+
+# 特定搜索引擎的配置
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: Bytespider
+Allow: /
