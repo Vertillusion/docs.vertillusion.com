@@ -191,13 +191,14 @@ export default withMermaid(
     base: "",
     head: [
       ["link", { rel: "icon", href: "https://www.vilinko.com/img/Newico.png" }],
-      // 防止浏览器缓存cookies和页面内容的meta标签
+      // 防止浏览器缓存
       ["meta", { "http-equiv": "Cache-Control", content: "no-cache, no-store, must-revalidate" }],
       ["meta", { "http-equiv": "Pragma", content: "no-cache" }],
       ["meta", { "http-equiv": "Expires", content: "0" }],
-      // 添加JavaScript来清除现有cookies并设置不缓存的cookies
+      ["meta", { "http-equiv": "X-UA-Compatible", content: "IE=edge" }],
+      ["meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }],
       ["script", {}, `
-        // 清除所有cookies
+        // 清除所有 cookies
         function clearAllCookies() {
           const cookies = document.cookie.split("; ");
           for (let c = 0; c < cookies.length; c++) {
@@ -210,7 +211,7 @@ export default withMermaid(
           }
         }
         
-        // 设置cookies时添加不缓存标志
+        // 设置 cookies 时添加不缓存标志
         function setNoCacheCookie(name, value, days = 0) {
           let expires = "";
           if (days) {
@@ -221,10 +222,22 @@ export default withMermaid(
           document.cookie = name + "=" + (value || "")  + expires + "; path=/; SameSite=Lax; secure; HttpOnly=false; Max-Age=0";
         }
         
+        // 新增：为静态资源 URL 添加时间戳防止缓存
+        function addTimestampToResources() {
+          const timestamp = new Date().getTime();
+          document.querySelectorAll('link[rel="stylesheet"], img').forEach(el => {
+            if (el.href && !el.href.includes('?v=')) {
+              const separator = el.href.includes('?') ? '&' : '?';
+              el.href = el.href + separator + 'v=' + timestamp;
+            }
+          });
+        }
+        
         // 页面加载时执行
         window.addEventListener('DOMContentLoaded', () => {
           clearAllCookies();
-          // 可选：设置一个会话cookie用于必要的功能，但不持久化
+          addTimestampToResources();
+          // 可选：设置一个会话 cookie 用于必要的功能，但不持久化
           setNoCacheCookie('session_active', 'true', 0);
         });
       `]
@@ -302,9 +315,19 @@ export default withMermaid(
           },
         },
       },
+      // 新增：构建时添加时间戳配置
+      build: {
+        rollupOptions: {
+          output: {
+            entryFileNames: 'assets/[name].[hash].js',
+            chunkFileNames: 'assets/[name].[hash].js',
+            assetFileNames: 'assets/[name].[hash].[ext]'
+          }
+        }
+      },
       plugins: [
         vitepressProtectPlugin({
-          disableF12: true, // F12开发者模式
+          disableF12: true, // F12 开发者模式
           disableCopy: false, // 文本复制
           disableSelect: false, // 文本选择
         }),
