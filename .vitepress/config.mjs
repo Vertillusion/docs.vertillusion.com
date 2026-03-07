@@ -1,14 +1,6 @@
 import { defineConfig } from 'vitepress';
 import vitepressProtectPlugin from "vitepress-protect-plugin";
 import { withMermaid } from 'vitepress-plugin-mermaid'; // mermaid
-let markdownItTaskCheckbox;
-import('markdown-it-task-checkbox') // todo
-  .then(module => {
-    markdownItTaskCheckbox = module.default || module;
-  })
-  .catch(error => {
-    console.error('Failed to import markdown-it-task-checkbox:', error);
-  });
 
 // 创建导航配置函数
 function createNav(lang = 'zh') {
@@ -297,11 +289,8 @@ export default withMermaid(
     
     markdown: {
       config: (md) => {
-        if (markdownItTaskCheckbox) {
-          md.use(markdownItTaskCheckbox);
-        } else {
-          console.warn('markdown-it-task-checkbox not loaded yet');
-        }
+        // 临时禁用 task-checkbox 插件以避免构建错误
+        console.log('Markdown config loaded');
       },
     },
     
@@ -317,11 +306,10 @@ export default withMermaid(
       },
       // 新增：构建时添加时间戳配置
       build: {
+        // 使用默认构建配置避免临时文件问题
         rollupOptions: {
           output: {
-            entryFileNames: 'assets/[name].[hash].js',
-            chunkFileNames: 'assets/[name].[hash].js',
-            assetFileNames: 'assets/[name].[hash].[ext]'
+            manualChunks: undefined
           }
         }
       },
