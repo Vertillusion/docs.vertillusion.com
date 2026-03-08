@@ -36,6 +36,7 @@ jobs:
         run: npm install --legacy-peer-deps # 安装依赖，忽略peer依赖冲突
       - name: Build with VitePress
         run: |
+          rm -rf .vitepress/dist .vitepress/.temp
           npm run docs:build # 启动项目
       - name: Add CNAME and .nojekyll
         run: |
