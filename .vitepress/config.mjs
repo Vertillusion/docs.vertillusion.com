@@ -12,7 +12,8 @@ function createNav(lang = 'zh') {
         items: [
           { text: 'Vilinko Studio', link: 'https://www.vilinko.com' },
           { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
-          { text: 'LFS', link: 'https://lfs.vilinko.com' }
+          { text: 'LFS', link: 'https://lfs.vilinko.com' },
+          { text: 'Pogget', link: 'https://pogget.vilinko.com'}
         ],
       },
       {
@@ -34,7 +35,8 @@ function createNav(lang = 'zh') {
       items: [
         { text: 'Vilinko Studio', link: 'https://www.vilinko.com' },
         { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
-        { text: 'LFS', link: 'https://lfs.vilinko.com' }
+        { text: 'LFS', link: 'https://lfs.vilinko.com' },
+        { text: 'Pogget', link: 'https://pogget.vilinko.com'}
       ],
     },
     {
@@ -80,15 +82,6 @@ function createSidebar(lang = 'zh') {
         collapsed: true,
         items: [
           { text: 'Basic Introduction', link: '/en/docs/vinaui/index' }
-        ]
-      },
-      {
-        text: 'LINKS',
-        collapsed: true,
-        items: [
-          { text: 'Vilinko Studio', link: 'https://www.vilinko.com' },
-          { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
-          { text: 'LFS', link: 'https://lfs.vilinko.com' }
         ]
       },
       {
@@ -144,15 +137,6 @@ function createSidebar(lang = 'zh') {
       collapsed: true,
       items: [
         { text: '基本介绍', link: '/docs/vinaui/index' }
-      ]
-    },
-    {
-      text: '链接',
-      collapsed: true,
-      items: [
-        { text: 'Vilinko Studio', link: 'https://www.vilinko.com' },
-        { text: 'LightFrame', link: 'https://lightframe.vilinko.com' },
-        { text: 'LFS', link: 'https://lfs.vilinko.com' }
       ]
     },
     {
