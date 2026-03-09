@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./chunks/framework.C3XuLvUm.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"docs/pogget/index.md","filePath":"docs/pogget/index.md"}'),a={name:"docs/pogget/index.md"};function n(s,c,r,d,i,p){return o(),t("div")}const f=e(a,[["render",n]]);export{m as __pageData,f as default};
