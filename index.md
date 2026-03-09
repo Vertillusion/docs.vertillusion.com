@@ -27,6 +27,13 @@ features:
     details: 免费、由每一个用户支持、面向用户的轻量级创作型桌面优化应用程序。
     link: /docs/lightframe/index
     linkText: 查看文档
+   - icon: 
+      dark: /img/products_pogget.ico
+      light: /img/products_pogget.ico
+    title: Pogget
+    details: 由每一个用户支持的轻量、强大、灵活的文件管理和交互工具。
+    link: /docs/pogget/index
+    linkText: 查看文档
   - icon: 
       dark: ../vuip.ico
       light: ../vuip.ico
