@@ -113,7 +113,8 @@ function createSidebar(lang = 'zh') {
       text: 'Pogget',
       collapsed: true,
       items: [
-        { text: '关于', link: '/docs/pogget/index' }
+        { text: '关于', link: '/docs/pogget/index' },
+        { text: '窗口编组', link: '/docs/pogget/group' }
       ]
     },
     {
