@@ -114,7 +114,8 @@ function createSidebar(lang = 'zh') {
       collapsed: true,
       items: [
         { text: '关于', link: '/docs/pogget/index' },
-        { text: '窗口编组', link: '/docs/pogget/group' }
+        { text: '窗口编组', link: '/docs/pogget/group' },
+        { text: '磁力窗', link: '/docs/pogget/mag' }
       ]
     },
     {
