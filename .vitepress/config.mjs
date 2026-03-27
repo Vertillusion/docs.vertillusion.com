@@ -110,6 +110,13 @@ function createSidebar(lang = 'zh') {
   // 默认中文侧边栏
   return [
     {
+      text: 'Pogget',
+      collapsed: true,
+      items: [
+        { text: '关于', link: '/docs/pogget/index' }
+      ]
+    },
+    {
       text: 'Universe',
       collapsed: true,
       items: [
