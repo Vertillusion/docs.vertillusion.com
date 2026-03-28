@@ -4,16 +4,6 @@ layout: home
 hero:
   name: "Vilinko Studio"
   text: "文档"
-  actions:
-    - theme: brand
-      text: 常见问题
-      link: /support/qa.md
-    - theme: alt
-      text: 赞助者列表
-      link: /docs/data/sponsor.md
-    - theme: alt
-      text: 服务支持
-      link: https://support.vilinko.com/
 
 features:
   - icon:

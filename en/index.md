@@ -5,17 +5,6 @@ hero:
   name: "Vilinko Studio"
   text: "Documentation"
 
-  actions:
-    - theme: brand
-      text: Common Questions
-      link: /support/qa.md
-    - theme: alt
-      text: Sponsor List
-      link: /docs/data/sponsor.md
-    - theme: alt
-      text: Support
-      link: https://support.vilinko.com/en/
-
 features:
   - icon:
       dark: https://lightframe.vilinko.com/images/logo.webp

@@ -13,3 +13,8 @@ It is composed of <u>Vi</u>sion, <u>Link</u>, and twin<u>kle</u>.
 When countless visions are created, looking back, it will surely shine and glow like a galaxy.
 
 <Linkcard url="https://www.vilinko.com" title="Vilinko Studio" description="https://www.vilinko.com" logo="https://www.vilinko.com/img/vilinko_2.png"/>
+
+## Sponsor List
+Below is our list of sponsors; thank you for their support! We use these funds to support the project's operation and server maintenance.
+
+[Sponsor List](/docs/data/sponsor)

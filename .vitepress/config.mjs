@@ -21,6 +21,7 @@ function createNav(lang = 'zh') {
         items: [
           { text: 'About Vilinko Studio', link: '/en/about/index' },
           { text: 'Developers List', link: '/en/about/developers' },
+          { text: '❤ Sponsor', link: 'https://afdian.com/a/EnderMo' },
         ],
       },
     ];
@@ -43,6 +44,7 @@ function createNav(lang = 'zh') {
       items: [
         { text: '关于 Vilinko Studio', link: '/about/index' },
         { text: '开发者列表', link: '/about/developers' },
+        { text: '❤ 支持我们', link: 'https://afdian.com/a/EnderMo' },
       ],
     },
   ];
