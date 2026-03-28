@@ -71,6 +71,3 @@ Thank you for using Vilinko Studio software. By using our services, you agree to
 ## Appendix
 ### Links to Third-Party Policies
 - [Afadian Platform Service Terms](https://afdian.com/term)
-
-### Contact Us
-- Create a ticket: [Vilinko Studio Ticket Creation Assistant](https://vilinkostudio.github.io/support/own/email.html)

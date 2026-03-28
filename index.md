@@ -12,11 +12,8 @@ hero:
       text: 赞助者列表
       link: /docs/data/sponsor.md
     - theme: alt
-      text: 创建工单
-      link: https://vilinkostudio.github.io/support/own/email.html
-    - theme: alt
-      text: 快捷服务
-      link: /docs/quick_service/index
+      text: 服务支持
+      link: https://support.vilinko.com/
 
 features:
   - icon:

@@ -23,7 +23,6 @@ function createNav(lang = 'zh') {
           { text: 'Developers List', link: '/en/about/developers' },
         ],
       },
-      { text: 'Login', link: 'https://vilinko-studio.feishu.cn' },
     ];
   }
   
@@ -46,7 +45,6 @@ function createNav(lang = 'zh') {
         { text: '开发者列表', link: '/about/developers' },
       ],
     },
-    { text: '成员登录', link: 'https://vilinko-studio.feishu.cn' },
   ];
 }
 
@@ -68,6 +66,15 @@ function createSidebar(lang = 'zh') {
           { text: 'Basic Introduction', link: '/en/docs/lightframe/index' },
           { text: 'User Manual', link: '/en/docs/lightframe/manual' },
           { text: 'Custom Commands', link: '/en/docs/lightframe/code' }
+        ]
+      },
+      {
+        text: 'Pogget',
+        collapsed: true,
+        items: [
+          { text: 'About Pogget', link: '/en/docs/pogget/index' },
+          { text: 'Window Group', link: '/en/docs/pogget/group' },
+          { text: 'Magnet Window', link: '/en/docs/pogget/mag' }
         ]
       },
       {
@@ -94,7 +101,6 @@ function createSidebar(lang = 'zh') {
       },
       {
         text: 'Service Agreement',
-        collapsed: true,
         items: [
           { text: 'Terms of Service', link: '/en/agreement/tos' },
           { text: 'Privacy Policy', link: '/en/agreement/privacy' },
@@ -110,15 +116,6 @@ function createSidebar(lang = 'zh') {
   // 默认中文侧边栏
   return [
     {
-      text: 'Pogget',
-      collapsed: true,
-      items: [
-        { text: '关于', link: '/docs/pogget/index' },
-        { text: '窗口编组', link: '/docs/pogget/group' },
-        { text: '磁力窗', link: '/docs/pogget/mag' }
-      ]
-    },
-    {
       text: 'Universe',
       collapsed: true,
       items: [
@@ -132,6 +129,15 @@ function createSidebar(lang = 'zh') {
         { text: '基本介绍', link: '/docs/lightframe/index' },
         { text: '使用教程', link: '/docs/lightframe/manual' },
         { text: '自定义命令', link: '/docs/lightframe/code' }
+      ]
+    },
+    {
+      text: 'Pogget',
+      collapsed: true,
+      items: [
+        { text: '关于', link: '/docs/pogget/index' },
+        { text: '组件编组', link: '/docs/pogget/group' },
+        { text: '磁力窗', link: '/docs/pogget/mag' }
       ]
     },
     {
@@ -158,7 +164,6 @@ function createSidebar(lang = 'zh') {
     },
     {
       text: '服务协议',
-      collapsed: true,
       items: [
         { text: '服务条款', link: '/agreement/tos' },
         { text: '隐私政策', link: '/agreement/privacy' },

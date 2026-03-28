@@ -1,4 +1,3 @@
-// https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
@@ -11,35 +10,25 @@ import SponsorTable from "./components/SponsorTable.vue";
 import DownloadCard from "./components/DownloadCard.vue";
 import Version, { processNumTags, EnNumComponent } from "./components/version.vue";
 import { processResearchTags } from "./components/research.vue";
-// 导入Login组件
 import Login from './components/login.vue';
-// 导入unlockre组件
 import Unlockre from './components/unlockre.vue';
-// 导入ua组件
 import Ua from './components/ua.vue';
-// 导入uain组件
 import Uain from './components/uain.vue';
-// 导入nuna-design-vue组件库
 import NunaDesignVue from 'nuna-design-vue';
 import 'nuna-design-vue/style.css';
 
-/** @type {import('vitepress').Theme} */
 export default {
-  ...DefaultTheme, // 展开DefaultTheme以确保所有默认属性都被包含
+  ...DefaultTheme,
   extends: DefaultTheme,
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // 调用默认主题的enhanceApp方法
     DefaultTheme.enhanceApp?.({ app, router, siteData })
 
-    // 全局注册nuna-design-vue组件库
     app.use(NunaDesignVue);
 
-    // 初始化图片优化工具
     const imageOptimizer = setupImageOptimization();
     imageOptimizer.init();
     
@@ -47,37 +36,24 @@ export default {
     app.component('Linkcard', Linkcard)
     app.component('SponsorTable', SponsorTable)
     app.component('DownloadCard', DownloadCard)
-    // 注册Closeword组件，支持<Closeword>和<cw>两种标签
     app.component('Closeword', Closeword)
     app.component('cw', Closeword)
-    // 注册Version组件，支持<Version>和<version>两种标签
     app.component('Version', Version)
     app.component('version', Version)
-    
-    // 注册EnNumComponent组件，支持<en_num>标签
     app.component('en_num', EnNumComponent)
-    
-    // 注册Login组件，支持<login>标签
     app.component('Login', Login)
     app.component('login', Login)
-    
-    // 注册Unlockre组件，支持<Unlockre>和<unlockre>以及<rere>三种标签
     app.component('Unlockre', Unlockre)
     app.component('unlockre', Unlockre)
     app.component('rere', Unlockre)
-    
-    // 注册Ua组件，支持<Ua>和<ua>两种标签
     app.component('Ua', Ua)
     app.component('ua', Ua)
-    
-    // 注册Uain组件，支持<Uain>和<uain>两种标签
     app.component('Uain', Uain)
     app.component('uain', Uain)
     
     // 创建全局Snackbar服务
     const snackbarService = {
       showMessage(message, color = 'info', timeout = 3000) {
-        // 创建Snackbar元素
         const snackbar = document.createElement('div');
         snackbar.className = 'v-snackbar';
         snackbar.style.cssText = `
@@ -139,11 +115,9 @@ export default {
       
       // 等待DOM渲染完成
       setTimeout(() => {
-        // 处理页面中的所有标签
         processNumTags();
         processResearchTags();
         
-        // 页面更新后重新处理图片
         imageOptimizer.updateImages();
       }, 100)
     }
@@ -163,6 +137,5 @@ export default {
 // 确保只在浏览器环境中执行
 if (typeof window !== 'undefined') {
   window.processResearchTags = processResearchTags;
-  // 处理数字标签
   window.processNumTags = processNumTags;
 }

@@ -1,3 +1,10 @@
+---
+prev: false
+next:
+  text: '组件编组'
+  link: '/docs/pogget/group'
+---
+
 # Pogget
 
 > 一款完全免费、由每一个用户支持的轻量文件交互效率工具。为了保护您的信息安全，如果您是通过网站下载，请务必确保下载源来自官网[https://pogget.vilinko.com](https://pogget.vilinko.com)。

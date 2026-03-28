@@ -30,7 +30,7 @@ next:
 ## Bug Feedback
 You can feedback bugs through the following two channels:
 
-1. [Create a ticket](https://vilinkostudio.github.io/support/own/email.html)
+1. [Support](https://support.vilinko.com/en/)
 
 Please provide the **.vui** file under the `C:\Users\username\AppData\Roaming\LightFrame` folder, which will help determine the bug.
 

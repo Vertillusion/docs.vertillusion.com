@@ -12,7 +12,6 @@ next:
 - 开发：[沫狐奶昔 CimiMoly](https://github.com/EnderMo)
 - [使用教程](/docs/lightframe/manual)
 - [自定义命令列表](/docs/lightframe/code)
-- [首次使用用户引导](/oobe/lightframe/index.md) <Badge type="warning" text="Beta" />
 :::
 
 <research>2</research>
@@ -31,7 +30,7 @@ next:
 ## Bug反馈
 您可以通过一下渠道反馈 bug ：  
 
-1. [创建工单](https://vilinkostudio.github.io/support/own/email.html)
+1. [服务支持](https://support.vilinko.com/)
 
 请提供`C:\Users\账户名\AppData\Roaming\LightFrame`文件夹下的 **.vui** 文件，这将有助于 Bug 的判断。
 

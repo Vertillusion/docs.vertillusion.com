@@ -124,7 +124,6 @@ In case of any conflict, the [**Simplified Chinese version**](/agreement/privacy
 ## 10. Contact Us
 - If you have any questions, suggestions or complaints about this Privacy Policy, you can contact us through the following methods:
   - Email: [privacy@vilinko.com](mailto:privacy@vilinko.com)
-  - Create a ticket: [Vilinko Studio Ticket Creation Assistant](https://vilinkostudio.github.io/support/own/email.html)
 - We will verify and reply within 15 working days after receiving your feedback.
 
 ## Appendix: Links to Third-Party Policies

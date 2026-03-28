@@ -49,10 +49,11 @@
   --vp-c-default-3: var(--vp-c-gray-3);
   --vp-c-default-soft: var(--vp-c-gray-soft);
   
-  --vp-c-brand-1: var(--vp-c-indigo-1);
-  --vp-c-brand-2: var(--vp-c-indigo-2);
-  --vp-c-brand-3: var(--vp-c-indigo-3);
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
+  /* 修改品牌色为 #5279FB */
+  --vp-c-brand-1: #5279FB;
+  --vp-c-brand-2: #6b8cff;
+  --vp-c-brand-3: #849eff;
+  --vp-c-brand-soft: rgba(82, 121, 251, 0.16);
 
   --vp-c-tip-1: var(--vp-c-brand-1);
   --vp-c-tip-2: var(--vp-c-brand-2);
@@ -152,19 +153,8 @@ body::-webkit-scrollbar {
  * -------------------------------------------------------------------------- */
 
 :root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #1e6bcb 30%,
-    #5c83ff
-  );
-
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #5c83ff 50%,
-    #66b3ff 50%
-  );
-  --vp-home-hero-image-filter: blur(44px);
+  --vp-home-hero-name-color: #5279FB;
+  --vp-home-hero-name-background: none;
 }
 
 @media (min-width: 640px) {
@@ -220,7 +210,7 @@ body::-webkit-scrollbar {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(92, 131, 255, 0.2),
+    rgba(82, 121, 251, 0.2),
     transparent
   );
   opacity: 0;
@@ -392,4 +382,3 @@ img[loading="lazy"]::before {
   
 
 }
-

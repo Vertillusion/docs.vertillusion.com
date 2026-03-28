@@ -13,11 +13,8 @@ hero:
       text: Sponsor List
       link: /docs/data/sponsor.md
     - theme: alt
-      text: Submit a Ticket
-      link: https://vilinkostudio.github.io/support/own/email.html
-    - theme: alt
-      text: Quick Service
-      link: /en/docs/quick_service/index
+      text: Support
+      link: https://support.vilinko.com/en/
 
 features:
   - icon:
@@ -26,6 +23,13 @@ features:
     title: LightFrame
     details: Completely free, supported by every user, a lightweight desktop optimization application for users.
     link: /en/docs/lightframe/index
+    linkText: View Documentation
+  - icon: 
+      dark: ../products_pogget.ico
+      light: ../products_pogget.ico
+    title: Pogget
+    details: A lightweight, powerful, and flexible file management and interaction tool supported by every user.
+    link: /docs/pogget/index
     linkText: View Documentation
   - icon: 
       dark: ../vuip.ico

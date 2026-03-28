@@ -61,6 +61,3 @@ prev: false
 ## 附录
 ### 第三方政策链接
 - [爱发电平台服务条款](https://afdian.com/term)
-
-### 联系我们
-- [创建工单](https://vilinkostudio.github.io/support/own/email.html)
