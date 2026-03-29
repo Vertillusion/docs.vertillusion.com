@@ -4,7 +4,7 @@
 - Video: [【Official Complete Tutorial】Want to make your favorite desktop? LightFrame Desktop Interaction Layout Tutorial【Basic】](https://www.bilibili.com/video/BV1yw411q7ct)
 :::
 
-<research>2</research>
+
 
 ## 0x01 First Use
 Download **LightFrame.zip** from the [official website](https://lightframe.vilinko.com/) and extract it to a fixed folder.

@@ -1,10 +1,10 @@
 ---
 layout: page
 ---
+
 <script>
 import {
   VPTeamPage,
-  VPTeamPageTitle,
   VPTeamMembers
 } from 'vitepress/theme'
 
@@ -112,10 +112,6 @@ export default {
 </script>
 
 <VPTeamPage>
-  <VPTeamPageTitle>
-    <template #title>Developers</template>
-    <template #subtitle>Meet the amazing people behind Vilinko Studio</template>
-  </VPTeamPageTitle>
   <VPTeamMembers
     :members="members"
     :size="'small'"

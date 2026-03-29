@@ -7,7 +7,7 @@ next: false
 
 # Custom Command List
 
-<research>2</research>
+
 
 1. (File) Open File
 2. (*.vui) Open Card

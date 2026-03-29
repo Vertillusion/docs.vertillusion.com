@@ -1,10 +1,10 @@
 ---
 layout: page
 ---
+
 <script>
 import {
   VPTeamPage,
-  VPTeamPageTitle,
   VPTeamMembers
 } from 'vitepress/theme'
 
@@ -114,5 +114,6 @@ export default {
 <VPTeamPage>
   <VPTeamMembers
     :members="members"
+    :size="'small'"
   />
 </VPTeamPage>

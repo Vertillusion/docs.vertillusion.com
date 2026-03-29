@@ -4,7 +4,7 @@
 - 视频：[【官方完整教程】想做出自己喜欢的桌面？LightFrame桌面交互布置教程【基础篇】](https://www.bilibili.com/video/BV1yw411q7ct)
 :::
 
-<research>2</research>
+
 
 ## 0x01 初次使用
 从[官网](https://lightframe.vilinko.com/)下载 **LightFrame.zip** ，并解压到一个固定的文件夹。  

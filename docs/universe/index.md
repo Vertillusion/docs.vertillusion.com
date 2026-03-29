@@ -14,8 +14,6 @@ next: false
 ## 介绍
 在 Vilinko Universe 发现、下载、启动、更新属于你和 Vilinko 的项目。
 
-当前 *<num>3</num>*
-
 
   <a href="https://lightframe.vilinko.com/Update/VilinkoUniverse.exe" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
     <n-button type="primary">下载 / 更新 Vilinko Universe</n-button>

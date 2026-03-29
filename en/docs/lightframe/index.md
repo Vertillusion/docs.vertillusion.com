@@ -14,7 +14,7 @@ next:
 - [Custom Command List](/docs/lightframe/code)
 :::
 
-<research>2</research>
+
 
 ## Software Features
 * Ready to use. Using a self-developed lightweight framework to achieve extremely low resource usage<sup>1</sup>, ensuring smooth daily use while meeting desktop experience needs.

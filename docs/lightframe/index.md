@@ -14,7 +14,7 @@ next:
 - [自定义命令列表](/docs/lightframe/code)
 :::
 
-<research>2</research>
+
 
 ## 软件特点
 - 即开即用。使用自开发轻量级框架,实现极低的资源占用<sup>1</sup>在满足桌面体验需求的同时保证日常使用流畅。

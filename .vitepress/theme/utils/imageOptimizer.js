@@ -88,35 +88,10 @@ class ImageLazyLoader {
 
 // 导出初始化函数
 export function setupImageOptimization() {
-  let imageLoader = null;
-  
-  // 初始化图片优化
-  function init() {
-    if (!isBrowser || imageLoader) return;
-    
-    imageLoader = new ImageLazyLoader();
-    imageLoader.init();
-  }
-  
-  // 页面更新时重新处理图片
-  function updateImages() {
-    if (!isBrowser || !imageLoader) return;
-    
-    imageLoader.processImages();
-  }
-  
-  // 清理资源
-  function destroy() {
-    if (!isBrowser || !imageLoader) return;
-    
-    imageLoader.destroy();
-    imageLoader = null;
-  }
-  
   return {
-    init,
-    updateImages,
-    destroy
+    init() {},
+    updateImages() {},
+    destroy() {}
   };
 }
 

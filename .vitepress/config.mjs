@@ -181,60 +181,7 @@ function createSidebar(lang = 'zh') {
 export default withMermaid(
   defineConfig({
     base: "",
-    head: [
-      ["link", { rel: "icon", href: "https://www.vilinko.com/img/Newico.png" }],
-      // 防止浏览器缓存
-      ["meta", { "http-equiv": "Cache-Control", content: "no-cache, no-store, must-revalidate" }],
-      ["meta", { "http-equiv": "Pragma", content: "no-cache" }],
-      ["meta", { "http-equiv": "Expires", content: "0" }],
-      ["meta", { "http-equiv": "X-UA-Compatible", content: "IE=edge" }],
-      ["meta", { name: "viewport", content: "width=device-width, initial-scale=1.0" }],
-      ["script", {}, `
-        // 清除所有 cookies
-        function clearAllCookies() {
-          const cookies = document.cookie.split("; ");
-          for (let c = 0; c < cookies.length; c++) {
-            const d = window.location.hostname.split(".");
-            while (d.length > 0) {
-              const cookieBase = encodeURIComponent(cookies[c].split("=")[0]) + "=; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; domain=" + d.join(".");
-              document.cookie = cookieBase;
-              d.shift();
-            }
-          }
-        }
-        
-        // 设置 cookies 时添加不缓存标志
-        function setNoCacheCookie(name, value, days = 0) {
-          let expires = "";
-          if (days) {
-            const date = new Date();
-            date.setTime(date.getTime() + (days*24*60*60*1000));
-            expires = "; expires=" + date.toUTCString();
-          }
-          document.cookie = name + "=" + (value || "")  + expires + "; path=/; SameSite=Lax; secure; HttpOnly=false; Max-Age=0";
-        }
-        
-        // 新增：为静态资源 URL 添加时间戳防止缓存
-        function addTimestampToResources() {
-          const timestamp = new Date().getTime();
-          document.querySelectorAll('link[rel="stylesheet"], img').forEach(el => {
-            if (el.href && !el.href.includes('?v=')) {
-              const separator = el.href.includes('?') ? '&' : '?';
-              el.href = el.href + separator + 'v=' + timestamp;
-            }
-          });
-        }
-        
-        // 页面加载时执行
-        window.addEventListener('DOMContentLoaded', () => {
-          clearAllCookies();
-          addTimestampToResources();
-          // 可选：设置一个会话 cookie 用于必要的功能，但不持久化
-          setNoCacheCookie('session_active', 'true', 0);
-        });
-      `]
-    ],
-    title: "Vilinko Studio 文档",
+    title: "Vilinko Docs",
     description: "Vilinko Studio 文档，提供产品的使用说明和用户服务支持。",
     keywords: 'Vilinko Studio,文档,产品,服务,支持,Vilinko,vertillusion,lightframe,lfs,vinaui,vui',
     
