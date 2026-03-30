@@ -19,7 +19,8 @@ next:
 
 ::: tip 提示 为了防止误删，删除组件时默认选项为"解散并归位"，文件会被放回到原始的位置。如果无法找到原始位置，文件会被放置到桌面。 :::
 物理收纳盒是物理意义上的收纳盒，适用于文件整理等情景。文件会被移动进入收纳盒中，"删除"等操作会真的将文件从电脑上移除。
-![explorer_CrnlQT9ilq](https://github.com/user-attachments/assets/59dba52f-41b2-4379-8e73-b95f383d73a5)
+![explorer_CrnlQT9ilq](https://github.com/user-attachments/assets/a4124224-fd9f-46fb-9e23-ab8bcd47b593)
+
 
 
 
