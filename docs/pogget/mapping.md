@@ -1,4 +1,4 @@
-<img width="351" height="411" alt="image" src="https://github.com/user-attachments/assets/a11cb999-2a34-4048-8d31-4130d212fd92" />---
+---
 prev: false
 next:
   text: '组件编组'
