@@ -52,13 +52,13 @@ function createNav(lang = 'zh') {
 function createSidebar(lang = 'zh') {
   if (lang === 'en') {
     return [
-      {
-        text: 'Universe',
-        collapsed: true,
-        items: [
-          { text: 'Introduction', link: '/en/docs/universe/index' }
-        ]
-      },
+//      {
+//        text: 'Universe',
+//        collapsed: true,
+//        items: [
+//          { text: 'Introduction', link: '/en/docs/universe/index' }
+//        ]
+//      },
       {
         text: 'LightFrame',
         collapsed: true,
@@ -115,13 +115,13 @@ function createSidebar(lang = 'zh') {
   
   // 默认中文侧边栏
   return [
-    {
-      text: 'Universe',
-      collapsed: true,
-      items: [
-        { text: '介绍', link: '/docs/universe/index' }
-      ]
-    },
+//    {
+//      text: 'Universe',
+//      collapsed: true,
+//      items: [
+//        { text: '介绍', link: '/docs/universe/index' }
+//      ]
+//    },
     {
       text: 'LightFrame',
       collapsed: true,
