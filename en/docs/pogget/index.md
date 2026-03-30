@@ -1,8 +1,8 @@
 ---
 prev: false
 next:
-text: 'Component grouping'
-link: '/en/docs/pogget/group'
+    text: 'Component grouping'
+    link: '/en/docs/pogget/group'
 ---
 
 # Pogget
