@@ -183,6 +183,9 @@ export default withMermaid(
     title: "Vilinko Docs",
     description: "Vilinko Studio 文档，提供产品的使用说明和用户服务支持。",
     keywords: 'Vilinko Studio,文档,产品,服务,支持,Vilinko,vertillusion,lightframe,lfs,vinaui,vui',
+    head: [
+      ['link', { rel: 'icon', type: 'image/png', href: 'https://www.vilinko.com/img/Newico.png' }]
+    ],
     
     // 多语言配置
     locales: {
