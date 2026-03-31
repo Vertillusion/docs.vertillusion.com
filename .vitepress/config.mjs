@@ -98,7 +98,6 @@ function createSidebar(lang = 'zh') {
         collapsed: true,
         items: [
           { text: 'About Vilinko', link: '/en/about/index' },
-          { text: 'Developers', link: '/en/about/developers' }
         ]
       },
       {
@@ -162,7 +161,6 @@ function createSidebar(lang = 'zh') {
       collapsed: true,
       items: [
         { text: '关于 Vilinko', link: '/about/index' },
-        { text: '开发者列表', link: '/about/developers' }
       ]
     },
     {
