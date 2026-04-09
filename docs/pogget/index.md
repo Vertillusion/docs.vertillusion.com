@@ -7,7 +7,7 @@ next:
 
 # Pogget
 
-> 一款完全免费、由每一个用户支持的轻量文件交互效率工具。为了保护您的信息安全，如果您是通过网站下载，请务必确保下载源来自官网[https://pogget.vilinko.com](https://pogget.vilinko.com)。
+> 一款完全免费、由每一个用户支持的轻量文件交互效率工具。为了保护您的信息安全，如果您是通过网站下载，请务必确保下载源来自官网 [https://pogget.vilinko.com](https://pogget.vilinko.com)。
 欢迎您在[这里](https://github.com/VilinkoStudio/docs.vilinko.com/edit/source/docs/pogget)参与文档的完善！
 
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
