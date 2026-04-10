@@ -28,9 +28,9 @@ next:
 
 ## ✨ 如何开始
 本项目不需要繁杂的安装步骤~
-1. 将文件(Pogget.exe)解压到你喜欢的任意目录,或者直接放在桌面。README.md 为项目自述，无需放置。
+1. 将文件 (Pogget.exe) 解压到你喜欢的任意目录,或者直接放在桌面。README.md 为项目自述，无需放置。
 2. 直接打开应用即可。
-如果在较早的系统提示dll丢失,可以在 [https://aka.ms/vc14/vc_redist.x64.exe](https://aka.ms/vc14/vc_redist.x64.exe) 下载补丁。
+如果在较早的系统提示 dll 丢失,可以在 [https://aka.ms/vc14/vc_redist.x64.exe](https://aka.ms/vc14/vc_redist.x64.exe) 下载补丁。
 
 ## 🗑️ 如何卸载
 

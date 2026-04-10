@@ -75,7 +75,8 @@ function createSidebar(lang = 'zh') {
           { text: 'About Pogget', link: '/en/docs/pogget/index' },
           { text: 'Window Group', link: '/en/docs/pogget/group' },
           { text: 'Mapped Storage and Regular Storage', link: '/en/docs/pogget/mapping' },
-          { text: 'Magnet Window', link: '/en/docs/pogget/mag' },
+          { text: 'Cache folder', link: '/en/docs/pogget/roaming' },
+          { text: 'Magnet Window', link: '/en/docs/pogget/mag' }
 
         ]
       },
@@ -139,6 +140,7 @@ function createSidebar(lang = 'zh') {
         { text: '关于', link: '/docs/pogget/index' },
         { text: '组件编组', link: '/docs/pogget/group' },
         { text: '映射收纳和普通收纳', link: '/docs/pogget/mapping' },
+        { text: '缓存文件夹', link: '/docs/pogget/roaming' },
         { text: '磁力窗', link: '/docs/pogget/mag' }
       ]
     },
