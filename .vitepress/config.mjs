@@ -274,10 +274,6 @@ export default withMermaid(
     },
     
     themeConfig: {
-      logo: {
-        light: "https://www.vilinko.com/img/Newico.png",
-        dark: "https://www.vilinko.com/img/Newico.png"
-      },
       
       // 搜索框
       search: {
