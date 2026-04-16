@@ -36,4 +36,10 @@ features:
     title: Vina UI
     details: 一个简洁轻量的 UI 基础框架。
     link: /docs/vinaui/index
+  - icon:
+      dark: https://www.vilinko.com/img/products_synap.png
+      light: https://www.vilinko.com/img/products_synap.png
+    title: Synap
+    details: ​一款极简的用于快速思维捕获的软件。
+    link: https://github.com/VilinkoStudio/Synap
 ---

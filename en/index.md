@@ -36,4 +36,10 @@ features:
     title: Vina UI
     details: A UI foundation that simple and light.
     link: /en/docs/vinaui/index
+  - icon:
+      dark: https://www.vilinko.com/img/products_synap.png
+      light: https://www.vilinko.com/img/products_synap.png
+    title: Synap
+    details: A minimalistic software for quick mind mapping.
+    link: https://github.com/VilinkoStudio/Synap
 ---
