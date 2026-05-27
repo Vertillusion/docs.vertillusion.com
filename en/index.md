@@ -41,5 +41,5 @@ features:
       light: https://www.vilinko.com/img/products_synap.png
     title: Synap
     details: A minimalistic software for quick mind mapping.
-    link: https://github.com/VilinkoStudio/Synap
+    link: /en/docs/synap/index
 ---

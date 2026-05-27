@@ -95,6 +95,13 @@ function createSidebar(lang = 'zh') {
         ]
       },
       {
+        text: 'Synap',
+        collapsed: true,
+        items: [
+          { text: 'Basic Introduction', link: '/en/docs/synap/index' }
+        ]
+      },
+      {
         text: 'ABOUT',
         collapsed: true,
         items: [
@@ -156,6 +163,13 @@ function createSidebar(lang = 'zh') {
       collapsed: true,
       items: [
         { text: '基本介绍', link: '/docs/vinaui/index' }
+      ]
+    },
+    {
+      text: 'Synap',
+      collapsed: true,
+      items: [
+        { text: '基本介绍', link: '/docs/synap/index' }
       ]
     },
     {

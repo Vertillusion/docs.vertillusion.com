@@ -41,5 +41,5 @@ features:
       light: https://www.vilinko.com/img/products_synap.png
     title: Synap
     details: ​一款极简的用于快速思维捕获的软件。
-    link: https://github.com/VilinkoStudio/Synap
+    link: /docs/synap/index
 ---
