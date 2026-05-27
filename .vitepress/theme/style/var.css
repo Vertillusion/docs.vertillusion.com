@@ -9,9 +9,9 @@
 }
 
 .dark {
-  --vp-c-brand-1: #1e6bcb;
-  --vp-c-brand-2: #5279FB;
-  --vp-c-brand-3: #6b8cff;
+  --vp-c-brand-1: #5279FB;
+  --vp-c-brand-2: #6b8cff;
+  --vp-c-brand-3: #849eff;
   --vp-home-hero-image-filter: blur(40px);
 }
 
