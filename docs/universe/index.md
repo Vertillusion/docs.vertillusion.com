@@ -4,11 +4,11 @@ next: false
 ---
 
 # Vilinko Universe
-::: warning 注意
+::: warning
 此条目正在建设中，部分内容可能在后续有所改动。
 :::
 
-::: tip 提示
+::: tip
 目前，在一般情况下 Vilinko Universe 会作为项目的更新器提供。
 :::
 ## 介绍

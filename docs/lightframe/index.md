@@ -7,7 +7,7 @@ next:
 
 # 基本介绍
 
-::: tip TIP
+::: tip
 - 传送门：[LightFrame 官方网站-定义热爱的桌面](https://lightframe.vilinko.com/)
 - 开发：[沫狐奶昔 CimiMoly](https://github.com/EnderMo)
 - [使用教程](/docs/lightframe/manual)

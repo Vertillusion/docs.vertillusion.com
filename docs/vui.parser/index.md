@@ -5,7 +5,7 @@ next: false
 
 # vui.parser
 
-::: tip TIP
+::: tip
 - 传送门：[vui.parser](https://haceau-zoac.github.io/vui.parser/)
 - 开发：[辰落火辉 Haceau-Zoac](https://github.com/Haceau-Zoac)  
 :::

@@ -1,6 +1,6 @@
 # User Manual
 
-::: tip TIP
+::: tip
 - Video: [【Official Complete Tutorial】Want to make your favorite desktop? LightFrame Desktop Interaction Layout Tutorial【Basic】](https://www.bilibili.com/video/BV1yw411q7ct)
 :::
 

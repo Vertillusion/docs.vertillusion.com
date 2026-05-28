@@ -4,11 +4,11 @@ next: false
 ---
 
 # Vilinko Universe
-::: warning Important
+::: warning
 This entry is under construction, some content may be changed.
 :::
 
-::: tip TIP
+::: tip
 Currently, Vilinko Universe will be provided as an update for your projects.
 :::
 

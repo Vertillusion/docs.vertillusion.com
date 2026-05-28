@@ -1,6 +1,6 @@
 # 使用教程
 
-::: tip TIP
+::: tip
 - 视频：[【官方完整教程】想做出自己喜欢的桌面？LightFrame桌面交互布置教程【基础篇】](https://www.bilibili.com/video/BV1yw411q7ct)
 :::
 
