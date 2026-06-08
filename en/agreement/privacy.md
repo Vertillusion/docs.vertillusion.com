@@ -1,130 +1,121 @@
 # Vilinko Studio Privacy Policy
+
 ::: tip Version
-Initial release date: August 6, 2025
-
-Last updated date: August 6, 2025
+Initial Release Date: August 6, 2025      
+Last Updated: June 8, 2026
 :::
-
-::: warning 
-Vilinko Studio is registered in Chinese Mainland, which means that when handling service requests from outside Chinese Mainland, we will comply with the relevant laws of the People's Republic of China. Your personal data will be processed in accordance with the applicable laws and regulations of the People's Republic of China.
-:::
-
-In case of any conflict, the [**Simplified Chinese version**](/agreement/privacy.md) shall prevail.
-
 
 ## 1. Introduction
-- Welcome to use the internet information technology tools and related services provided by Vilinko Studio (hereinafter referred to as "we"). This Privacy Policy aims to explain to you how we collect, use, store, protect and disclose your personal information, as well as the rights you enjoy related to personal information.
-- This Privacy Policy is closely related to your use of our services. Please carefully read and fully understand this Policy before using any service, especially the content marked in bold or underlined. Your use or continued use of our services means that you agree to our processing of your personal information in accordance with this Policy.
-- If you have any questions about this Policy, you can contact us through the methods provided in this Policy.
+Welcome to the internet information technology tools and related services provided by Vilinko Studio (hereinafter referred to as "we," "us," or "our"). This Privacy Policy is designed to explain how we collect, use, store, protect, and disclose your personal information, as well as the rights you hold regarding your personal data. This Privacy Policy is closely related to your use of our services. Please read and fully understand this policy carefully before using any of our services, **particularly the terms highlighted in bold or underlined**. By using or continuing to use our services, you express your consent to our processing of your personal information in accordance with this Privacy Policy. If you have any questions regarding this policy, please contact us through the methods provided herein.
 
 ## 2. Scope of Application
-- This Policy applies to all services provided by us, including but not limited to user login systems, forum services, personalized customization functions, computer desktop beautification tools, file interpreters, as well as related websites, clients, mini-programs, etc.
-- This Policy does not apply to the following situations:
-  - Products or services provided to you by third parties through our services. Such third-party services may have their own independent privacy policies, and we are not responsible for third parties' privacy policies and behaviors.
-  - Third-party services authorized by us, but such authorization does not include authorization for third parties to collect and use your personal information. Third parties shall process your information in accordance with their own privacy policies.
+1. This Privacy Policy applies to all services provided by us, including but not limited to the user login system, forum services, personalized customization features, desktop beautification tools, file interpreters, and associated websites, clients, mini-programs, etc.
+2. This Privacy Policy does not apply to:
+   - Products or services provided to you by third parties through our services. Such third-party services may have independent privacy policies, and we are not responsible for the privacy policies or practices of any third party.
+   - Third-party services authorized by us, provided that such authorization does not constitute consent for the third party to collect or use your personal information. Third parties shall process your information in accordance with their own privacy policies.
 
 ## 3. Information We Collect
 ### (1) Information You Voluntarily Provide
-- Registration information: When you register a Vilinko Studio account, you may need to provide a mobile phone number, email address, username, password and other information. If you choose to log in through a third-party account (such as WeChat, QQ, GitHub, etc.), we will obtain the information you have made public on the third-party platform (such as nickname, avatar, etc.), which is subject to the content displayed on the third-party authorization page.
-- Information submitted during service usage:
-  - Content such as posts, comments, replies, private messages you publish when using the forum service.
-  - Pictures you upload, preference parameters you set, text descriptions you input when using the personalized customization function.
-  - Opinions, suggestions, complaints and relevant supporting materials you submit to us through the customer service system and feedback channels.
-- Other voluntarily provided information: Such as name, address, contact information you provide when participating in our questionnaires and activities.
+1. **Registration Information:** When you register for a Vilinko Studio account, you may need to provide your mobile phone number, email address, username, password, and other relevant information. If you choose to log in via a third-party account (e.g., WeChat, QQ, GitHub, etc.), we will obtain your publicly available information on that third-party platform (such as nickname, avatar, etc.), subject to the content displayed on the third-party authorization page.
+2. **Information Submitted During Service Utilization:**
+   - Posts, comments, replies, private messages, and other content you publish while using the forum services.
+   - Uploaded images, preference parameters, textual descriptions, and other data you input while using personalized customization functions.
+   - Opinions, suggestions, complaints, and relevant evidentiary materials submitted to us via our customer service system or feedback channels.
+3. **Other Voluntarily Provided Information:** Such as your name, address, contact details, and other information provided when participating in our questionnaires, surveys, or promotional events.
 
-### (2) Information We Collect During Your Use of Services
-- Device information: Including device model, operating system type and version, device identifiers (such as IMEI, MEID, Android ID, IDFA, MAC address, etc.), device hardware information (such as CPU, memory, storage capacity), battery status, sensor information (such as acceleration sensor, gyroscope), etc.
-- Network information: Including IP address, network type (such as Wi-Fi, 4G, 5G), network operator, access point name (APN), Bluetooth information, Wi-Fi hotspot information, etc.
-- Location information:
-  - If you agree to use functions involving location services (such as location-based resource recommendations) and authorize us to obtain location information, we may obtain your precise location information through GPS, base stations, Wi-Fi, etc.
-  - If you do not authorize, but the service function requires approximate location information, we may obtain your approximate geographical location based on your IP address and other information.
-  - You can turn off the location information authorization through the device system settings or the permission management function in the service at any time. After turning off, we will no longer collect it, but it may affect the normal use of related functions.
-- Log information:
-  - Access logs: Including the time, location, pages or functions you access, duration of access, click records, etc.
-  - Operation logs: Including your operation behaviors in the service (such as login, logout, modification of settings, file upload, resource download, etc.), operation results, error information, etc.
-  - Device operation logs: Including the running status, crash information, exception logs of the service on your device, which are used to troubleshoot faults and optimize performance.
-- File information:
-  - When you use the file interpreter function, we will temporarily read the content of the file to be interpreted that you select, which is only used to complete the interpretation operation. After the operation is completed, the temporary data will be cleared according to the settings (unless you choose to save the result).
-  - Files you upload and store through the service (such as personalized beautification materials, forum attachments, etc.) will be stored and managed by us according to your settings.
+### (2) Information We Collect Automatically During Your Use of Services
+1. **Device Information:** Operating system type of the device.
+2. **Network Information:** Including IP address, network operator/ISP information, etc.
+3. **Location Information:**
+   - If you consent to use features involving location services (such as location-based resource recommendations) and authorize us to access your location data, we may obtain your precise location information via GPS.
+   - If you do not grant authorization, but the functionality of the service requires approximate location data to operate normally, we may determine your approximate geographic location based on your IP address or other alternative data.
+   - You may revoke your location permission at any time through your device's system settings or the permission management within our services. Once revoked, we will cease collecting this data, though it may affect the functionality of certain services.
+4. **Log Information:**
+   - **Access Logs:** Including the time of your access, pages or features visited, click records, etc.
+   - **Operation Logs:** Including your operational behaviors within the service (such as login, logout, settings modifications, file uploads, resource downloads, etc.), operational results, and error logs.
+   - **Device Runtime Logs:** Including the operational status of the service on your device, crash information, and exception logs.
+5. **File Information:**
+   - When you use file upload features, we temporarily read the contents of the file selected for interpretation strictly to execute the requested operation. Upon completion, temporary data will be permanently cleared (unless you explicitly choose to save the results).
+   - Files you upload or store through our services (such as personalized beautification assets, forum attachments, etc.) will be stored and managed in accordance with your explicit settings.
 
 ### (3) Information Obtained from Third Parties
-- If you use our services through a third-party cooperation platform or authorize a third party to provide us with your information, we will obtain relevant information about you on the third-party platform under the premise of complying with laws and regulations and mutual agreements, which is subject to your agreement with the third party and the scope of authorization.
-- To ensure service security and prevent fraud risks, we may obtain risk assessment information about you from legally compliant third-party institutions.
+1. If you use our services through a third-party partner platform or authorize a third party to provide your information to us, we will obtain your relevant information from such third parties to the extent permitted by applicable laws and regulations, subject to your agreements and authorization scope with the third party.
+2. To ensure service security and mitigate fraud risks, we may obtain risk assessment information regarding your account from legally compliant third-party institutions.
 
-## 4. How We Use Information
-- Provide you with services: Create an account for you based on your registration information to ensure your normal use of various service functions; process relevant requests based on your operation instructions (such as interpreting files, publishing forum content).
-- Optimize service experience:
-  - Optimize the compatibility and stability of the service on different devices according to device information and operation logs, and fix vulnerabilities and faults.
-- Ensure service security:
-  - Use device information, network information, log information, etc. to identify risks such as abnormal login and malicious attacks, and take security measures to protect your account and information security.
-  - Monitor and handle behaviors that violate laws, regulations or service agreements to maintain service order.
-- Communication and notification:
-  - Send you service-related notifications (such as account registration success notification, password reset reminder, service update announcement, etc.).
-  - With your consent, push activity information and other content to you, which you can cancel receiving through relevant settings.
-- Legal requirements or protection of legitimate rights and interests:
-  - Use your information to comply with laws and regulations and respond to legal requirements from judicial or administrative authorities.
-  - Use your information within a reasonable and necessary scope to safeguard the legitimate rights and interests of us and users (such as responding to lawsuits, arbitrations).
-- Other purposes with your consent: Such as for market research, product improvement, etc., we will clearly inform you and obtain your consent before use.
+## 4. How We Use the Information
+1. **Service Provision:** To create an account for you based on your registration information, ensure the proper functioning of various service features, and process corresponding commands based on your operations (such as file interpretation and forum posting).
+2. **Service Experience Optimization:** To optimize the compatibility and stability of our services across different devices and to repair vulnerabilities and system glitches based on device information and runtime logs.
+3. **Service Security & Safeguards:**
+   - Utilizing device, network, and log information to identify abnormal logins, malicious attacks, and other security risks, thereby implementing technical measures to safeguard your account and data.
+   - Monitoring and handling behaviors that violate applicable laws, regulations, or our service agreements to maintain public order within the platform.
+   - Identifying and preventing malicious access activities initiated by automated bots.
+4. **Communication and Notifications:**
+   - Sending service-related notices (such as successful registration notifications, password reset reminders, service update announcements, etc.).
+   - Pushing promotional event information with your prior consent. You can opt out or disable these communications at any time via the corresponding settings.
+5. **Legal Compliance and Rights Protection:**
+   - Utilizing your information to comply with legal obligations, statutory duties, or to respond to legitimate requests from judicial or administrative authorities.
+   - Utilizing your information within a reasonably necessary scope to protect the legitimate rights and interests of both us and our users (such as responding to litigation or arbitration).
+6. **Other Uses with Your Explicit Consent:** For purposes such as market research or product improvement, we will explicitly inform you and obtain your consent prior to processing.
 
 ## 5. Storage and Protection of Information
-### (1) Storage Location
-- Your personal information is stored on servers within the territory of the People's Republic of China.
+### (1) Location of Storage
+- Your personal information will be stored on servers located within the territory of the People's Republic of China.
 
-### (2) Storage Period
-- We will determine a reasonable storage period according to the type of information and the purpose of use:
-  - Account information: We will continue to store it while your account is active; if you cancel your account, we will delete or anonymize it within a reasonable period.
-  - If otherwise specified by laws and regulations, such provisions shall apply (for example, the storage period of information that needs to be retained for performing statutory duties or dealing with disputes may be extended).
+### (2) Retention Period
+- We determine reasonable retention periods based on the type and purpose of the information:
+   - **Account Information:** Retained continuously while your account remains active. If you terminate/delete your account, we will delete or anonymize your personal information within a reasonable timeframe.
+   - Where applicable laws and regulations dictate otherwise, such statutory retention periods shall prevail (e.g., information retained for the fulfillment of statutory duties or dispute resolution may be kept for a longer duration).
 
-### (3) Protection Measures
-- Adopt technical means such as encryption technology (such as SSL/TLS encrypted transmission, encrypted data storage), access control mechanisms, firewalls, intrusion detection systems to prevent information from being accessed, leaked, tampered with or damaged without authorization.
-- Formulate emergency plans for data security incidents. In case of security incidents such as information leakage, we will take timely remedial measures and report to relevant departments and notify you in accordance with regulations.
+### (3) Protective Measures
+- We implement technical safeguards, including encryption technologies (such as SSL/TLS encrypted transmission, data encryption at rest), access control mechanisms, firewalls, and intrusion detection systems, to protect information from unauthorized access, leakage, tampering, or damage.
+- We have established a data security incident emergency response plan. In the event of a security incident such as a data breach, we will promptly execute remedy actions, report to competent authorities, and notify you in accordance with regulatory requirements.
 
-## 6. Sharing, Transfer and Public Disclosure of Information
+## 6. Sharing, Transfer, and Public Disclosure of Information
 ### (1) Sharing
-- We will not share your personal information with third parties unless the following conditions are met:
-  - Obtain your explicit consent: Before sharing, we will clearly inform you of the purpose of sharing, the identity of the third party and the scope of information, and share it after your confirmation and consent.
-  - Service necessity: To provide you with services, it is necessary to share necessary information with third-party service providers (such as server hosting providers, cloud storage service providers, payment service providers, etc.). Such third parties can only use the information within the scope of providing services and must abide by confidentiality obligations.
-  - Legal requirements: Share information with relevant departments in accordance with laws and regulations, or mandatory requirements from judicial or administrative authorities.
-  - Protection of legitimate rights and interests: Share information with relevant parties within a reasonable and necessary scope to protect the legitimate rights and interests of us and users (such as preventing fraud, handling infringement behaviors).
+- We will not share your personal information with any third party, except under the following circumstances:
+   - **With Your Explicit Consent:** Prior to sharing, we will explicitly inform you of the purpose, the identity of the third party, and the scope of the information, and proceed only upon obtaining your explicit confirmation.
+   - **Service Necessity:** To provide you with services, we may share necessary information with third-party service providers (such as server hosting providers, cloud storage vendors, payment processors, etc.). Such third parties may only use the information within the scope of providing the service and are strictly contractually bound by confidentiality obligations.
+   - **Legal Mandates:** Sharing information in accordance with laws, regulations, or mandatory requests from judicial or administrative authorities.
+   - **Protection of Legitimate Interests:** Sharing information with relevant parties within a reasonably necessary scope to protect the legitimate rights and interests of us and our users (such as fraud prevention or addressing intellectual property infringements).
 
 ### (2) Transfer
-- Without your explicit consent, we will not transfer your personal information to any third party. If it needs to be transferred due to enterprise merger, division, acquisition, reorganization, etc., we will notify you in advance and ensure that the transferee continues to comply with the provisions of this Policy; if you disagree, you can choose to cancel your account.
+- We will not transfer your personal information to any third party without your explicit consent. In the event of corporate mergers, divisions, acquisitions, restructuring, or similar corporate transactions requiring the transfer of personal data, we will notify you in advance and ensure that the successor entity continues to abide by this Privacy Policy. If you object, you may choose to terminate your account.
 
 ### (3) Public Disclosure
-- We will not publicly disclose your personal information unless the following conditions are met:
-  - Obtain your explicit consent.
-  - Required by laws and regulations or instructed by competent authorities.
-  - Disclose publicly within a necessary scope to maintain public interests (such as combating crimes).
-  - Information you actively disclose in the service (such as public forum posts), and the scope of public disclosure of such information is subject to your settings.
+- We will not publicly disclose your personal information except under the following circumstances:
+   - Upon obtaining your explicit consent.
+   - Pursuant to legal requirements or directives from competent authorities.
+   - Within a necessary scope to protect public interest (such as combating criminal activities).
+   - Information you voluntarily make public within the services (such as public forum posts), the scope of which shall be governed by your personal visibility settings.
 
 ## 7. Your Rights
-- Right of access: You have the right to access your personal information (such as basic account information, usage records, etc.).
-- Right of correction: If you find errors in your information, you can apply to us for correction, and we will correct it in a timely manner after verification.
-- Right of deletion: You can request us to delete your personal information in the following cases:
-  - The purpose of our collection and use of information has been achieved or is no longer necessary.
-  - You withdraw your consent authorization.
-  - We process your information in violation of laws, regulations or agreement.
-  - Other situations where deletion is legally required.
-  - We will delete it in a timely manner after verification. If it needs to be retained due to legal regulations, we will anonymize it.
-- Right to withdraw consent: You can withdraw your authorization for us to collect and use information at any time (such as turning off permission settings), but withdrawing consent may cause some service functions to be unavailable.
-- Right of duplication: You can request us to provide a copy of your personal information, and we will provide it in a reasonable way under the prescribed premise.
-- Right of cancellation: You can cancel your account through the cancellation function in the service or by contacting customer service. After cancellation, we will stop providing services for you and process your information (delete or anonymize) in accordance with regulations.
-- Right to restrict automated decision-making: For decisions made through automated decision-making methods (such as algorithm recommendations) that have a significant impact on your rights and interests, you have the right to request us to explain and can refuse to process your information only through automated decision-making.
+1. **Right of Access:** You have the right to access your personal information (such as basic account info, usage records, etc.).
+2. **Right to Rectification:** If you discover that your information is inaccurate or incomplete, you have the right to request a rectification, which we will process promptly upon verification.
+3. **Right to Erasure (Right to be Forgotten):** You may request the deletion of your personal information under the following circumstances:
+   - The purpose for which the information was collected or processed has been achieved or is no longer necessary.
+   - You withdraw your consent/authorization.
+   - Our processing of your information violates applicable laws, regulations, or service agreements.
+   - Other circumstances provided by law.
+   - We will delete the data promptly upon verification. If retention is required by laws and regulations, we will subject such data to anonymization.
+4. **Right to Withdraw Consent:** You may withdraw your authorization for us to collect and use your data at any time (e.g., by disabling device permissions). However, withdrawing consent may result in the unavailability of certain service features.
+5. **Right to Data Portability:** You have the right to request a copy of your personal information, which we will provide in a structured, commonly used format under reasonable and lawful conditions.
+6. **Right to Account Termination:** You can terminate your account via the account closure feature within the service or by contacting customer support. Upon termination, we will cease providing services to you and handle your data (via deletion or anonymization) in compliance with legal requirements.
+7. **Right to Contesting Automated Decision-making:** For decisions that significantly affect your rights and interests made solely through automated decision-making mechanisms (such as algorithmic recommendations), you have the right to demand an explanation, and you may refuse the processing of your information through purely automated means.
 
 ## 8. Protection of Minors
-- We attach great importance to the protection of minors' personal information. If you are a minor under the age of 18, you should use our services under the guidance of a guardian and the guardian should read this Policy on your behalf.
-- The guardian of a minor should properly manage the minor's account and personal information. If it is found that the minor's information is improperly collected or used, you can contact us for handling.
-- We will not provide minors with service content inappropriate for their age, nor will we disclose minors' personal information to third parties without the guardian's consent.
+1. We attach the utmost importance to the protection of minors' personal information. If you are a minor under the age of 18, you must use our services under the guidance and supervision of a parent or legal guardian, who should read this Privacy Policy on your behalf.
+2. Parents or legal guardians of minors should properly manage the accounts and personal information of minors. If you discover that a minor's information has been improperly collected or used, please contact us immediately.
+3. We do not provide age-inappropriate service content to minors, nor will we disclose a minor's personal information to third parties without the prior consent of their guardian.
 
-## 9. Update and Notification of the Policy
-- We may revise this Privacy Policy according to changes in laws and regulations, adjustments to service functions, etc.
-- The revised Privacy Policy will be announced in prominent positions such as our official website and service client, and the effective date will be indicated. If the revised content involves significant changes to your rights and interests, we will prompt you through pop-ups, text messages, emails, etc., and give you a reasonable consideration period.
-- Your continued use of our services means that you agree to the revised Privacy Policy; if you disagree, you should stop using the services.
+## 9. Revisions and Notifications to This Policy
+1. We may revise this Privacy Policy from time to time due to amendments in applicable laws and regulations, adjustments to service features, or other operational changes.
+2. The revised Privacy Policy will be published in prominent locations on our official website or service clients, with the effective date clearly indicated. If the revisions involve material changes to your rights or interests, we will prominently notify you via pop-up alerts, SMS, emails, or similar means, providing you with a reasonable consideration period.
+3. Your continued use of our services constitutes your acceptance of the revised Privacy Policy. If you do not agree with the updated terms, you must immediately cease using our services.
 
 ## 10. Contact Us
-- If you have any questions, suggestions or complaints about this Privacy Policy, you can contact us through the following methods:
-  - Email: [privacy@vilinko.com](mailto:privacy@vilinko.com)
-- We will verify and reply within 15 working days after receiving your feedback.
+- If you have any questions, suggestions, or complaints regarding this Privacy Policy, you may reach out to us via the following communication channels:
+   - Email: [privacy@vilinko.com](mailto:privacy@vilinko.com)
+   - [Vilinko Support & Feedback Center](https://support.vilinko.com)
 
-## Appendix: Links to Third-Party Policies
-- [Afadian Platform Service Terms](https://afdian.com/term)
+## Appendix: Third-Party Policy Links
+- [Afdian Platform Terms of Service](https://afdian.com/term)

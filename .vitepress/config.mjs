@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress';
 import vitepressProtectPlugin from "vitepress-protect-plugin";
 import { withMermaid } from 'vitepress-plugin-mermaid'; // mermaid
+// import { generateSidebar } from "vitepress-sidebar";
 
 // 创建导航配置函数
 function createNav(lang = 'zh') {
@@ -61,7 +62,7 @@ function createSidebar(lang = 'zh') {
 //      },
       {
         text: 'LightFrame',
-        collapsed: true,
+//        collapsed: true,
         items: [
           { text: 'Basic Introduction', link: '/en/docs/lightframe/index' },
           { text: 'User Manual', link: '/en/docs/lightframe/manual' },
@@ -70,9 +71,9 @@ function createSidebar(lang = 'zh') {
       },
       {
         text: 'Pogget',
-        collapsed: true,
+//        collapsed: true,
         items: [
-          { text: 'About Pogget', link: '/en/docs/pogget/index' },
+          { text: 'Pogget', link: '/en/docs/pogget/index' },
           { text: 'Window Group', link: '/en/docs/pogget/group' },
           { text: 'Mapped Storage and Regular Storage', link: '/en/docs/pogget/mapping' },
           { text: 'Cache folder', link: '/en/docs/pogget/roaming' },
@@ -82,28 +83,28 @@ function createSidebar(lang = 'zh') {
       },
       {
         text: 'Vui.Parser',
-        collapsed: true,
+//        collapsed: true,
         items: [
           { text: 'Basic Introduction', link: '/en/docs/vui.parser/index' }
         ]
       },
       {
         text: 'Vina.UI',
-        collapsed: true,
+//        collapsed: true,
         items: [
           { text: 'Basic Introduction', link: '/en/docs/vinaui/index' }
         ]
       },
       {
         text: 'Synap',
-        collapsed: true,
+//        collapsed: true,
         items: [
           { text: 'Basic Introduction', link: '/en/docs/synap/index' }
         ]
       },
       {
         text: 'ABOUT',
-        collapsed: true,
+//        collapsed: true,
         items: [
           { text: 'About Vilinko', link: '/en/about/index' },
         ]
@@ -133,7 +134,7 @@ function createSidebar(lang = 'zh') {
 //    },
     {
       text: 'LightFrame',
-      collapsed: true,
+//      collapsed: true,
       items: [
         { text: '基本介绍', link: '/docs/lightframe/index' },
         { text: '使用教程', link: '/docs/lightframe/manual' },
@@ -142,9 +143,9 @@ function createSidebar(lang = 'zh') {
     },
     {
       text: 'Pogget',
-      collapsed: true,
+//      collapsed: true,
       items: [
-        { text: '关于', link: '/docs/pogget/index' },
+        { text: 'Pogget', link: '/docs/pogget/index' },
         { text: '组件编组', link: '/docs/pogget/group' },
         { text: '映射收纳和普通收纳', link: '/docs/pogget/mapping' },
         { text: '缓存文件夹', link: '/docs/pogget/roaming' },
@@ -153,28 +154,28 @@ function createSidebar(lang = 'zh') {
     },
     {
       text: 'Vui.Parser',
-      collapsed: true,
+//      collapsed: true,
       items: [
         { text: '基本介绍', link: '/docs/vui.parser/index' }
       ]
     },
     {
       text: 'Vina.UI',
-      collapsed: true,
+//      collapsed: true,
       items: [
         { text: '基本介绍', link: '/docs/vinaui/index' }
       ]
     },
     {
       text: 'Synap',
-      collapsed: true,
+//      collapsed: true,
       items: [
         { text: '基本介绍', link: '/docs/synap/index' }
       ]
     },
     {
       text: '关于',
-      collapsed: true,
+//      collapsed: true,
       items: [
         { text: '关于 Vilinko', link: '/about/index' },
       ]
