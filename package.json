@@ -11,6 +11,7 @@
     "vitepress": "^1.6.4",
     "vitepress-plugin-mermaid": "^2.0.17",
     "vitepress-protect-plugin": "^1.0.6",
+    "vitepress-sidebar": "^1.36.1",
     "vue": "^3.5.18"
   },
   "scripts": {
