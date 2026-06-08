@@ -41,6 +41,12 @@ The Windows and Android applications of Inspiration Station downloaded from Vili
 | **Specific Identifiers** | When you access Inspiration Station, your IP address is retrieved through the browser to analyze traffic sources and defend against malicious attacks. When you use the download feature, your UserAgent information is obtained via the browser to identify the device system type and version, ensuring a more compatible browsing experience. |
 | **Local Cache Access** | When you browse component descriptions or load dynamic content on Inspiration Station, the system requests cookies and localStorage permissions to prevent browser lagging caused by loading excessive dynamic content simultaneously. |
 
+## Synap
+| Permission / Data Type | Purpose of Collection & Description of Use Cases |
+| :---: | :--- |
+| **Browser Invocation** | Used to trigger external browsers to open links such as the software's official website and project homepages. |
+| **Network Connection & Data Communication** | This application establishes network connections only in the following explicit scenarios and remains completely offline at all other times:<br>1. **Version Update Checks:** To retrieve the latest version information;<br>2. **Note Data Backup & Synchronization:** Your note data will be transmitted over the network to our servers or other devices *only* after you explicitly consent to synchronize your data. During this entire process, your note data is processed and transmitted in a fully encrypted format. |
+
 ## Vilinko Service Websites
 
 ::: tip Websites Covered under This Disclosure
