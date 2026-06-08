@@ -24,6 +24,9 @@ Welcome to the internet information technology tools and related services provid
 3. **Other Voluntarily Provided Information:** Such as your name, address, contact details, and other information provided when participating in our questionnaires, surveys, or promotional events.
 
 ### (2) Information We Collect Automatically During Your Use of Services
+
+For specific permissions and information utilized by our applications, please refer to our [Public Disclosure of Personal Information Collection](./privacy_collect.html).
+
 1. **Device Information:** Operating system type of the device.
 2. **Network Information:** Including IP address, network operator/ISP information, etc.
 3. **Location Information:**
