@@ -9,10 +9,6 @@ Initial release date: August 6, 2025
 Last updated date: August 6, 2025
 :::
 
-::: warning 
-Vilinko Studio is registered in Chinese Mainland, which means that when handling service requests from outside Chinese Mainland, we will comply with the relevant laws of the People's Republic of China. Your personal data will be processed in accordance with the applicable laws and regulations of the People's Republic of China.
-:::
-
 Thank you for using Vilinko Studio software. By using our services, you agree to these terms. We are constantly changing and improving our services. We may add or remove features, or suspend or discontinue a service entirely. You may stop using our services at any time, and we may impose new restrictions on our services at any time. In case of ambiguity in the Vilinko Studio Software Service Terms in different languages, the [**Simplified Chinese version**](/agreement/tos.md) shall prevail.
 
 

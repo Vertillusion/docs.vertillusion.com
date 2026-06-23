@@ -10,10 +10,6 @@ Initial Release Date: November 9, 2025
 Last Updated Date: November 9, 2025
 :::
 
-::: warning 
-Vilinko Studio is registered in Chinese Mainland, which means that when handling service requests from outside Chinese Mainland, we will comply with the relevant laws of the People's Republic of China. Your personal data will be processed in accordance with the applicable laws and regulations of the People's Republic of China.
-:::
-
 In case of any conflict, the [**Simplified Chinese version**](/agreement/pogget-vui-service.md) shall prevail.
 
 ## 1. General Provisions
