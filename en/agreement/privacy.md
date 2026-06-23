@@ -5,6 +5,10 @@ Initial Release Date: August 6, 2025
 Last Updated: June 8, 2026
 :::
 
+::: warning
+Your personal data remains 100% localized on your device and is never used for training, analysis, or telemetry. We do not collect any personal information unless you voluntarily choose to sign up for an account, in which case only your essential account credentials will be securely stored to manage your profile.
+:::
+
 ## 1. Introduction
 Welcome to the internet information technology tools and related services provided by Vilinko Studio (hereinafter referred to as "we," "us," or "our"). This Privacy Policy is designed to explain how we collect, use, store, protect, and disclose your personal information, as well as the rights you hold regarding your personal data. This Privacy Policy is closely related to your use of our services. Please read and fully understand this policy carefully before using any of our services, **particularly the terms highlighted in bold or underlined**. By using or continuing to use our services, you express your consent to our processing of your personal information in accordance with this Privacy Policy. If you have any questions regarding this policy, please contact us through the methods provided herein.
 

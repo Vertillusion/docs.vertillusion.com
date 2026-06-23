@@ -10,6 +10,10 @@ Initial Release Date: November 9, 2025
 Last Updated Date: November 9, 2025
 :::
 
+::: warning
+Your personal data remains 100% localized on your device and is never used for training, analysis, or telemetry. We do not collect any personal information unless you voluntarily choose to sign up for an account, in which case only your essential account credentials will be securely stored to manage your profile.
+:::
+
 In case of any conflict, the [**Simplified Chinese version**](/agreement/pogget-vui-service.md) shall prevail.
 
 ## 1. General Provisions
