@@ -351,7 +351,7 @@ export default withMermaid(
       socialLinks: [
         { icon: 'github', link: 'https://github.com/VilinkoStudio' },
         { icon: 'bilibili', link: 'https://space.bilibili.com/3493298551393123' },
-        { icon: 'qq', link: 'https://pd.qq.com/s/fnd9tarkb'}
+        { icon: 'qq', link: 'https://pd.qq.com/g/csm3ip9s49'}
       ]
     },
   })
